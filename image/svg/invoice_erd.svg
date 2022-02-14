@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="699px" preserveAspectRatio="none" style="width:1349px;height:699px;background:#FFFFFF;" version="1.1" viewBox="0 0 1349 699" width="1349px" zoomAndPan="magnify"><defs><filter height="300%" id="f1pcpdnzqsos3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[399bd561b4b309c296e08a68421496ee]
+cluster invoce ERD--><rect fill="#FFFFFF" filter="url(#f1pcpdnzqsos3)" height="529" style="stroke:#000000;stroke-width:1.5;" width="1330" x="7" y="72"/><path d="M97,72 L97,81.4883 L87,91.4883 L7,91.4883 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="10" y="86.5352">invoce ERD</text><!--MD5=[c27f6089cac20879da17267857103c68]
+class invoice_detail_spots--><rect codeLine="9" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="208.5488" id="invoice_detail_spots" style="stroke:#A80036;stroke-width:1.5;" width="205" x="23.5" y="107"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="114" x="69" y="123.6016">invoice_detail_spots</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24.5" x2="227.5" y1="131.1328" y2="131.1328"/><ellipse cx="34.5" cy="142.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="179" x="43.5" y="145.7676">invoice_detail_spot_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="24.5" x2="227.5" y1="152.0879" y2="152.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="24.5" x2="227.5" y1="154.0879" y2="154.0879"/><polygon fill="none" points="34.5,158.0879,38.5,162.0879,34.5,166.0879,30.5,162.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="43.5" y="166.7227">contract_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="43.5" y="179.6777">yearmonth: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="43.5" y="192.6328">text: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="43.5" y="205.5879">from: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="43.5" y="218.543">to: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="43.5" y="231.498">invoice_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="43.5" y="244.4531">unit_price: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="43.5" y="257.4082">amount: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="43.5" y="270.3633">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="43.5" y="283.3184">source_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="43.5" y="296.2734">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="43.5" y="309.2285">created_by: INT</text><!--MD5=[a07ed6457be8f887faa62ac7363b5e4a]
+class invoice_details--><rect codeLine="25" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="208.5488" id="invoice_details" style="stroke:#A80036;stroke-width:1.5;" width="175" x="1089.5" y="376"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="1135.5" y="392.6016">invoice_details</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1090.5" x2="1263.5" y1="400.1328" y2="400.1328"/><ellipse cx="1100.5" cy="411.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="1109.5" y="414.7676">invoice_detail_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1090.5" x2="1263.5" y1="421.0879" y2="421.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1090.5" x2="1263.5" y1="423.0879" y2="423.0879"/><polygon fill="none" points="1100.5,427.0879,1104.5,431.0879,1100.5,435.0879,1096.5,431.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="1109.5" y="435.7227">invoice_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="1109.5" y="448.6777">text: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="1109.5" y="461.6328">invoice_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="1109.5" y="474.5879">from: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="1109.5" y="487.543">to: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="1109.5" y="500.498">unit_price: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="1109.5" y="513.4531">amount: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="1109.5" y="526.4082">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="1109.5" y="539.3633">tax_rate: DECIMAL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="1109.5" y="552.3184">source_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="1109.5" y="565.2734">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="1109.5" y="578.2285">created_by: INT</text><!--MD5=[9d11c655097822872fc162a7419ec79a]
+class invoice_note_templates--><rect codeLine="41" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="143.7734" id="invoice_note_templates" style="stroke:#A80036;stroke-width:1.5;" width="222" x="264" y="139.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="133" x="308.5" y="156.1016">invoice_note_templates</text><line style="stroke:#A80036;stroke-width:1.5;" x1="265" x2="485" y1="163.6328" y2="163.6328"/><ellipse cx="275" cy="174.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="284" y="178.2676">invoice_note_template_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="265" x2="485" y1="184.5879" y2="184.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="265" x2="485" y1="186.5879" y2="186.5879"/><polygon fill="none" points="275,190.5879,279,194.5879,275,198.5879,271,194.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="284" y="199.2227">contract_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="284" y="212.1777">sort_order: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="284" y="225.1328">note: MEDIUMTEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="284" y="238.0879">yearmonth_from: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="284" y="251.043">yearmonth_to: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="284" y="263.998">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="284" y="276.9531">created_by: INT</text><!--MD5=[ba8b6f8b3ea7120bff55fd1d517ba7ab]
+class invoice_notes--><rect codeLine="52" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="104.9082" id="invoice_notes" style="stroke:#A80036;stroke-width:1.5;" width="170" x="884" y="428"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="931" y="444.6016">invoice_notes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="885" x2="1053" y1="452.1328" y2="452.1328"/><ellipse cx="895" cy="463.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="904" y="466.7676">invoice_note_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="885" x2="1053" y1="473.0879" y2="473.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="885" x2="1053" y1="475.0879" y2="475.0879"/><polygon fill="none" points="895,479.0879,899,483.0879,895,487.0879,891,483.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="904" y="487.7227">invoice_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="904" y="500.6777">note: MEDIUMTEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="904" y="513.6328">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="904" y="526.5879">created_by: INT</text><!--MD5=[2b4f7112c0947b92d1e7b06292ed86fb]
+class invoice_payments--><rect codeLine="60" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="169.6836" id="invoice_payments" style="stroke:#A80036;stroke-width:1.5;" width="192" x="1129" y="126.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="1174.5" y="143.1016">invoice_payments</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1130" x2="1320" y1="150.6328" y2="150.6328"/><ellipse cx="1140" cy="161.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="1149" y="165.2676">invoice_payment_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1130" x2="1320" y1="171.5879" y2="171.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1130" x2="1320" y1="173.5879" y2="173.5879"/><polygon fill="none" points="1140,177.5879,1144,181.5879,1140,185.5879,1136,181.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="1149" y="186.2227">invoice_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="1149" y="199.1777">payment_date: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="1149" y="212.1328">amount: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="1149" y="225.0879">memo: MEDIUMTEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="1149" y="238.043">is_import: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="1149" y="250.998">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="1149" y="263.9531">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="1149" y="276.9082">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="1149" y="289.8633">updated_by: INT</text><!--MD5=[c5def7a9e0d04fd4905f9c4448944f5d]
+class invoice_send_log_details--><rect codeLine="74" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="104.9082" id="invoice_send_log_details" style="stroke:#A80036;stroke-width:1.5;" width="230" x="538" y="428"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="140" x="583" y="444.6016">invoice_send_log_details</text><line style="stroke:#A80036;stroke-width:1.5;" x1="539" x2="767" y1="452.1328" y2="452.1328"/><ellipse cx="549" cy="463.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="558" y="466.7676">invoice_send_log_detail_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="539" x2="767" y1="473.0879" y2="473.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="539" x2="767" y1="475.0879" y2="475.0879"/><polygon fill="none" points="549,479.0879,553,483.0879,549,487.0879,545,483.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="558" y="487.7227">invoice_send_log_id: INT</text><polygon fill="none" points="549,492.043,553,496.043,549,500.043,545,496.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="558" y="500.6777">invoice_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="558" y="513.6328">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="558" y="526.5879">created_by: INT</text><!--MD5=[89f721cac4ac6bffc79fa9ef73b63af6]
+class invoice_send_logs--><rect codeLine="82" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="91.9531" id="invoice_send_logs" style="stroke:#A80036;stroke-width:1.5;" width="181" x="521.5" y="165.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="561" y="182.1016">invoice_send_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="522.5" x2="701.5" y1="189.6328" y2="189.6328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="169" x="527.5" y="204.2676">invoice_send_log_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="522.5" x2="701.5" y1="210.5879" y2="210.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="522.5" x2="701.5" y1="212.5879" y2="212.5879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="541.5" y="225.2227">sent_at: DATETIME</text><polygon fill="none" points="532.5,229.543,536.5,233.543,532.5,237.543,528.5,233.543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="541.5" y="238.1777">company_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="541.5" y="251.1328">created_by: INT</text><!--MD5=[1f149f2fdd5f1998f8cc2f0ce9cb389f]
+class invoices--><rect codeLine="89" fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="195.5938" id="invoices" style="stroke:#A80036;stroke-width:1.5;" width="168" x="926" y="113.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="987.5" y="130.1016">invoices</text><line style="stroke:#A80036;stroke-width:1.5;" x1="927" x2="1093" y1="137.6328" y2="137.6328"/><ellipse cx="937" cy="148.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="946" y="152.2676">invoice_id: INT «Gen»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="927" x2="1093" y1="158.5879" y2="158.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="927" x2="1093" y1="160.5879" y2="160.5879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="946" y="173.2227">disp_invoice_id: VARCHAR</text><polygon fill="none" points="937,177.543,941,181.543,937,185.543,933,181.543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="128" x="946" y="186.1777">contract_id: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="946" y="199.1328">yearmonth: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="946" y="212.0879">due_date: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="946" y="225.043">fix_flag: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="946" y="237.998">total_amount: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="946" y="250.9531">payment_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="946" y="263.9082">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="946" y="276.8633">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="946" y="289.8184">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="946" y="302.7734">updated_by: INT</text><!--MD5=[907d3dfc5add89348121e3e08d91b393]
+class demand_letter_send_logs--><rect fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="40.1328" id="demand_letter_send_logs" style="stroke:#A80036;stroke-width:1.5;" width="153" x="737.5" y="191.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="147" x="740.5" y="208.1016">demand_letter_send_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="738.5" x2="889.5" y1="215.6328" y2="215.6328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="738.5" x2="889.5" y1="223.6328" y2="223.6328"/><!--MD5=[66aab1fb7235a144374180887ec21426]
+class contracts--><rect fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="40.1328" id="contracts" style="stroke:#A80036;stroke-width:1.5;" width="58" x="222" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="225" y="23.6016">contracts</text><line style="stroke:#A80036;stroke-width:1.5;" x1="223" x2="279" y1="31.1328" y2="31.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="223" x2="279" y1="39.1328" y2="39.1328"/><!--MD5=[06c040eda66248c7f73e0a0bce42a847]
+class journalizings--><rect fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="40.1328" id="journalizings" style="stroke:#A80036;stroke-width:1.5;" width="79" x="1137.5" y="645"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="1140.5" y="661.6016">journalizings</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1138.5" x2="1215.5" y1="669.1328" y2="669.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1138.5" x2="1215.5" y1="677.1328" y2="677.1328"/><!--MD5=[f35e55692cd15d3448af899285a39763]
+class companies--><rect fill="#FEFECE" filter="url(#f1pcpdnzqsos3)" height="40.1328" id="companies" style="stroke:#A80036;stroke-width:1.5;" width="68" x="578" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="62" x="581" y="23.6016">companies</text><line style="stroke:#A80036;stroke-width:1.5;" x1="579" x2="645" y1="31.1328" y2="31.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="579" x2="645" y1="39.1328" y2="39.1328"/><!--MD5=[b22a5cadb5407fb6187fb8e4a74aea6a]
+link invoices to invoice_details--><path codeLine="104" d="M1102.28,303 C1102.28,303 1111.5,303 1111.5,303 C1111.5,303 1111.5,367.96 1111.5,367.96 " fill="none" id="invoices-invoice_details" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1111.5" x2="1117.5" y1="367.96" y2="375.96"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1111.5" x2="1105.5" y1="367.96" y2="375.96"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1111.5" x2="1111.5" y1="367.96" y2="375.96"/><ellipse cx="1111.5" cy="361.96" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1105.28" x2="1094.28" y1="303" y2="303"/><ellipse cx="1105.28" cy="303" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1098.28" x2="1098.28" y1="307" y2="299"/><!--MD5=[0dc242ec7b8ab9c229e6f0e29073f666]
+link demand_letter_send_logs to invoices--><path codeLine="105" d="M898.62,212 C898.62,212 917.97,212 917.97,212 " fill="none" id="demand_letter_send_logs-invoices" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="914.97" x2="925.97" y1="212" y2="212"/><ellipse cx="914.97" cy="212" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="921.97" x2="921.97" y1="208" y2="216"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="898.62" x2="890.62" y1="212" y2="218"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="898.62" x2="890.62" y1="212" y2="206"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="898.62" x2="890.62" y1="212" y2="212"/><ellipse cx="904.62" cy="212" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><!--MD5=[996d41d8ce53d95baad510370d18364f]
+link invoices to invoice_notes--><path codeLine="106" d="M990,317.76 C990,317.76 990,419.78 990,419.78 " fill="none" id="invoices-invoice_notes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="990" x2="996" y1="419.78" y2="427.78"/><line style="stroke:#A80036;stroke-width:1.0;" x1="990" x2="984" y1="419.78" y2="427.78"/><line style="stroke:#A80036;stroke-width:1.0;" x1="990" x2="990" y1="419.78" y2="427.78"/><ellipse cx="990" cy="413.78" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="990" x2="990" y1="320.76" y2="309.76"/><ellipse cx="990" cy="320.76" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="986" x2="994" y1="313.76" y2="313.76"/><!--MD5=[c1aef43f10036981491492d931a4d5b1]
+link invoices to invoice_payments--><path codeLine="107" d="M1102.05,212 C1102.05,212 1120.88,212 1120.88,212 " fill="none" id="invoices-invoice_payments" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1120.88" x2="1128.88" y1="212" y2="206"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1120.88" x2="1128.88" y1="212" y2="218"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1120.88" x2="1128.88" y1="212" y2="212"/><ellipse cx="1114.88" cy="212" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1105.05" x2="1094.05" y1="212" y2="212"/><ellipse cx="1105.05" cy="212" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1098.05" x2="1098.05" y1="216" y2="208"/><!--MD5=[878dcae5f458831620176da9f6f20937]
+link invoices to invoice_send_log_details--><path codeLine="108" d="M917.77,297 C917.77,297 752.75,297 752.75,297 C752.75,297 752.75,419.92 752.75,419.92 " fill="none" id="invoices-invoice_send_log_details" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="752.75" x2="758.75" y1="419.92" y2="427.92"/><line style="stroke:#A80036;stroke-width:1.0;" x1="752.75" x2="746.75" y1="419.92" y2="427.92"/><line style="stroke:#A80036;stroke-width:1.0;" x1="752.75" x2="752.75" y1="419.92" y2="427.92"/><ellipse cx="752.75" cy="413.92" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="914.77" x2="925.77" y1="297" y2="297"/><ellipse cx="914.77" cy="297" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="921.77" x2="921.77" y1="293" y2="301"/><!--MD5=[921b0016b16cd3ff355606fa75185a37]
+link invoice_send_logs to invoice_send_log_details--><path codeLine="109" d="M620.25,265.74 C620.25,265.74 620.25,419.96 620.25,419.96 " fill="none" id="invoice_send_logs-invoice_send_log_details" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="620.25" x2="626.25" y1="419.96" y2="427.96"/><line style="stroke:#A80036;stroke-width:1.0;" x1="620.25" x2="614.25" y1="419.96" y2="427.96"/><line style="stroke:#A80036;stroke-width:1.0;" x1="620.25" x2="620.25" y1="419.96" y2="427.96"/><ellipse cx="620.25" cy="413.96" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="620.25" x2="620.25" y1="268.74" y2="257.74"/><ellipse cx="620.25" cy="268.74" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="616.25" x2="624.25" y1="261.74" y2="261.74"/><!--MD5=[ba480cde7ddc42183b26fc7f59c37531]
+link contracts to invoice_detail_spots--><path codeLine="111" d="M246.25,55.24 C246.25,55.24 246.25,127 246.25,127 C246.25,127 236.51,127 236.51,127 " fill="none" id="contracts-invoice_detail_spots" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="236.51" x2="228.51" y1="127" y2="133"/><line style="stroke:#A80036;stroke-width:1.0;" x1="236.51" x2="228.51" y1="127" y2="121"/><line style="stroke:#A80036;stroke-width:1.0;" x1="236.51" x2="228.51" y1="127" y2="127"/><ellipse cx="242.51" cy="127" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="246.25" x2="246.25" y1="58.24" y2="47.24"/><ellipse cx="246.25" cy="58.24" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="242.25" x2="250.25" y1="51.24" y2="51.24"/><!--MD5=[2a34a49dcdb4f645bd7f58b67cfbed16]
+link contracts to invoice_note_templates--><path codeLine="112" d="M272,55.1 C272,55.1 272,131.32 272,131.32 " fill="none" id="contracts-invoice_note_templates" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="272" x2="278" y1="131.32" y2="139.32"/><line style="stroke:#A80036;stroke-width:1.0;" x1="272" x2="266" y1="131.32" y2="139.32"/><line style="stroke:#A80036;stroke-width:1.0;" x1="272" x2="272" y1="131.32" y2="139.32"/><ellipse cx="272" cy="125.32" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="272" x2="272" y1="58.1" y2="47.1"/><ellipse cx="272" cy="58.1" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="268" x2="276" y1="51.1" y2="51.1"/><!--MD5=[bb6e614fc02cf7453d1ed0f3959c79df]
+link invoice_details to journalizings--><path codeLine="113" d="M1177,593.15 C1177,593.15 1177,636.7 1177,636.7 " fill="none" id="invoice_details-journalizings" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1177" x2="1183" y1="636.7" y2="644.7"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1177" x2="1171" y1="636.7" y2="644.7"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1177" x2="1177" y1="636.7" y2="644.7"/><ellipse cx="1177" cy="630.7" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1177" x2="1177" y1="596.15" y2="585.15"/><ellipse cx="1177" cy="596.15" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1173" x2="1181" y1="589.15" y2="589.15"/><!--MD5=[78360bec06b6ec0fb186aebb870e0ce1]
+link companies to invoice_send_logs--><path codeLine="114" d="M612,55.1 C612,55.1 612,157.45 612,157.45 " fill="none" id="companies-invoice_send_logs" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="612" x2="618" y1="157.45" y2="165.45"/><line style="stroke:#A80036;stroke-width:1.0;" x1="612" x2="606" y1="157.45" y2="165.45"/><line style="stroke:#A80036;stroke-width:1.0;" x1="612" x2="612" y1="157.45" y2="165.45"/><line style="stroke:#A80036;stroke-width:1.0;" x1="616" x2="608" y1="155.45" y2="155.45"/><line style="stroke:#A80036;stroke-width:1.0;" x1="612" x2="612" y1="58.1" y2="47.1"/><ellipse cx="612" cy="58.1" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="608" x2="616" y1="51.1" y2="51.1"/><!--MD5=[034a7da614c629aeca6f8d4fbf8d1304]
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "invoce ERD" {
+  entity "invoice_detail_spots" {
+    + invoice_detail_spot_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    text: VARCHAR
+    from: DATE
+    to: DATE
+    invoice_type: TINYINT
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_details" {
+    + invoice_detail_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    text: VARCHAR
+    invoice_type: TINYINT
+    from: DATE
+    to: DATE
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    tax_rate: DECIMAL
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_note_templates" {
+    + invoice_note_template_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    sort_order: TINYINT
+    note: MEDIUMTEXT
+    yearmonth_from: INT
+    yearmonth_to: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_notes" {
+    + invoice_note_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    note: MEDIUMTEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_payments" {
+    + invoice_payment_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    payment_date: DATE
+    amount: MEDIUMINT
+    memo: MEDIUMTEXT
+    is_import: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  entity "invoice_send_log_details" {
+    + invoice_send_log_detail_id: INT <<Gen>>
+    ==
+    # invoice_send_log_id: INT
+    # invoice_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_send_logs" {
+    invoice_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # company_id: INT
+    created_by: INT
+  }
+  entity "invoices" {
+    + invoice_id: INT <<Gen>>
+    ==
+    disp_invoice_id: VARCHAR
+    # contract_id: MEDIUMINT
+    yearmonth: INT
+    due_date: DATE
+    fix_flag: TINYINT
+    total_amount: INT
+    payment_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  invoices |o..o{ invoice_details
+  invoices |o.l.o{ demand_letter_send_logs
+  invoices |o..o{ invoice_notes
+  invoices |o.r.o{ invoice_payments
+  invoices |o.d.o{ invoice_send_log_details
+  invoice_send_logs |o..o{ invoice_send_log_details
+}
+contracts |o.d.o{ invoice_detail_spots
+contracts |o.d.o{ invoice_note_templates
+invoice_details |o..o{ journalizings
+companies |o..|{ invoice_send_logs
+
+@enduml
+
+@startuml
+
+hide circle
+
+skinparam linetype ortho
+
+frame "invoce ERD" {
+  entity "invoice_detail_spots" {
+    + invoice_detail_spot_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    text: VARCHAR
+    from: DATE
+    to: DATE
+    invoice_type: TINYINT
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_details" {
+    + invoice_detail_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    text: VARCHAR
+    invoice_type: TINYINT
+    from: DATE
+    to: DATE
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    tax_rate: DECIMAL
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_note_templates" {
+    + invoice_note_template_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    sort_order: TINYINT
+    note: MEDIUMTEXT
+    yearmonth_from: INT
+    yearmonth_to: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_notes" {
+    + invoice_note_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    note: MEDIUMTEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_payments" {
+    + invoice_payment_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    payment_date: DATE
+    amount: MEDIUMINT
+    memo: MEDIUMTEXT
+    is_import: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  entity "invoice_send_log_details" {
+    + invoice_send_log_detail_id: INT <<Gen>>
+    ==
+    # invoice_send_log_id: INT
+    # invoice_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_send_logs" {
+    invoice_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # company_id: INT
+    created_by: INT
+  }
+  entity "invoices" {
+    + invoice_id: INT <<Gen>>
+    ==
+    disp_invoice_id: VARCHAR
+    # contract_id: MEDIUMINT
+    yearmonth: INT
+    due_date: DATE
+    fix_flag: TINYINT
+    total_amount: INT
+    payment_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  invoices |o..o{ invoice_details
+  invoices |o.l.o{ demand_letter_send_logs
+  invoices |o..o{ invoice_notes
+  invoices |o.r.o{ invoice_payments
+  invoices |o.d.o{ invoice_send_log_details
+  invoice_send_logs |o..o{ invoice_send_log_details
+}
+contracts |o.d.o{ invoice_detail_spots
+contracts |o.d.o{ invoice_note_templates
+invoice_details |o..o{ journalizings
+companies |o..|{ invoice_send_logs
+
+@enduml
+
+PlantUML version 1.2022.0(Wed Jan 12 01:16:42 JST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

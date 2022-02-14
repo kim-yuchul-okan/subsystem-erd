@@ -12,7 +12,10 @@
   - [company_erd.pu](#company_erd)
   - [plans_erd.pu](#plans_erd)
   - [users_erd.pu](#users_erd)
-  - template_erd.pu
+  - [invoice_erd.pu](#invoice_erd)
+  - [maintenance_erd.pu](#maintenance_erd)
+  - [note_erd.pu](#note_erd)
+  - [reference_erd.pu](#reference_erd)
 - [subsystem.pu](#subsystem)
 
 ### subsystem
@@ -36,3 +39,21 @@
 - admins, roles, areas, calendar, faqs, information, menus
 
 ### box_erd
+
+- boxes, items, depot*, material*
+
+### invoice_erd
+
+- invoice
+
+### maintenance_erd
+
+- maintenance
+
+### note_erd
+
+- note
+
+### reference_erd
+
+- etc
