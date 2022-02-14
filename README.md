@@ -12,6 +12,5 @@
 │   ├── plans_erd.pu
 │   ├── template_erd.pu
 │   └── users_erd.pu
-├── subsytem.pu
-└── subsytem_simple.pu
+└── subsytem.pu
 ```
