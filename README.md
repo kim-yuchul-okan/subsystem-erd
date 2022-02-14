@@ -7,13 +7,13 @@
   - png/
   - svg/
 - subsystem/
-  - [admin_erd.pu](./subsystem-erd#admin_erd)
-  - [box_erd.pu](./subsystem-erd#box_erd)
-  - [company_erd.pu](./subsystem-erd#company_erd)
-  - [plans_erd.pu](./subsystem-erd#plans_erd)
-  - [users_erd.pu](./subsystem-erd#users_erd)
+  - [admin_erd.pu](#admin_erd)
+  - [box_erd.pu](#box_erd)
+  - [company_erd.pu](#company_erd)
+  - [plans_erd.pu](#plans_erd)
+  - [users_erd.pu](#users_erd)
   - template_erd.pu
-- [subsystem.pu](./subsystem-erd#subsystem)
+- [subsystem.pu](#subsystem)
 
 ### subsystem
 
