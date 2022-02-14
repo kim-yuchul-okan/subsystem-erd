@@ -1037,321 +1037,6 @@ frame "admins ERD" {
 }
 
 frame "working" {
-
-  frame "box, item" {
-    entity "box_continuous_request_shots" {
-      + box_id: INT
-      + shot_date: DATE
-      ==
-      comment: VARCHAR
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-      shot_time: TIME
-    }
-    entity "box_continuous_requests" {
-      + box_id: INT
-      ==
-      comment: VARCHAR
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "box_offsets" {
-      + box_offset_id: INT <<generated>>
-      ==
-      # box_id: INT
-      yearmonth: INT
-      total_used_amount: MEDIUMINT
-      total_used_amount_appli_web: MEDIUMINT
-      total_used_amount_appli_native: MEDIUMINT
-      total_used_amount_ic: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "boxes_control_numbers" {
-      + boxes_control_numbers_id: INT <<generated>>
-      ==
-      # box_id: INT
-      control_number: VARCHAR
-      settlement_type: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      deleted_at: DATETIME
-      deleted_by: INT
-    }
-    entity "box_payments" {
-      + maintenance_id: INT
-      ==
-      used_amount: MEDIUMINT
-      collect_amount: MEDIUMINT
-      collect_amount_cash: MEDIUMINT
-      collect_amount_appli_web: MEDIUMINT
-      collect_amount_appli_native: MEDIUMINT
-      collect_amount_ic: MEDIUMINT
-      uncollect_amount: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "box_stocks" {
-      + maintenance_id: INT
-      + action_id: TINYINT
-      + item_id: INT
-      ==
-      quantity: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "box_achievements" {
-      + maintenance_id: INT
-      + item_id: INT
-      ==
-      actual_delivery_quantity: INT
-      sales_quantity: INT
-      loss_quantity: INT
-      recall_quantity: INT
-      delivery_result_quantity: INT
-      stock_quantity: INT
-      prepare_quantity: INT
-      created_at: DATETIME
-    }
-    entity "box_orders" {
-      + maintenance_id: INT
-      + action_id: TINYINT
-      + item_id: INT
-      ==
-      quantity: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "box_prepares" {
-      +box_prepare_id: INT <<generated>>
-      ==
-      # maintenance_schedule_id: INT
-      # box_id: INT
-      # item_id: INT
-      quantity: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "boxes" {
-      + box_id: INT <<generated>>
-      ==
-      # contract_id: INT
-      floor: INT
-      floor_name: VARCHAR
-      is_display_okanpay: TINYINT
-      is_itoen: TINYINT
-      is_exists: TINYINT
-      is_use_collection_box: TINYINT
-      storage_type: TINYINT
-      rice_box_count: TINYINT
-      container_box_count: TINYINT
-      one_plate_box_count: TINYINT
-      cutter_count: TINYINT
-      registration_status: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "box_maintenance_extents" {
-      + maintenance_id: INT
-      ==
-      inner_comment: VARCHAR
-      comment: VARCHAR
-      power_outage_flg: TINYINT
-      moving_flg: TINYINT
-      without_maintenance_count_flg: TINYINT
-      without_delivery_count_flg: TINYINT
-      is_without_delivery_sheet: TINYINT
-      is_without_maintenance: TINYINT
-      is_without_suggest: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "box_maintenances" {
-      + maintenance_id: INT <<generated>>
-      ==
-      # maintenance_schedule_id: INT
-      # maintenance_date: DATE
-      # box_id: INT
-      prev_maintenance_id: INT
-      notified_at: DATETIME
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_continuous_request_shots" {
-      + item_continuous_request_id: INT
-      + shot_date: DATE
-      ==
-      # box_id: INT
-      # item_id: INT
-      quantity: INT
-      completion_date: DATE
-      is_registered_admin: TINYINT
-      is_display_renrakucho: TINYINT
-      is_deleted: TINYINT
-      is_operated_admin: TINYINT
-      operated_at: DATETIME
-      operated_by: INT
-      accepted_by: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-      shot_time: TIME
-    }
-    entity "item_continuous_requests" {
-      + item_continuous_request_id: INT <<generated>>
-      ==
-      # box_id: INT
-      # item_id: INT
-      quantity: INT
-      completion_date: DATE
-      is_registered_admin: TINYINT
-      is_display_renrakucho: TINYINT
-      is_deleted: TINYINT
-      is_operated_admin: TINYINT
-      operated_at: DATETIME
-      operated_by: INT
-      accepted_by: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_extents" {
-      + item_id: INT
-      ==
-      safety_stock_rate: FLOAT
-      min_stock_quantity: MEDIUMINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_request_extents" {
-      + item_request_id: INT <<generated>>
-      ==
-      usage_situation_enquete: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_requests" {
-      + item_request_id: INT <<generated>>
-      ==
-      # maintenance_schedule_id: INT
-      # menu_id: SMALLINT
-      # box_id: INT
-      memo: TEXT
-      reflection_date: DATE
-      completion_date: DATE
-      is_registered_admin: TINYINT
-      is_display_renrakucho: TINYINT
-      is_deleted: TINYINT
-      is_operated_admin: TINYINT
-      operated_at: DATETIME
-      operated_by: INT
-      duplicated_item_request_id: INT
-      accepted_by: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_sub_types" {
-      + item_sub_type_id: INT
-      ==
-      # item_type_id: INT
-      item_sub_type_name: VARCHAR
-      grouping_flag: TINYINT
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-    entity "item_types" {
-      + item_type_id: INT
-      ==
-      sort_order: SMALLINT
-      item_type_name: VARCHAR
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-    entity "items" {
-      + item_id: INT <<generated>>
-      ==
-      name: VARCHAR
-      middle_name: VARCHAR
-      external_name: VARCHAR
-      sort_order: INT
-      condition_type: INT
-      item_sub_type_id: INT
-      price_e1: MEDIUMINT
-      price_e2: MEDIUMINT
-      price_e3: MEDIUMINT
-      price_e4: MEDIUMINT
-      price_e5: MEDIUMINT
-      is_display_logi: TINYINT
-      is_display_menu: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "item_conditions" {
-      + item_condition_id: SMALLINT
-      ==
-      name: VARCHAR
-      short_name: VARCHAR
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-    entity "mapping_item_requests_items" {
-      + item_request_id: INT
-      + item_id: INT
-      ==
-      quantity: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    frame "box temp" {
-      entity "tmp_boxes" {
-        + box_id: INT <<generated>>
-        ==
-        # contract_id: INT
-        floor: INT
-        floor_name: VARCHAR
-        is_display_okanpay: TINYINT
-        is_itoen: TINYINT
-        is_exists: TINYINT
-        is_use_collection_box: TINYINT
-        storage_type: TINYINT
-        rice_box_count: TINYINT
-        container_box_count: TINYINT
-        one_plate_box_count: TINYINT
-        cutter_count: TINYINT
-        registration_status: TINYINT
-        created_at: DATETIME
-        created_by: INT
-        updated_at: DATETIME
-        updated_by: INT
-      }
-    }
-  }
   frame "maintenance" {
     entity "maintenance_schedules" {
       + maintenance_schedule_id: INT <<generated>>
@@ -1941,7 +1626,320 @@ frame "working" {
   }
 }
 
-
+frame "box ERD {
+  entity "box_continuous_request_shots" {
+    + box_id: INT
+    + shot_date: DATE
+    ==
+    comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+    shot_time: TIME
+  }
+  entity "box_continuous_requests" {
+    + box_id: INT
+    ==
+    comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_offsets" {
+    + box_offset_id: INT <<generated>>
+    ==
+    # box_id: INT
+    yearmonth: INT
+    total_used_amount: MEDIUMINT
+    total_used_amount_appli_web: MEDIUMINT
+    total_used_amount_appli_native: MEDIUMINT
+    total_used_amount_ic: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "boxes_control_numbers" {
+    + boxes_control_numbers_id: INT <<generated>>
+    ==
+    # box_id: INT
+    control_number: VARCHAR
+    settlement_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    deleted_at: DATETIME
+    deleted_by: INT
+  }
+  entity "box_payments" {
+    + maintenance_id: INT
+    ==
+    used_amount: MEDIUMINT
+    collect_amount: MEDIUMINT
+    collect_amount_cash: MEDIUMINT
+    collect_amount_appli_web: MEDIUMINT
+    collect_amount_appli_native: MEDIUMINT
+    collect_amount_ic: MEDIUMINT
+    uncollect_amount: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "box_stocks" {
+    + maintenance_id: INT
+    + action_id: TINYINT
+    + item_id: INT
+    ==
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_achievements" {
+    + maintenance_id: INT
+    + item_id: INT
+    ==
+    actual_delivery_quantity: INT
+    sales_quantity: INT
+    loss_quantity: INT
+    recall_quantity: INT
+    delivery_result_quantity: INT
+    stock_quantity: INT
+    prepare_quantity: INT
+    created_at: DATETIME
+  }
+  entity "box_orders" {
+    + maintenance_id: INT
+    + action_id: TINYINT
+    + item_id: INT
+    ==
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "box_prepares" {
+    +box_prepare_id: INT <<generated>>
+    ==
+    # maintenance_schedule_id: INT
+    # box_id: INT
+    # item_id: INT
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "boxes" {
+    + box_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    floor: INT
+    floor_name: VARCHAR
+    is_display_okanpay: TINYINT
+    is_itoen: TINYINT
+    is_exists: TINYINT
+    is_use_collection_box: TINYINT
+    storage_type: TINYINT
+    rice_box_count: TINYINT
+    container_box_count: TINYINT
+    one_plate_box_count: TINYINT
+    cutter_count: TINYINT
+    registration_status: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_maintenance_extents" {
+    + maintenance_id: INT
+    ==
+    inner_comment: VARCHAR
+    comment: VARCHAR
+    power_outage_flg: TINYINT
+    moving_flg: TINYINT
+    without_maintenance_count_flg: TINYINT
+    without_delivery_count_flg: TINYINT
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_maintenances" {
+    + maintenance_id: INT <<generated>>
+    ==
+    # maintenance_schedule_id: INT
+    # maintenance_date: DATE
+    # box_id: INT
+    prev_maintenance_id: INT
+    notified_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_continuous_request_shots" {
+    + item_continuous_request_id: INT
+    + shot_date: DATE
+    ==
+    # box_id: INT
+    # item_id: INT
+    quantity: INT
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+    shot_time: TIME
+  }
+  entity "item_continuous_requests" {
+    + item_continuous_request_id: INT <<generated>>
+    ==
+    # box_id: INT
+    # item_id: INT
+    quantity: INT
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_extents" {
+    + item_id: INT
+    ==
+    safety_stock_rate: FLOAT
+    min_stock_quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_request_extents" {
+    + item_request_id: INT <<generated>>
+    ==
+    usage_situation_enquete: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_requests" {
+    + item_request_id: INT <<generated>>
+    ==
+    # maintenance_schedule_id: INT
+    # menu_id: SMALLINT
+    # box_id: INT
+    memo: TEXT
+    reflection_date: DATE
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    duplicated_item_request_id: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_sub_types" {
+    + item_sub_type_id: INT
+    ==
+    # item_type_id: INT
+    item_sub_type_name: VARCHAR
+    grouping_flag: TINYINT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "item_types" {
+    + item_type_id: INT
+    ==
+    sort_order: SMALLINT
+    item_type_name: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "items" {
+    + item_id: INT <<generated>>
+    ==
+    name: VARCHAR
+    middle_name: VARCHAR
+    external_name: VARCHAR
+    sort_order: INT
+    condition_type: INT
+    item_sub_type_id: INT
+    price_e1: MEDIUMINT
+    price_e2: MEDIUMINT
+    price_e3: MEDIUMINT
+    price_e4: MEDIUMINT
+    price_e5: MEDIUMINT
+    is_display_logi: TINYINT
+    is_display_menu: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_conditions" {
+    + item_condition_id: SMALLINT
+    ==
+    name: VARCHAR
+    short_name: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "mapping_item_requests_items" {
+    + item_request_id: INT
+    + item_id: INT
+    ==
+    quantity: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  frame "box temp" {
+    entity "tmp_boxes" {
+      + box_id: INT <<generated>>
+      ==
+      # contract_id: INT
+      floor: INT
+      floor_name: VARCHAR
+      is_display_okanpay: TINYINT
+      is_itoen: TINYINT
+      is_exists: TINYINT
+      is_use_collection_box: TINYINT
+      storage_type: TINYINT
+      rice_box_count: TINYINT
+      container_box_count: TINYINT
+      one_plate_box_count: TINYINT
+      cutter_count: TINYINT
+      registration_status: TINYINT
+      created_at: DATETIME
+      created_by: INT
+      updated_at: DATETIME
+      updated_by: INT
+    }
+  }
+}
 contracts |o..o{ office_addon_orders
 contracts |o..o{ office_plan_orders
 contracts |o..o{ plan_revision_logs
