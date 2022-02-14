@@ -1,0 +1,186 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "admins ERD" {
+  entity "admins" as admins {
+    + id: INT  <<generated>>
+    ==
+    * email: VARCHAR
+    encrypted_password: VARCHAR
+    name: VARCHAR
+    password_expiration_at: DATETIME
+    *reset_password_token: VARCHAR
+    reset_password_sent_at: DATETIME
+    remember_created_at: DATETIME
+    locked_at: DATETIME
+    sign_in_count: INT
+    current_sign_in_at: DATETIME
+    last_sign_in_at: DATETIME
+    current_sign_in_ip: VARCHAR
+    last_sign_in_ip: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "mapping_admins_roles" {
+    + admin_id: INT
+    + role_id: INT
+  }
+  entity "roles" {
+    + role_id: INT <<generated>>
+    ==
+    name: VARCHAR
+    description: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "area_groups" {
+    + area_group_id: INT <<generated>>
+    ==
+    * area_group_name: VARCHAR
+    service_type: TINYINT
+    is_recommend_mon: TINYINT
+    is_recommend_tue: TINYINT
+    is_recommend_wed: TINYINT
+    is_recommend_thu: TINYINT
+    is_recommend_fri: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "areas" {
+    + area_id: INT <<generated>>
+    ==
+    # area_group_id: TINYINT
+    * area_name: VARCHAR
+    is_display: TINYINT
+    is_without_23_ward: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "calendar_extents" {
+    + date: DATE
+    ==
+    maintenance_memo: TEXT
+    delivery_line_count: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "calendars" {
+    + date: DATE
+    ==
+    date_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "faq_categories" {
+    + faq_category_id: SMALLINT <<generated>>
+    ==
+    faq_category_name: VARCHAR
+    sort_order: SMALLINT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "faqs" {
+    + faq_id: INT <<generated>>
+    ==
+    # faq_category_id: SMALLINT
+    question: VARCHAR
+    answer: MEDIUMTEXT
+    is_display_note: TINYINT
+    is_display_delivery: TINYINT
+    sort_order: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "information" {
+    + information_id: INT <<generated>>
+    ==
+    # information_category_id: TINYINT
+    service_type: INT
+    title: VARCHAR
+    body: TEXT
+    start_at: DATETIME
+    end_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "information_categories" {
+    + information_category_id: TINYINT <<generated>>
+    ==
+    name: VARCHAR
+    sort_order: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "menu_files" {
+    + menu_file_id: INT <<generated>>
+    ==
+    # menu_id: INT
+    service_type: TINYINT
+    file_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "menus" {
+    + menu_id: INT <<generated>>
+    ==
+    menu_category_id: SMALLINT
+    menu_name: VARCHAR
+    start_date: DATE
+    end_date: DATE
+    request_start_date: DATE
+    request_end_date: DATE
+    inner_comment: TEXT
+    comment: TEXT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_menus_items" {
+    + mapping_menus_item_id: INT <<generated>>
+    ==
+    # menu_id: SMALLINT
+    # item_id: INT
+    is_requestable: TINYINT
+    status_id: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  admins |o.d.o{ mapping_admins_roles
+  mapping_admins_roles }o..o| roles
+  area_groups ||..o{ areas
+  calendars ||..o| calendar_extents
+  faqs }|..|| faq_categories
+  information }|..|| information_categories
+  menus ||.u.o{ menu_files
+  menus ||.d.o{ mapping_menus_items
+}
+
+items ||.u.o{ mapping_menus_items
+@enduml
