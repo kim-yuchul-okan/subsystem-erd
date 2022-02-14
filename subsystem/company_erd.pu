@@ -8,7 +8,7 @@ skinparam linetype ortho
 
 frame "company ERD" {
   entity "companies" {
-    + company_id: MEDIUMINT <<generated>>
+    + company_id: MEDIUMINT <<Gen>>
     ==
     name: VARCHAR
     name_kana: VARCHAR
@@ -35,7 +35,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "company_extents" {
-    + company_id: MEDIUMINT <<generated>>
+    + company_id: MEDIUMINT <<Gen>>
     ==
     contact_memo: TEXT
     created_at: DATETIME
@@ -44,7 +44,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contacts" {
-    + contact_id: INT <<generated>>
+    + contact_id: INT <<Gen>>
     ==
     # company_id: MEDIUMINT
     name: VARCHAR
@@ -61,7 +61,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_companies_contacts" {
-    + mapping_companies_contacts_id: INT <<generated>>
+    + mapping_companies_contacts_id: INT <<Gen>>
     ==
     # contact_id: INT
     email_purpose_id: TINYINT
@@ -72,7 +72,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_addons" {
-    + mapping_contracts_addons_id: MEDIUMINT <<generated>>
+    + mapping_contracts_addons_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
@@ -87,7 +87,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_contacts" {
-    + mapping_contracts_contacts_id: INT <<generated>>
+    + mapping_contracts_contacts_id: INT <<Gen>>
     ==
     # contract_id: INT
     # contact_id: INT
@@ -99,7 +99,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_plans" {
-    + mapping_contracts_plans_id: MEDIUMINT <<generated>>
+    + mapping_contracts_plans_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
@@ -118,7 +118,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contract_delivery_available_hours" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     specified_time_start: TIME
     specified_time_end: TIME
@@ -221,7 +221,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts" {
-    + contract_id: MEDIUMINT <<generated>>
+    + contract_id: MEDIUMINT <<Gen>>
     ==
     name: VARCHAR
     name_kana: VARCHAR
@@ -260,7 +260,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_cs_tags" {
-    + contracts_cs_tag_id: MEDIUMINT <<generated>>
+    + contracts_cs_tag_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     cs_tag_id: INT
@@ -270,7 +270,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_addons" {
-    + contracts_office_addon_id: MEDIUMINT <<generated>>
+    + contracts_office_addon_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_addon_id: SMALLINT
@@ -285,7 +285,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_addons_histories" {
-    + contracts_office_addons_history_id: INT <<generated>>
+    + contracts_office_addons_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # contracts_office_addon_id: MEDIUMINT
@@ -302,7 +302,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_options" {
-    + contracts_office_option_id: MEDIUMINT <<generated>>
+    + contracts_office_option_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_option_id: SMALLINT
@@ -318,7 +318,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_options_histories" {
-    + contracts_office_options_history_id: INT <<generated>>
+    + contracts_office_options_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # contracts_office_option_id: MEDIUMINT
@@ -336,7 +336,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_plans" {
-    + contracts_office_plan_id: MEDIUMINT <<generated>>
+    + contracts_office_plan_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_plan_id: SMALLINT
@@ -356,7 +356,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_plans_histories" {
-    + contracts_office_plans_history_id: INT <<generated>>
+    + contracts_office_plans_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # ccontracts_office_plan_id: MEDIUMINT
@@ -378,7 +378,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_unreceivable_dates" {
-    + contracts_unreceivable_date_id: INT <<generated>>
+    + contracts_unreceivable_date_id: INT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     unreceivable_date: DATE
@@ -388,7 +388,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "cs_tags" {
-    + cs_tag_id: INT  <<generated>>
+    + cs_tag_id: INT  <<Gen>>
     ==
     name: VARCHAR
     is_display: TINYINT
@@ -406,9 +406,27 @@ frame "company ERD" {
     created_at: DATETIME
     created_by: INT
   }
+  entity "note_restrictable_functions" {
+    + note_restrictable_function_id: INT <<Gen>>
+    ==
+    function_name: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_contracts_note_restrictable_functions" {
+    + mapping_contracts_note_restrictable_function_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    # note_restrictable_function_id: INT
+    created_at: DATETIME
+    created_by: INTßß
+  }
   frame "contract temp" {
     entity "tmp_contracts" {
-      + contract_id: MEDIUMINT <<generated>>
+      + contract_id: MEDIUMINT <<Gen>>
       ==
       name: VARCHAR
       name_kana: VARCHAR
@@ -447,7 +465,7 @@ frame "company ERD" {
       updated_by: INT
     }
     entity "contract_cycles" {
-      + mapping_contracts_plans_id: INT <<generated>>
+      + mapping_contracts_plans_id: INT <<Gen>>
       ==
       from: DATE
       to: DATE
@@ -478,6 +496,8 @@ frame "company ERD" {
   contracts_office_addons ||..o{ contracts_office_addons_histories
   contracts_office_plans ||..o{ contracts_office_plans_histories
   contracts_office_options ||..o{ contracts_office_options_histories
+  note_restrictable_functions |o..o{ mapping_contracts_note_restrictable_functions
+  contracts |o.d.o{ mapping_contracts_note_restrictable_functions
 }
 
 ' invoices }o.d.o{ contracts

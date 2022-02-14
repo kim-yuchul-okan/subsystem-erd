@@ -8,21 +8,21 @@ skinparam linetype ortho
 
 frame "plans ERD" {
   entity "office_addon_types" {
-    + office_addon_type_id: TINYINT <<generated>>
+    + office_addon_type_id: TINYINT <<Gen>>
     ==
     office_addon_type_name: VARCHAR
     created_at: DATETIME
     created_by: INT
   }
   entity "office_option_types" {
-    + office_option_type_id: TINYINT <<generated>>
+    + office_option_type_id: TINYINT <<Gen>>
     ==
     office_option_type_name: VARCHAR
     created_at: DATETIME
     created_by: INT
   }
   entity "office_addon_order_send_logs" {
-    + office_addon_order_send_log_id: INT <<generated>>
+    + office_addon_order_send_log_id: INT <<Gen>>
     ==
     # office_addon_order_id: INT
     sent_at: DATETIME
@@ -31,7 +31,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "office_addon_orders" {
-    + office_addon_order_id: INT <<generated>>
+    + office_addon_order_id: INT <<Gen>>
     ==
     # contract_id: INT
     # office_addon_id: INT
@@ -51,7 +51,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_addons" {
-    + office_addon_id: SMALLINT <<generated>>
+    + office_addon_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     # office_addon_type_id: TINYINT
@@ -77,7 +77,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_option_groups" {
-    + office_option_group_id: SMALLINT <<generated>>
+    + office_option_group_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     # office_option_type_id: TINYINT
@@ -94,7 +94,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_options" {
-    + office_option_id: SMALLINT <<generated>>
+    + office_option_id: SMALLINT <<Gen>>
     ==
     # office_option_group_id: SMALLINT
     # office_plan_id: SMALLINT
@@ -116,7 +116,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_plan_order_send_logs" {
-    + office_plan_order_send_log_id: INT <<generated>>
+    + office_plan_order_send_log_id: INT <<Gen>>
     ==
     # office_plan_order_id: INT
     sent_at: DATETIME
@@ -125,7 +125,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "office_plan_orders" {
-    + office_plan_order_id: MEDIUMINT <<generated>>
+    + office_plan_order_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     # office_plan_id: SMALLINT
@@ -155,7 +155,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_plans" {
-    + office_plan_id: SMALLINT <<generated>>
+    + office_plan_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     name: VARCHAR
@@ -185,14 +185,14 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "plan_revision_logs" {
-    + plan_revision_log_id: INT <<generated>>
+    + plan_revision_log_id: INT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
     created_by: INT
   }
   entity "plan_revision_send_logs" {
-    + plan_revision_send_log_id: INT <<generated>>
+    + plan_revision_send_log_id: INT <<Gen>>
     ==
     # contract_id: INT
     yearmonth: INT
@@ -201,7 +201,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "plans" {
-    + plan_id: SMALLINT <<generated>>
+    + plan_id: SMALLINT <<Gen>>
     ==
     plan_type: TINYINT
     name: VARCHAR
@@ -221,7 +221,23 @@ frame "plans ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
-
+  entity "invoice_plans" {
+    + invoice_plan_id: INT <<Gen>>
+    ==
+    # plan_id: SMALLINT
+    invoice_plan_type: TINYINT
+    name: VARCHAR
+    invoice_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    sort_order: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  plans |o.r.o{ invoice_plans
   plans |o.d.o| office_plans
   plans |o.u.o{ plan_revision_logs
   office_plans |o.d.o{ office_options
@@ -239,6 +255,5 @@ contracts |o..o{ plan_revision_logs
 contracts |o..o| plan_revision_send_logs
 plans |o.r.o{ mapping_contracts_addons
 plans |o.r.o{ mapping_contracts_plans
-plans |o.r.o{ invoice_plans
 
 @enduml

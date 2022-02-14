@@ -7,8 +7,8 @@ hide circle
 skinparam linetype ortho
 
 frame "admins ERD" {
-  entity "admins" as admins {
-    + id: INT  <<generated>>
+  entity "admins" {
+    + id: INT  <<Gen>>
     ==
     * email: VARCHAR
     encrypted_password: VARCHAR
@@ -31,7 +31,7 @@ frame "admins ERD" {
     + role_id: INT
   }
   entity "roles" {
-    + role_id: INT <<generated>>
+    + role_id: INT <<Gen>>
     ==
     name: VARCHAR
     description: VARCHAR
@@ -40,7 +40,7 @@ frame "admins ERD" {
     updated_at: DATETIME
   }
   entity "area_groups" {
-    + area_group_id: INT <<generated>>
+    + area_group_id: INT <<Gen>>
     ==
     * area_group_name: VARCHAR
     service_type: TINYINT
@@ -55,7 +55,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "areas" {
-    + area_id: INT <<generated>>
+    + area_id: INT <<Gen>>
     ==
     # area_group_id: TINYINT
     * area_name: VARCHAR
@@ -86,7 +86,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "faq_categories" {
-    + faq_category_id: SMALLINT <<generated>>
+    + faq_category_id: SMALLINT <<Gen>>
     ==
     faq_category_name: VARCHAR
     sort_order: SMALLINT
@@ -94,7 +94,7 @@ frame "admins ERD" {
     updated_at: DATETIME
   }
   entity "faqs" {
-    + faq_id: INT <<generated>>
+    + faq_id: INT <<Gen>>
     ==
     # faq_category_id: SMALLINT
     question: VARCHAR
@@ -108,7 +108,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "information" {
-    + information_id: INT <<generated>>
+    + information_id: INT <<Gen>>
     ==
     # information_category_id: TINYINT
     service_type: INT
@@ -122,7 +122,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "information_categories" {
-    + information_category_id: TINYINT <<generated>>
+    + information_category_id: TINYINT <<Gen>>
     ==
     name: VARCHAR
     sort_order: TINYINT
@@ -132,7 +132,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "menu_files" {
-    + menu_file_id: INT <<generated>>
+    + menu_file_id: INT <<Gen>>
     ==
     # menu_id: INT
     service_type: TINYINT
@@ -143,7 +143,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "menus" {
-    + menu_id: INT <<generated>>
+    + menu_id: INT <<Gen>>
     ==
     menu_category_id: SMALLINT
     menu_name: VARCHAR
@@ -159,7 +159,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "mapping_menus_items" {
-    + mapping_menus_item_id: INT <<generated>>
+    + mapping_menus_item_id: INT <<Gen>>
     ==
     # menu_id: SMALLINT
     # item_id: INT
@@ -171,7 +171,6 @@ frame "admins ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
-
   admins |o.d.o{ mapping_admins_roles
   mapping_admins_roles }o..o| roles
   area_groups ||..o{ areas

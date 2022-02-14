@@ -1,0 +1,117 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "invoce ERD" {
+  entity "invoice_detail_spots" {
+    + invoice_detail_spot_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    text: VARCHAR
+    from: DATE
+    to: DATE
+    invoice_type: TINYINT
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_details" {
+    + invoice_detail_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    text: VARCHAR
+    invoice_type: TINYINT
+    from: DATE
+    to: DATE
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    tax_rate: DECIMAL
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_note_templates" {
+    + invoice_note_template_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    sort_order: TINYINT
+    note: MEDIUMTEXT
+    yearmonth_from: INT
+    yearmonth_to: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_notes" {
+    + invoice_note_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    note: MEDIUMTEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_payments" {
+    + invoice_payment_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    payment_date: DATE
+    amount: MEDIUMINT
+    memo: MEDIUMTEXT
+    is_import: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  entity "invoice_send_log_details" {
+    + invoice_send_log_detail_id: INT <<Gen>>
+    ==
+    # invoice_send_log_id: INT
+    # invoice_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_send_logs" {
+    invoice_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # company_id: INT
+    created_by: INT
+  }
+  entity "invoices" {
+    + invoice_id: INT <<Gen>>
+    ==
+    disp_invoice_id: VARCHAR
+    # contract_id: MEDIUMINT
+    yearmonth: INT
+    due_date: DATE
+    fix_flag: TINYINT
+    total_amount: INT
+    payment_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  invoices |o..o{ invoice_details
+  invoices |o.l.o{ demand_letter_send_logs
+  invoices |o..o{ invoice_notes
+  invoices |o.r.o{ invoice_payments
+  invoices |o.d.o{ invoice_send_log_details
+  invoice_send_logs |o..o{ invoice_send_log_details
+}
+contracts |o.d.o{ invoice_detail_spots
+contracts |o.d.o{ invoice_note_templates
+invoice_details |o..o{ journalizings
+companies |o..|{ invoice_send_logs
+
+@enduml

@@ -1,0 +1,102 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "note ERD" {
+  entity "note_maintenance_quantites" {
+    + note_maintenance_quantity_id: INT <<Gen>>
+    ==
+    # note_maintenance_id: INT
+    # item_id: INT
+    stock_quantity: INT
+    loss_quantity: INT
+    sales_quantity: INT
+    actual_delivery_quantity: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "note_maintenances" {
+    + note_maintenance_id: INT <<Gen>>
+    ==
+    # box_id: INT
+    maintenance_date: DATE
+    prev_note_maintenance_id: INT
+    collect_amount: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "note_role_groups" {
+    + note_role_group_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "note_roles" {
+    + note_role_id: INT <<Gen>>
+    ==
+    * name: VARCHAR
+    description: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "mapping_note_role_groups_note_roles" {
+    + note_role_group_id: INT
+    + note_role_id: INT
+    ==
+  }
+  entity "mapping_note_users_note_roles" {
+    + note_user_id: INT
+    + note_role_id: INT
+    + contract_id: INT
+    ==
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "note_users" {
+    + id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    email: VARCHAR
+    encrypted_password: VARCHAR
+    # company_id: MEDIUMINT
+    contract_id: INT
+    contact_id: INT
+    reset_password_token: VARCHAR
+    reset_password_sent_at: DATETIME
+    remember_created_at: DATETIME
+    sign_in_count: INT
+    current_sign_in_at: DATETIME
+    last_sign_in_at: DATETIME
+    current_sign_in_ip: VARCHAR
+    last_sign_in_ip: VARCHAR
+    password_salt: VARCHAR
+    is_force_change_password: TINYINT
+    can_edit_permission: TINYINT
+    is_backdoor: TINYINT
+    default_password: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  note_users |o..o{ mapping_note_users_note_roles
+  note_roles |o..o{ mapping_note_users_note_roles
+  note_maintenances |o..o{ note_maintenance_quantites
+  note_role_groups |o..o{ mapping_note_role_groups_note_roles
+  note_roles |o..o{ mapping_note_role_groups_note_roles
+}
+companies |o..o{ note_users
+companies |o..o{ note_maintenances
+items |o..o{ note_maintenance_quantites
+note_users |o..o{ schedule_adjustment_requests
+
+@enduml

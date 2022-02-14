@@ -8,7 +8,7 @@ skinparam linetype ortho
 
 frame "users ERD" {
   entity "users_clients" {
-    + id: INT  <<generated>>
+    + id: INT  <<Gen>>
     ==
     name: VARCHAR
     # client_id: VARCHAR
@@ -21,7 +21,7 @@ frame "users ERD" {
     notes: TINYTEXT
   }
   entity "users_sessions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # client_id: VARCHAR
     redirect_uri: VARCHAR
@@ -35,14 +35,14 @@ frame "users ERD" {
     limited_access: TINYINT
   }
   entity "users_sessionscopes" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # session_id: INT
     access_token: VARCHAR
     # scope: VARCHAR
   }
   entity "users_scopes" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # scope: VARCHAR
     name: VARCHAR
@@ -57,7 +57,7 @@ frame "users ERD" {
     ==
   }
   entity "users_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     area: VARCHAR
     permission: VARCHAR
@@ -70,7 +70,7 @@ frame "users ERD" {
     updated_by: INT
   }
   entity "users_metadata" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # parent_id: INT
     key: VARCHAR
@@ -80,7 +80,7 @@ frame "users ERD" {
     updated_at: INT
   }
   entity "users_providers" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # parent_id: INT
     provider: VARCHAR
@@ -99,14 +99,14 @@ frame "users ERD" {
     ==
   }
   entity "users_role_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # role_id: INT
     # perms_id: INT
     actions: TEXT
   }
   entity "users_roles" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     name: VARCHAR
     filter: ENUM
@@ -117,7 +117,7 @@ frame "users ERD" {
     updated_by: INT
   }
   entity "users_groups" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     name: VARCHAR
     # user_id: INT
@@ -125,7 +125,7 @@ frame "users ERD" {
     updated_at: INT
   }
   entity "users" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     username: VARCHAR
     password: VARCHAR
@@ -150,14 +150,14 @@ frame "users ERD" {
   users_role_permissions }|..|| users_roles
   users_permissions ||.d.|{ users_role_permissions
   entity "users_user_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # user_id: INT
     # perms_id: INT
     actions: TEXT
   }
   entity "users_group_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # group_id: INT
     # perms_id: INT

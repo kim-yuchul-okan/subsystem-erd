@@ -6,9 +6,148 @@ hide circle
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
+frame "reference" {
+  entity "application_send_logs" {
+    + application_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: INT
+    created_by: INT
+  }
+  entity "demand_letter_send_logs" {
+    + demand_letter_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: MEDIUMINT
+    # invoice_id: INT
+    created_by: INT
+  }
+  entity "journalizings" {
+    + journalizing_id: INT <<Gen>>
+    ==
+    yearmonth: INT
+    journalizing_type: TINYINT
+    # invoice_detail_id: INT
+    from: DATE
+    unit_price: INT
+    payment_date: DATE
+    payment_amount: INT
+    payment_count: TINYINT
+    payment_status: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "schedule_adjustment_requests" {
+    + schedule_adjustment_request_id: INT <<Gen>>
+    ==
+    received_at: DATETIME
+    # maintenance_schedule_id: INT
+    # contract_id: INT
+    # note_user_id: INT
+    original_maintenance_date: DATE
+    request_maintenance_date: DATE
+    status: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "schedule_mail_send_logs" {
+    + schedule_mail_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: INT
+    created_by: INT
+  }
+  entity "statement_of_delivery_send_log_details" {
+    + statement_of_delivery_send_log_id: INT
+    + maintenance_id: INT
+    ==
+    skip_collect_amount: TINYINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "statement_of_delivery_send_logs" {
+    + statement_of_delivery_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    mailbody: TEXT
+    # contract_id: INT
+    maintenance_date: DATE
+    next_maintenance_date: DATE
+    created_by: INT
+  }
+  entity "tft_donation_requests" {
+    + tft_donation_request_id: MEDIUMINT <<Gen>>
+    ==
+    # contract_id: MEDIUMINT
+    from_tft: DATE
+    to_tft: DATE
+    from_term: DATE
+    to_term: DATE
+    quantity: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  entity "notice_templates" {
+    + notice_template_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    content: TEXT
+    service_type: INT
+    is_display: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "prefectures" {
+    + prefecture_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    delivery_dates: SMALLINT∂
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "taxes" {
+    + tax_id: INT <<Gen>>
+    ==
+    from: DATE
+    to: DATE
+    rate: DECIMAL
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "tkvs" {
+    + tkv_id: INT <<Gen>>
+    ==
+    type: VARCHAR
+    key: VARCHAR
+    value: TEXT
+    description: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "delivery_results_changes_histories" {
+    + delivery_results_changes_history_id: INT <<Gen>>
+    ==
+    prev_maintenance_id: INT
+    next_maintenance_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+}
 frame "users ERD" {
   entity "users_clients" {
-    + id: INT  <<generated>>
+    + id: INT  <<Gen>>
     ==
     name: VARCHAR
     # client_id: VARCHAR
@@ -21,7 +160,7 @@ frame "users ERD" {
     notes: TINYTEXT
   }
   entity "users_sessions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # client_id: VARCHAR
     redirect_uri: VARCHAR
@@ -35,14 +174,14 @@ frame "users ERD" {
     limited_access: TINYINT
   }
   entity "users_sessionscopes" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # session_id: INT
     access_token: VARCHAR
     # scope: VARCHAR
   }
   entity "users_scopes" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # scope: VARCHAR
     name: VARCHAR
@@ -57,7 +196,7 @@ frame "users ERD" {
     ==
   }
   entity "users_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     area: VARCHAR
     permission: VARCHAR
@@ -70,7 +209,7 @@ frame "users ERD" {
     updated_by: INT
   }
   entity "users_metadata" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # parent_id: INT
     key: VARCHAR
@@ -80,7 +219,7 @@ frame "users ERD" {
     updated_at: INT
   }
   entity "users_providers" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # parent_id: INT
     provider: VARCHAR
@@ -99,14 +238,14 @@ frame "users ERD" {
     ==
   }
   entity "users_role_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # role_id: INT
     # perms_id: INT
     actions: TEXT
   }
   entity "users_roles" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     name: VARCHAR
     filter: ENUM
@@ -117,7 +256,7 @@ frame "users ERD" {
     updated_by: INT
   }
   entity "users_groups" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     name: VARCHAR
     # user_id: INT
@@ -125,7 +264,7 @@ frame "users ERD" {
     updated_at: INT
   }
   entity "users" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     username: VARCHAR
     password: VARCHAR
@@ -150,14 +289,14 @@ frame "users ERD" {
   users_role_permissions }|..|| users_roles
   users_permissions ||.d.|{ users_role_permissions
   entity "users_user_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # user_id: INT
     # perms_id: INT
     actions: TEXT
   }
   entity "users_group_permissions" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     # group_id: INT
     # perms_id: INT
@@ -166,21 +305,21 @@ frame "users ERD" {
 }
 frame "plans ERD" {
   entity "office_addon_types" {
-    + office_addon_type_id: TINYINT <<generated>>
+    + office_addon_type_id: TINYINT <<Gen>>
     ==
     office_addon_type_name: VARCHAR
     created_at: DATETIME
     created_by: INT
   }
   entity "office_option_types" {
-    + office_option_type_id: TINYINT <<generated>>
+    + office_option_type_id: TINYINT <<Gen>>
     ==
     office_option_type_name: VARCHAR
     created_at: DATETIME
     created_by: INT
   }
   entity "office_addon_order_send_logs" {
-    + office_addon_order_send_log_id: INT <<generated>>
+    + office_addon_order_send_log_id: INT <<Gen>>
     ==
     # office_addon_order_id: INT
     sent_at: DATETIME
@@ -189,7 +328,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "office_addon_orders" {
-    + office_addon_order_id: INT <<generated>>
+    + office_addon_order_id: INT <<Gen>>
     ==
     # contract_id: INT
     # office_addon_id: INT
@@ -209,7 +348,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_addons" {
-    + office_addon_id: SMALLINT <<generated>>
+    + office_addon_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     # office_addon_type_id: TINYINT
@@ -235,7 +374,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_option_groups" {
-    + office_option_group_id: SMALLINT <<generated>>
+    + office_option_group_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     # office_option_type_id: TINYINT
@@ -252,7 +391,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_options" {
-    + office_option_id: SMALLINT <<generated>>
+    + office_option_id: SMALLINT <<Gen>>
     ==
     # office_option_group_id: SMALLINT
     # office_plan_id: SMALLINT
@@ -274,7 +413,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_plan_order_send_logs" {
-    + office_plan_order_send_log_id: INT <<generated>>
+    + office_plan_order_send_log_id: INT <<Gen>>
     ==
     # office_plan_order_id: INT
     sent_at: DATETIME
@@ -283,7 +422,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "office_plan_orders" {
-    + office_plan_order_id: MEDIUMINT <<generated>>
+    + office_plan_order_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     # office_plan_id: SMALLINT
@@ -313,7 +452,7 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "office_plans" {
-    + office_plan_id: SMALLINT <<generated>>
+    + office_plan_id: SMALLINT <<Gen>>
     ==
     service_type: TINYINT
     name: VARCHAR
@@ -343,14 +482,14 @@ frame "plans ERD" {
     updated_by: INT
   }
   entity "plan_revision_logs" {
-    + plan_revision_log_id: INT <<generated>>
+    + plan_revision_log_id: INT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
     created_by: INT
   }
   entity "plan_revision_send_logs" {
-    + plan_revision_send_log_id: INT <<generated>>
+    + plan_revision_send_log_id: INT <<Gen>>
     ==
     # contract_id: INT
     yearmonth: INT
@@ -359,7 +498,7 @@ frame "plans ERD" {
     created_by: INT
   }
   entity "plans" {
-    + plan_id: SMALLINT <<generated>>
+    + plan_id: SMALLINT <<Gen>>
     ==
     plan_type: TINYINT
     name: VARCHAR
@@ -379,6 +518,32 @@ frame "plans ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
+  entity "invoice_plans" {
+    + invoice_plan_id: INT <<Gen>>
+    ==
+    # plan_id: SMALLINT
+    invoice_plan_type: TINYINT
+    name: VARCHAR
+    invoice_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    sort_order: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  plans |o.r.o{ invoice_plans
+  plans |o.d.o| office_plans
+  plans |o.u.o{ plan_revision_logs
+  office_plans |o.d.o{ office_options
+  office_options }o.l.o| office_option_groups
+  office_option_groups }o.u.o| office_option_types
+  office_addon_orders }o.d.o| office_addons
+  office_addons }o.d.o| office_addon_types
+  office_addon_types |o.d.o{ office_addon_order_send_logs
+  office_plan_orders |o.d.o{ office_plan_order_send_logs
   plans |o.d.o| office_plans
   plans |o.u.o{ plan_revision_logs
   office_plans |o.d.o{ office_options
@@ -391,7 +556,7 @@ frame "plans ERD" {
 }
 frame "company ERD" {
   entity "companies" {
-    + company_id: MEDIUMINT <<generated>>
+    + company_id: MEDIUMINT <<Gen>>
     ==
     name: VARCHAR
     name_kana: VARCHAR
@@ -418,7 +583,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "company_extents" {
-    + company_id: MEDIUMINT <<generated>>
+    + company_id: MEDIUMINT <<Gen>>
     ==
     contact_memo: TEXT
     created_at: DATETIME
@@ -427,7 +592,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contacts" {
-    + contact_id: INT <<generated>>
+    + contact_id: INT <<Gen>>
     ==
     # company_id: MEDIUMINT
     name: VARCHAR
@@ -444,7 +609,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_companies_contacts" {
-    + mapping_companies_contacts_id: INT <<generated>>
+    + mapping_companies_contacts_id: INT <<Gen>>
     ==
     # contact_id: INT
     email_purpose_id: TINYINT
@@ -455,7 +620,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_addons" {
-    + mapping_contracts_addons_id: MEDIUMINT <<generated>>
+    + mapping_contracts_addons_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
@@ -470,7 +635,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_contacts" {
-    + mapping_contracts_contacts_id: INT <<generated>>
+    + mapping_contracts_contacts_id: INT <<Gen>>
     ==
     # contract_id: INT
     # contact_id: INT
@@ -482,7 +647,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "mapping_contracts_plans" {
-    + mapping_contracts_plans_id: MEDIUMINT <<generated>>
+    + mapping_contracts_plans_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     # plan_id: INT
@@ -501,7 +666,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contract_delivery_available_hours" {
-    + id: INT <<generated>>
+    + id: INT <<Gen>>
     ==
     specified_time_start: TIME
     specified_time_end: TIME
@@ -604,7 +769,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts" {
-    + contract_id: MEDIUMINT <<generated>>
+    + contract_id: MEDIUMINT <<Gen>>
     ==
     name: VARCHAR
     name_kana: VARCHAR
@@ -643,7 +808,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_cs_tags" {
-    + contracts_cs_tag_id: MEDIUMINT <<generated>>
+    + contracts_cs_tag_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: INT
     cs_tag_id: INT
@@ -653,7 +818,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_addons" {
-    + contracts_office_addon_id: MEDIUMINT <<generated>>
+    + contracts_office_addon_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_addon_id: SMALLINT
@@ -668,7 +833,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_addons_histories" {
-    + contracts_office_addons_history_id: INT <<generated>>
+    + contracts_office_addons_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # contracts_office_addon_id: MEDIUMINT
@@ -685,7 +850,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_options" {
-    + contracts_office_option_id: MEDIUMINT <<generated>>
+    + contracts_office_option_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_option_id: SMALLINT
@@ -701,7 +866,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_options_histories" {
-    + contracts_office_options_history_id: INT <<generated>>
+    + contracts_office_options_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # contracts_office_option_id: MEDIUMINT
@@ -719,7 +884,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_plans" {
-    + contracts_office_plan_id: MEDIUMINT <<generated>>
+    + contracts_office_plan_id: MEDIUMINT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     office_plan_id: SMALLINT
@@ -739,7 +904,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_office_plans_histories" {
-    + contracts_office_plans_history_id: INT <<generated>>
+    + contracts_office_plans_history_id: INT <<Gen>>
     ==
     logged_at: DATETIME
     # ccontracts_office_plan_id: MEDIUMINT
@@ -761,7 +926,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "contracts_unreceivable_dates" {
-    + contracts_unreceivable_date_id: INT <<generated>>
+    + contracts_unreceivable_date_id: INT <<Gen>>
     ==
     # contract_id: MEDIUMINT
     unreceivable_date: DATE
@@ -771,7 +936,7 @@ frame "company ERD" {
     updated_by: INT
   }
   entity "cs_tags" {
-    + cs_tag_id: INT  <<generated>>
+    + cs_tag_id: INT  <<Gen>>
     ==
     name: VARCHAR
     is_display: TINYINT
@@ -789,9 +954,27 @@ frame "company ERD" {
     created_at: DATETIME
     created_by: INT
   }
+  entity "note_restrictable_functions" {
+    + note_restrictable_function_id: INT <<Gen>>
+    ==
+    function_name: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_contracts_note_restrictable_functions" {
+    + mapping_contracts_note_restrictable_function_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    # note_restrictable_function_id: INT
+    created_at: DATETIME
+    created_by: INTßß
+  }
   frame "contract temp" {
     entity "tmp_contracts" {
-      + contract_id: MEDIUMINT <<generated>>
+      + contract_id: MEDIUMINT <<Gen>>
       ==
       name: VARCHAR
       name_kana: VARCHAR
@@ -830,7 +1013,7 @@ frame "company ERD" {
       updated_by: INT
     }
     entity "contract_cycles" {
-      + mapping_contracts_plans_id: INT <<generated>>
+      + mapping_contracts_plans_id: INT <<Gen>>
       ==
       from: DATE
       to: DATE
@@ -860,10 +1043,12 @@ frame "company ERD" {
   contracts_office_addons ||..o{ contracts_office_addons_histories
   contracts_office_plans ||..o{ contracts_office_plans_histories
   contracts_office_options ||..o{ contracts_office_options_histories
+  note_restrictable_functions |o..o{ mapping_contracts_note_restrictable_functions
+  contracts |o.d.o{ mapping_contracts_note_restrictable_functions
 }
 frame "admins ERD" {
-  entity "admins" as admins {
-    + id: INT  <<generated>>
+  entity "admins" {
+    + id: INT  <<Gen>>
     ==
     * email: VARCHAR
     encrypted_password: VARCHAR
@@ -886,7 +1071,7 @@ frame "admins ERD" {
     + role_id: INT
   }
   entity "roles" {
-    + role_id: INT <<generated>>
+    + role_id: INT <<Gen>>
     ==
     name: VARCHAR
     description: VARCHAR
@@ -895,7 +1080,7 @@ frame "admins ERD" {
     updated_at: DATETIME
   }
   entity "area_groups" {
-    + area_group_id: INT <<generated>>
+    + area_group_id: INT <<Gen>>
     ==
     * area_group_name: VARCHAR
     service_type: TINYINT
@@ -910,7 +1095,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "areas" {
-    + area_id: INT <<generated>>
+    + area_id: INT <<Gen>>
     ==
     # area_group_id: TINYINT
     * area_name: VARCHAR
@@ -941,7 +1126,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "faq_categories" {
-    + faq_category_id: SMALLINT <<generated>>
+    + faq_category_id: SMALLINT <<Gen>>
     ==
     faq_category_name: VARCHAR
     sort_order: SMALLINT
@@ -949,7 +1134,7 @@ frame "admins ERD" {
     updated_at: DATETIME
   }
   entity "faqs" {
-    + faq_id: INT <<generated>>
+    + faq_id: INT <<Gen>>
     ==
     # faq_category_id: SMALLINT
     question: VARCHAR
@@ -963,7 +1148,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "information" {
-    + information_id: INT <<generated>>
+    + information_id: INT <<Gen>>
     ==
     # information_category_id: TINYINT
     service_type: INT
@@ -977,7 +1162,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "information_categories" {
-    + information_category_id: TINYINT <<generated>>
+    + information_category_id: TINYINT <<Gen>>
     ==
     name: VARCHAR
     sort_order: TINYINT
@@ -987,7 +1172,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "menu_files" {
-    + menu_file_id: INT <<generated>>
+    + menu_file_id: INT <<Gen>>
     ==
     # menu_id: INT
     service_type: TINYINT
@@ -998,7 +1183,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "menus" {
-    + menu_id: INT <<generated>>
+    + menu_id: INT <<Gen>>
     ==
     menu_category_id: SMALLINT
     menu_name: VARCHAR
@@ -1014,7 +1199,7 @@ frame "admins ERD" {
     updated_by: INT
   }
   entity "mapping_menus_items" {
-    + mapping_menus_item_id: INT <<generated>>
+    + mapping_menus_item_id: INT <<Gen>>
     ==
     # menu_id: SMALLINT
     # item_id: INT
@@ -1035,107 +1220,344 @@ frame "admins ERD" {
   menus ||.u.o{ menu_files
   menus ||.d.o{ mapping_menus_items
 }
-
-frame "working" {
-  frame "maintenance" {
-    entity "maintenance_schedules" {
-      + maintenance_schedule_id: INT <<generated>>
+frame "box ERD" {
+  entity "box_continuous_request_shots" {
+    + box_id: INT
+    + shot_date: DATE
+    ==
+    comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+    shot_time: TIME
+  }
+  entity "box_continuous_requests" {
+    + box_id: INT
+    ==
+    comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_offsets" {
+    + box_offset_id: INT <<Gen>>
+    ==
+    # box_id: INT
+    yearmonth: INT
+    total_used_amount: MEDIUMINT
+    total_used_amount_appli_web: MEDIUMINT
+    total_used_amount_appli_native: MEDIUMINT
+    total_used_amount_ic: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "boxes_control_numbers" {
+    + boxes_control_numbers_id: INT <<Gen>>
+    ==
+    # box_id: INT
+    control_number: VARCHAR
+    settlement_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    deleted_at: DATETIME
+    deleted_by: INT
+  }
+  entity "box_stocks" {
+    + maintenance_id: INT
+    + action_id: TINYINT
+    + item_id: INT
+    ==
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_achievements" {
+    + maintenance_id: INT
+    + item_id: INT
+    ==
+    actual_delivery_quantity: INT
+    sales_quantity: INT
+    loss_quantity: INT
+    recall_quantity: INT
+    delivery_result_quantity: INT
+    stock_quantity: INT
+    prepare_quantity: INT
+    created_at: DATETIME
+  }
+  entity "box_orders" {
+    + maintenance_id: INT
+    + action_id: TINYINT
+    + item_id: INT
+    ==
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "box_prepares" {
+    +box_prepare_id: INT <<Gen>>
+    ==
+    # maintenance_schedule_id: INT
+    # box_id: INT
+    # item_id: INT
+    quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "boxes" {
+    + box_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    floor: INT
+    floor_name: VARCHAR
+    is_display_okanpay: TINYINT
+    is_itoen: TINYINT
+    is_exists: TINYINT
+    is_use_collection_box: TINYINT
+    storage_type: TINYINT
+    rice_box_count: TINYINT
+    container_box_count: TINYINT
+    one_plate_box_count: TINYINT
+    cutter_count: TINYINT
+    registration_status: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_maintenance_extents" {
+    + maintenance_id: INT
+    ==
+    inner_comment: VARCHAR
+    comment: VARCHAR
+    power_outage_flg: TINYINT
+    moving_flg: TINYINT
+    without_maintenance_count_flg: TINYINT
+    without_delivery_count_flg: TINYINT
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "box_maintenances" {
+    + maintenance_id: INT <<Gen>>
+    ==
+    # maintenance_schedule_id: INT
+    # maintenance_date: DATE
+    # box_id: INT
+    prev_maintenance_id: INT
+    notified_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_continuous_request_shots" {
+    + item_continuous_request_id: INT
+    + shot_date: DATE
+    ==
+    # box_id: INT
+    # item_id: INT
+    quantity: INT
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+    shot_time: TIME
+  }
+  entity "item_continuous_requests" {
+    + item_continuous_request_id: INT <<Gen>>
+    ==
+    # box_id: INT
+    # item_id: INT
+    quantity: INT
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_extents" {
+    + item_id: INT
+    ==
+    safety_stock_rate: FLOAT
+    min_stock_quantity: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_request_extents" {
+    + item_request_id: INT <<Gen>>
+    ==
+    usage_situation_enquete: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_requests" {
+    + item_request_id: INT <<Gen>>
+    ==
+    # maintenance_schedule_id: INT
+    # menu_id: SMALLINT
+    # box_id: INT
+    memo: TEXT
+    reflection_date: DATE
+    completion_date: DATE
+    is_registered_admin: TINYINT
+    is_display_renrakucho: TINYINT
+    is_deleted: TINYINT
+    is_operated_admin: TINYINT
+    operated_at: DATETIME
+    operated_by: INT
+    duplicated_item_request_id: INT
+    accepted_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "items" {
+    + item_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    middle_name: VARCHAR
+    external_name: VARCHAR
+    sort_order: INT
+    condition_type: INT
+    item_sub_type_id: INT
+    price_e1: MEDIUMINT
+    price_e2: MEDIUMINT
+    price_e3: MEDIUMINT
+    price_e4: MEDIUMINT
+    price_e5: MEDIUMINT
+    is_display_logi: TINYINT
+    is_display_menu: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "item_conditions" {
+    + item_condition_id: SMALLINT
+    ==
+    name: VARCHAR
+    short_name: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "mapping_item_requests_items" {
+    + item_request_id: INT
+    + item_id: INT
+    ==
+    quantity: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  frame "box temp" {
+    entity "tmp_boxes" {
+      + box_id: INT <<Gen>>
       ==
-      # contract_id: MEDIUMINT
-      maintenance_date: DATE
-      maintenance_type_id: INT
-      is_without_delivery_sheet: TINYINT
-      is_without_maintenance: TINYINT
-      is_without_suggest: TINYINT
-      is_notified: TINYINT
-      is_extra_request: TINYINT
-      comment: VARCHAR
-      inner_comment: VARCHAR
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "maintenance_schedule_available_hours" {
-      + id: INT <<generated>>
-      ==
-      specified_time_start: TIME
-      specified_time_end: TIME
-      # maintenance_schedule_id: INT
+      # contract_id: INT
+      floor: INT
+      floor_name: VARCHAR
+      is_display_okanpay: TINYINT
+      is_itoen: TINYINT
+      is_exists: TINYINT
+      is_use_collection_box: TINYINT
+      storage_type: TINYINT
+      rice_box_count: TINYINT
+      container_box_count: TINYINT
+      one_plate_box_count: TINYINT
+      cutter_count: TINYINT
+      registration_status: TINYINT
       created_at: DATETIME
       created_by: INT
       updated_at: DATETIME
       updated_by: INT
-    }
-    entity "maintenance_schedule_extents" {
-      + maintenance_schedule_id: INT
-      + box_id: INT
-      ==
-      comment: VARCHAR
-      is_request_desired: TINYINT
-      one_plate: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "maintenance_handies" {
-      + maintenance_id: INT
-      ==
-      comment: TEXT
-      start_at: DATETIME
-      end_at: DATETIME
-      check_loss_quantity1: TINYINT
-      check_loss_quantity2: TINYINT
-      check_takeout_quantity1: TINYINT
-      check_takeout_quantity2: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "maintenance_handy_logs" {
-      + maintenance_handy_log_id: INT <<generated>>
-      ==
-      # maintenance_id: INT
-      params: TEXT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "maintenance_handy_users" {
-      + maintenance_handy_user_id: INT
-      ==
-      name: VARCHAR
-      token: VARCHAR
-      expire_date: DATETIME
-      sign_in_count: INT
-      last_sign_in_at: DATETIME
-      created_at: DATETIME
-      created_by: INT
-      undated_at: DATETIME
-      updated_by: INT
-    }
-    entity "maintenance_types" {
-      + maintenance_type_id: INT <<generated>>
-      ==
-      service_type: TINYINT
-      maintenance_type_name: VARCHAR
-      maintenance_type_note_name: VARCHAR
-      is_without_delivery_sheet: TINYINT
-      is_without_maintenance: TINYINT
-      is_without_suggest: TINYINT
-      sort_order: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "maintenance_upper_limits" {
-      + maintenance_upper_limit_id: INT <<generated>>
-      ==
-      service_type: TINYINT
-      upper_limit: SMALLINT
-      unit: VARCHAR
-      created_at: DATETIME
-      updated_at: DATETIME
     }
   }
+  entity "box_payments" {
+    + maintenance_id: INT
+    ==
+    used_amount: MEDIUMINT
+    collect_amount: MEDIUMINT
+    collect_amount_cash: MEDIUMINT
+    collect_amount_appli_web: MEDIUMINT
+    collect_amount_appli_native: MEDIUMINT
+    collect_amount_ic: MEDIUMINT
+    uncollect_amount: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  boxes |o.d.o{ item_continuous_requests
+  item_continuous_requests }o.d.|| items
+  boxes |o.d.o{ box_prepares
+  box_prepares }o.d.|| items
+  boxes |o.d.o{ item_continuous_request_shots
+  item_continuous_request_shots }o.d.|| items
+  boxes |o.r.o{ box_maintenances
+  box_maintenances ||.r.o| box_payments
+  box_maintenances ||.u.o| box_maintenance_extents
+  box_maintenances |o.d.o{ statement_of_delivery_send_log_details
+  boxes |o.l.o{ boxes_control_numbers
+  boxes |o.l.o{ box_offsets
+  boxes |o.u.o| box_continuous_request_shots
+  boxes |o.u.o| box_continuous_requests
+  items ||.l.o| item_extents
+  items }o.l.|| item_conditions
+  items ||.l.o{ item_requests
+  item_requests ||.l.o| item_request_extents
+  box_orders }o..|| items
+  box_achievements }o..|| items
+  box_stocks }o..|| items
+  box_maintenances ||..o{ box_achievements
+  box_maintenances ||..o{ box_orders
+  box_maintenances ||..o{ box_stocks
+  entity "item_sub_types" {
+    + item_sub_type_id: INT
+    ==
+    # item_type_id: INT
+    item_sub_type_name: VARCHAR
+    grouping_flag: TINYINT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "item_types" {
+    + item_type_id: INT
+    ==
+    sort_order: SMALLINT
+    item_type_name: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  item_types |o..o{ item_sub_types
   frame "depot" {
     entity "depot_orders" {
       + depot_id: SMALLINT
@@ -1185,220 +1607,13 @@ frame "working" {
       created_at: INT
       updated_at: INT
     }
+    depots |o.u.o{ depot_orders
+    depots |o.u.o{ depot_receiveds
+    depots |o.u.o{ depot_stocks
   }
-  frame "invoce" {
-    entity "invoice_detail_spots" {
-      + invoice_detail_spot_id: INT <<generated>>
-      ==
-      # contract_id: INT
-      yearmonth: INT
-      text: VARCHAR
-      from: DATE
-      to: DATE
-      invoice_type: TINYINT
-      unit_price: INT
-      amount: SMALLINT
-      tax_class: TINYINT
-      source_id: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "invoice_details" {
-      + invoice_detail_id: INT <<generated>>
-      ==
-      # invoice_id: INT
-      text: VARCHAR
-      invoice_type: TINYINT
-      from: DATE
-      to: DATE
-      unit_price: INT
-      amount: SMALLINT
-      tax_class: TINYINT
-      tax_rate: DECIMAL
-      source_id: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "invoice_note_templates" {
-      + invoice_note_template_id: INT <<generated>>
-      ==
-      # contract_id: INT
-      sort_order: TINYINT
-      note: MEDIUMTEXT
-      yearmonth_from: INT
-      yearmonth_to: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "invoice_notes" {
-      + invoice_note_id: INT <<generated>>
-      ==
-      # invoice_id: INT
-      note: MEDIUMTEXT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "invoice_payments" {
-      + invoice_payment_id: INT <<generated>>
-      ==
-      # invoice_id: INT
-      payment_date: DATE
-      amount: MEDIUMINT
-      memo: MEDIUMTEXT
-      is_import: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "invoice_plans" {
-      + invoice_plan_id: INT <<generated>>
-      ==
-      # plan_id: SMALLINT
-      invoice_plan_type: TINYINT
-      name: VARCHAR
-      invoice_name: VARCHAR
-      quantity_limit: SMALLINT
-      price: MEDIUMINT
-      tax_class: TINYINT
-      sort_order: SMALLINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "invoice_send_log_details" {
-      + invoice_send_log_detail_id: INT <<generated>>
-      ==
-      # invoice_send_log_id: INT
-      # invoice_id: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "invoice_send_logs" {
-      invoice_send_log_id: INT <<generated>>
-      ==
-      sent_at: DATETIME
-      # company_id: INT
-      created_by: INT
-    }
-    entity "invoices" {
-      + invoice_id: INT <<generated>>
-      ==
-      disp_invoice_id: VARCHAR
-      # contract_id: MEDIUMINT
-      yearmonth: INT
-      due_date: DATE
-      fix_flag: TINYINT
-      total_amount: INT
-      payment_type: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-  }
-  frame "note" {
-    entity "note_maintenance_quantites" {
-      + note_maintenance_quantity_id: INT <<generated>>
-      ==
-      # note_maintenance_id: INT
-      # item_id: INT
-      stock_quantity: INT
-      loss_quantity: INT
-      sales_quantity: INT
-      actual_delivery_quantity: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "note_maintenances" {
-      + note_maintenance_id: INT <<generated>>
-      ==
-      # box_id: INT
-      maintenance_date: DATE
-      prev_note_maintenance_id: INT
-      collect_amount: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "note_restrictable_functions" {
-      + note_restrictable_function_id: INT <<generated>>
-      ==
-      function_name: VARCHAR
-      sort_order: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "mapping_contracts_note_restrictable_functions" {
-      + mapping_contracts_note_restrictable_function_id: INT <<generated>>
-      ==
-      # contract_id: INT
-      # note_restrictable_function_id: INT
-      created_at: DATETIME
-      created_by: INTßß
-    }
-    entity "note_role_groups" {
-      + note_role_group_id: INT <<generated>>
-      ==
-      name: VARCHAR
-      sort_order: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "note_roles" {
-      + note_role_id: INT <<generated>>
-      ==
-      * name: VARCHAR
-      description: VARCHAR
-      sort_order: INT
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-    entity "mapping_note_role_groups_note_roles" {
-      + note_role_group_id: INT
-      + note_role_id: INT
-      ==
-    }
-    entity "mapping_note_users_note_roles" {
-      + note_user_id: INT
-      + note_role_id: INT
-      + contract_id: INT
-      ==
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "note_users" {
-      + id: INT <<generated>>
-      ==
-      name: VARCHAR
-      email: VARCHAR
-      encrypted_password: VARCHAR
-      # company_id: MEDIUMINT
-      contract_id: INT
-      contact_id: INT
-      reset_password_token: VARCHAR
-      reset_password_sent_at: DATETIME
-      remember_created_at: DATETIME
-      sign_in_count: INT
-      current_sign_in_at: DATETIME
-      last_sign_in_at: DATETIME
-      current_sign_in_ip: VARCHAR
-      last_sign_in_ip: VARCHAR
-      password_salt: VARCHAR
-      is_force_change_password: TINYINT
-      can_edit_permission: TINYINT
-      is_backdoor: TINYINT
-      default_password: VARCHAR
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-  }
+  items |o.d.o{ depot_orders
+  items |o.d.o{ depot_receiveds
+  items |o.d.o{ depot_stocks
   frame "material" {
     entity "mapping_material_requests_materials" {
       + material_request_id: INT
@@ -1431,7 +1646,7 @@ frame "working" {
       shot_time: TIME
     }
     entity "material_continuous_requests" {
-      + material_continuous_request_id: INT <<generated>>
+      + material_continuous_request_id: INT <<Gen>>
       ==
       # material_id: INT
       # box_id: INT
@@ -1451,7 +1666,7 @@ frame "working" {
       updated_by: INT
     }
     entity "material_requests" {
-      + material_request_id: INT <<generated>>
+      + material_request_id: INT <<Gen>>
       ==
       # maintenance_schedule_id: INT
       # box_id: INT
@@ -1472,7 +1687,7 @@ frame "working" {
       updated_by: INT
     }
     entity "materials" {
-      + material_id: INT <<generated>>
+      + material_id: INT <<Gen>>
       ==
       name: VARCHAR
       request_unit: INT
@@ -1483,194 +1698,300 @@ frame "working" {
       updated_at: DATETIME
       updated_by: INT
     }
+    materials |o.l.o{ mapping_material_requests_materials
+    materials |o..o{ material_continuous_requests
+    materials |o..o{ material_continuous_request_shots
   }
-  frame tmp2 {
-    entity "application_send_logs" {
-      + application_send_log_id: INT <<generated>>
-      ==
-      sent_at: DATETIME
-      # contract_id: INT
-      created_by: INT
-    }
-    entity "demand_letter_send_logs" {
-      + demand_letter_send_log_id: INT <<generated>>
-      ==
-      sent_at: DATETIME
-      # contract_id: MEDIUMINT
-      # invoice_id: INT
-      created_by: INT
-    }
-    entity "journalizings" {
-      + journalizing_id: INT <<generated>>
-      ==
-      yearmonth: INT
-      journalizing_type: TINYINT
-      # invoice_detail_id: INT
-      from: DATE
-      unit_price: INT
-      payment_date: DATE
-      payment_amount: INT
-      payment_count: TINYINT
-      payment_status: SMALLINT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "schedule_adjustment_requests" {
-      + schedule_adjustment_request_id: INT <<generated>>
-      ==
-      received_at: DATETIME
-      # maintenance_schedule_id: INT
-      # contract_id: INT
-      # note_user_id: INT
-      original_maintenance_date: DATE
-      request_maintenance_date: DATE
-      status: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "schedule_mail_send_logs" {
-      + schedule_mail_log_id: INT <<generated>>
-      ==
-      sent_at: DATETIME
-      # contract_id: INT
-      created_by: INT
-    }
-    entity "statement_of_delivery_send_log_details" {
-      + statement_of_delivery_send_log_id: INT
-      + maintenance_id: INT
-      ==
-      skip_collect_amount: TINYINT
-      created_at: DATETIME
-      created_by: INT
-    }
-    entity "statement_of_delivery_send_logs" {
-      + statement_of_delivery_send_log_id: INT <<generated>>
-      ==
-      sent_at: DATETIME
-      mailbody: TEXT
-      # contract_id: INT
-      maintenance_date: DATE
-      next_maintenance_date: DATE
-      created_by: INT
-    }
-    entity "tft_donation_requests" {
-      + tft_donation_request_id: MEDIUMINT <<generated>>
-      ==
-      # contract_id: MEDIUMINT
-      from_tft: DATE
-      to_tft: DATE
-      from_term: DATE
-      to_term: DATE
-      quantity: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-  }
-  frame "reference" {
-    entity "notice_templates" {
-      + notice_template_id: INT <<generated>>
-      ==
-      name: VARCHAR
-      content: TEXT
-      service_type: INT
-      is_display: TINYINT
-      sort_order: INT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "prefectures" {
-      + prefecture_id: INT <<generated>>
-      ==
-      name: VARCHAR
-      delivery_dates: SMALLINT∂
-      created_at: DATETIME
-      updated_at: DATETIME
-    }
-    entity "taxes" {
-      + tax_id: INT <<generated>>
-      ==
-      from: DATE
-      to: DATE
-      rate: DECIMAL
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "tkvs" {
-      + tkv_id: INT <<generated>>
-      ==
-      type: VARCHAR
-      key: VARCHAR
-      value: TEXT
-      description: VARCHAR
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-    entity "delivery_results_changes_histories" {
-      + delivery_results_changes_history_id: INT <<generated>>
-      ==
-      prev_maintenance_id: INT
-      next_maintenance_id: INT
-      created_at: DATETIME
-      created_by: INT
-    }
-  }
+  material_continuous_requests }o..o| boxes
+  material_requests }o..o| boxes
 }
-
-frame "box ERD {
-  entity "box_continuous_request_shots" {
-    + box_id: INT
-    + shot_date: DATE
+frame "note ERD" {
+  entity "note_maintenance_quantites" {
+    + note_maintenance_quantity_id: INT <<Gen>>
     ==
-    comment: VARCHAR
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-    shot_time: TIME
-  }
-  entity "box_continuous_requests" {
-    + box_id: INT
-    ==
-    comment: VARCHAR
+    # note_maintenance_id: INT
+    # item_id: INT
+    stock_quantity: INT
+    loss_quantity: INT
+    sales_quantity: INT
+    actual_delivery_quantity: INT
     created_at: DATETIME
     created_by: INT
     updated_at: DATETIME
     updated_by: INT
   }
-  entity "box_offsets" {
-    + box_offset_id: INT <<generated>>
+  entity "note_maintenances" {
+    + note_maintenance_id: INT <<Gen>>
     ==
     # box_id: INT
+    maintenance_date: DATE
+    prev_note_maintenance_id: INT
+    collect_amount: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "note_role_groups" {
+    + note_role_group_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "note_roles" {
+    + note_role_id: INT <<Gen>>
+    ==
+    * name: VARCHAR
+    description: VARCHAR
+    sort_order: INT
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "mapping_note_role_groups_note_roles" {
+    + note_role_group_id: INT
+    + note_role_id: INT
+    ==
+  }
+  entity "mapping_note_users_note_roles" {
+    + note_user_id: INT
+    + note_role_id: INT
+    + contract_id: INT
+    ==
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "note_users" {
+    + id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    email: VARCHAR
+    encrypted_password: VARCHAR
+    # company_id: MEDIUMINT
+    contract_id: INT
+    contact_id: INT
+    reset_password_token: VARCHAR
+    reset_password_sent_at: DATETIME
+    remember_created_at: DATETIME
+    sign_in_count: INT
+    current_sign_in_at: DATETIME
+    last_sign_in_at: DATETIME
+    current_sign_in_ip: VARCHAR
+    last_sign_in_ip: VARCHAR
+    password_salt: VARCHAR
+    is_force_change_password: TINYINT
+    can_edit_permission: TINYINT
+    is_backdoor: TINYINT
+    default_password: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  note_users |o..o{ mapping_note_users_note_roles
+  note_roles |o..o{ mapping_note_users_note_roles
+  note_maintenances |o..o{ note_maintenance_quantites
+  note_role_groups |o..o{ mapping_note_role_groups_note_roles
+  note_roles |o..o{ mapping_note_role_groups_note_roles
+}
+frame "invoce ERD" {
+  entity "invoice_detail_spots" {
+    + invoice_detail_spot_id: INT <<Gen>>
+    ==
+    # contract_id: INT
     yearmonth: INT
-    total_used_amount: MEDIUMINT
-    total_used_amount_appli_web: MEDIUMINT
-    total_used_amount_appli_native: MEDIUMINT
-    total_used_amount_ic: MEDIUMINT
+    text: VARCHAR
+    from: DATE
+    to: DATE
+    invoice_type: TINYINT
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_details" {
+    + invoice_detail_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    text: VARCHAR
+    invoice_type: TINYINT
+    from: DATE
+    to: DATE
+    unit_price: INT
+    amount: SMALLINT
+    tax_class: TINYINT
+    tax_rate: DECIMAL
+    source_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_note_templates" {
+    + invoice_note_template_id: INT <<Gen>>
+    ==
+    # contract_id: INT
+    sort_order: TINYINT
+    note: MEDIUMTEXT
+    yearmonth_from: INT
+    yearmonth_to: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_notes" {
+    + invoice_note_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    note: MEDIUMTEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "invoice_payments" {
+    + invoice_payment_id: INT <<Gen>>
+    ==
+    # invoice_id: INT
+    payment_date: DATE
+    amount: MEDIUMINT
+    memo: MEDIUMTEXT
+    is_import: TINYINT
     created_at: DATETIME
     created_by: INT
     updated_at: DATETIME
     updated_by: INT
   }
-  entity "boxes_control_numbers" {
-    + boxes_control_numbers_id: INT <<generated>>
+  entity "invoice_send_log_details" {
+    + invoice_send_log_detail_id: INT <<Gen>>
     ==
-    # box_id: INT
-    control_number: VARCHAR
-    settlement_type: TINYINT
+    # invoice_send_log_id: INT
+    # invoice_id: INT
     created_at: DATETIME
     created_by: INT
-    deleted_at: DATETIME
-    deleted_by: INT
+  }
+  entity "invoice_send_logs" {
+    invoice_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # company_id: INT
+    created_by: INT
+  }
+  entity "invoices" {
+    + invoice_id: INT <<Gen>>
+    ==
+    disp_invoice_id: VARCHAR
+    # contract_id: MEDIUMINT
+    yearmonth: INT
+    due_date: DATE
+    fix_flag: TINYINT
+    total_amount: INT
+    payment_type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  invoices |o..o{ invoice_details
+  invoices |o.l.o{ demand_letter_send_logs
+  invoices |o..o{ invoice_notes
+  invoices |o.r.o{ invoice_payments
+  invoices |o.d.o{ invoice_send_log_details
+  invoice_send_logs |o..o{ invoice_send_log_details
+}
+frame "maintenance ERD" {
+  entity "maintenance_schedules" {
+    + maintenance_schedule_id: INT <<Gen>>
+    ==
+    # contract_id: MEDIUMINT
+    maintenance_date: DATE
+    maintenance_type_id: INT
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    is_notified: TINYINT
+    is_extra_request: TINYINT
+    comment: VARCHAR
+    inner_comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_schedule_available_hours" {
+    + id: INT <<Gen>>
+    ==
+    specified_time_start: TIME
+    specified_time_end: TIME
+    # maintenance_schedule_id: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_schedule_extents" {
+    + maintenance_schedule_id: INT
+    + box_id: INT
+    ==
+    comment: VARCHAR
+    is_request_desired: TINYINT
+    one_plate: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_handies" {
+    + maintenance_id: INT
+    ==
+    comment: TEXT
+    start_at: DATETIME
+    end_at: DATETIME
+    check_loss_quantity1: TINYINT
+    check_loss_quantity2: TINYINT
+    check_takeout_quantity1: TINYINT
+    check_takeout_quantity2: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_handy_logs" {
+    + maintenance_handy_log_id: INT <<Gen>>
+    ==
+    # maintenance_id: INT
+    params: TEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_handy_users" {
+    + maintenance_handy_user_id: INT
+    ==
+    name: VARCHAR
+    token: VARCHAR
+    expire_date: DATETIME
+    sign_in_count: INT
+    last_sign_in_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    undated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_types" {
+    + maintenance_type_id: INT <<Gen>>
+    ==
+    service_type: TINYINT
+    maintenance_type_name: VARCHAR
+    maintenance_type_note_name: VARCHAR
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_upper_limits" {
+    + maintenance_upper_limit_id: INT <<Gen>>
+    ==
+    service_type: TINYINT
+    upper_limit: SMALLINT
+    unit: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
   }
   entity "box_payments" {
     + maintenance_id: INT
@@ -1685,269 +2006,22 @@ frame "box ERD {
     created_at: DATETIME
     created_by: INT
   }
-  entity "box_stocks" {
-    + maintenance_id: INT
-    + action_id: TINYINT
-    + item_id: INT
-    ==
-    quantity: MEDIUMINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "box_achievements" {
-    + maintenance_id: INT
-    + item_id: INT
-    ==
-    actual_delivery_quantity: INT
-    sales_quantity: INT
-    loss_quantity: INT
-    recall_quantity: INT
-    delivery_result_quantity: INT
-    stock_quantity: INT
-    prepare_quantity: INT
-    created_at: DATETIME
-  }
-  entity "box_orders" {
-    + maintenance_id: INT
-    + action_id: TINYINT
-    + item_id: INT
-    ==
-    quantity: MEDIUMINT
-    created_at: DATETIME
-    created_by: INT
-  }
-  entity "box_prepares" {
-    +box_prepare_id: INT <<generated>>
-    ==
-    # maintenance_schedule_id: INT
-    # box_id: INT
-    # item_id: INT
-    quantity: MEDIUMINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "boxes" {
-    + box_id: INT <<generated>>
-    ==
-    # contract_id: INT
-    floor: INT
-    floor_name: VARCHAR
-    is_display_okanpay: TINYINT
-    is_itoen: TINYINT
-    is_exists: TINYINT
-    is_use_collection_box: TINYINT
-    storage_type: TINYINT
-    rice_box_count: TINYINT
-    container_box_count: TINYINT
-    one_plate_box_count: TINYINT
-    cutter_count: TINYINT
-    registration_status: TINYINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "box_maintenance_extents" {
-    + maintenance_id: INT
-    ==
-    inner_comment: VARCHAR
-    comment: VARCHAR
-    power_outage_flg: TINYINT
-    moving_flg: TINYINT
-    without_maintenance_count_flg: TINYINT
-    without_delivery_count_flg: TINYINT
-    is_without_delivery_sheet: TINYINT
-    is_without_maintenance: TINYINT
-    is_without_suggest: TINYINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "box_maintenances" {
-    + maintenance_id: INT <<generated>>
-    ==
-    # maintenance_schedule_id: INT
-    # maintenance_date: DATE
-    # box_id: INT
-    prev_maintenance_id: INT
-    notified_at: DATETIME
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_continuous_request_shots" {
-    + item_continuous_request_id: INT
-    + shot_date: DATE
-    ==
-    # box_id: INT
-    # item_id: INT
-    quantity: INT
-    completion_date: DATE
-    is_registered_admin: TINYINT
-    is_display_renrakucho: TINYINT
-    is_deleted: TINYINT
-    is_operated_admin: TINYINT
-    operated_at: DATETIME
-    operated_by: INT
-    accepted_by: INT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-    shot_time: TIME
-  }
-  entity "item_continuous_requests" {
-    + item_continuous_request_id: INT <<generated>>
-    ==
-    # box_id: INT
-    # item_id: INT
-    quantity: INT
-    completion_date: DATE
-    is_registered_admin: TINYINT
-    is_display_renrakucho: TINYINT
-    is_deleted: TINYINT
-    is_operated_admin: TINYINT
-    operated_at: DATETIME
-    operated_by: INT
-    accepted_by: INT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_extents" {
-    + item_id: INT
-    ==
-    safety_stock_rate: FLOAT
-    min_stock_quantity: MEDIUMINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_request_extents" {
-    + item_request_id: INT <<generated>>
-    ==
-    usage_situation_enquete: TINYINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_requests" {
-    + item_request_id: INT <<generated>>
-    ==
-    # maintenance_schedule_id: INT
-    # menu_id: SMALLINT
-    # box_id: INT
-    memo: TEXT
-    reflection_date: DATE
-    completion_date: DATE
-    is_registered_admin: TINYINT
-    is_display_renrakucho: TINYINT
-    is_deleted: TINYINT
-    is_operated_admin: TINYINT
-    operated_at: DATETIME
-    operated_by: INT
-    duplicated_item_request_id: INT
-    accepted_by: INT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_sub_types" {
-    + item_sub_type_id: INT
-    ==
-    # item_type_id: INT
-    item_sub_type_name: VARCHAR
-    grouping_flag: TINYINT
-    created_at: DATETIME
-    updated_at: DATETIME
-  }
-  entity "item_types" {
-    + item_type_id: INT
-    ==
-    sort_order: SMALLINT
-    item_type_name: VARCHAR
-    created_at: DATETIME
-    updated_at: DATETIME
-  }
-  entity "items" {
-    + item_id: INT <<generated>>
-    ==
-    name: VARCHAR
-    middle_name: VARCHAR
-    external_name: VARCHAR
-    sort_order: INT
-    condition_type: INT
-    item_sub_type_id: INT
-    price_e1: MEDIUMINT
-    price_e2: MEDIUMINT
-    price_e3: MEDIUMINT
-    price_e4: MEDIUMINT
-    price_e5: MEDIUMINT
-    is_display_logi: TINYINT
-    is_display_menu: TINYINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "item_conditions" {
-    + item_condition_id: SMALLINT
-    ==
-    name: VARCHAR
-    short_name: VARCHAR
-    created_at: DATETIME
-    updated_at: DATETIME
-  }
-  entity "mapping_item_requests_items" {
-    + item_request_id: INT
-    + item_id: INT
-    ==
-    quantity: INT
-    created_at: DATETIME
-    created_by: INT
-  }
-  frame "box temp" {
-    entity "tmp_boxes" {
-      + box_id: INT <<generated>>
-      ==
-      # contract_id: INT
-      floor: INT
-      floor_name: VARCHAR
-      is_display_okanpay: TINYINT
-      is_itoen: TINYINT
-      is_exists: TINYINT
-      is_use_collection_box: TINYINT
-      storage_type: TINYINT
-      rice_box_count: TINYINT
-      container_box_count: TINYINT
-      one_plate_box_count: TINYINT
-      cutter_count: TINYINT
-      registration_status: TINYINT
-      created_at: DATETIME
-      created_by: INT
-      updated_at: DATETIME
-      updated_by: INT
-    }
-  }
+  maintenance_schedules |o..o{ schedule_adjustment_requests
+  maintenance_schedules ||..o{ maintenance_schedule_available_hours
+  maintenance_schedules ||..o| maintenance_schedule_extents
+  maintenance_schedules }|..|| maintenance_types
+  maintenance_schedules |o..o{ material_requests
 }
+
+companies |o..o{ note_users
+companies |o..o{ note_maintenances
+note_users |o..o{ schedule_adjustment_requests
 contracts |o..o{ office_addon_orders
 contracts |o..o{ office_plan_orders
 contracts |o..o{ plan_revision_logs
 contracts |o..o| plan_revision_send_logs
 plans |o.r.o{ mapping_contracts_addons
 plans |o.r.o{ mapping_contracts_plans
-plans |o.r.o{ invoice_plans
-
 invoices }o.d.o{ contracts
 boxes }o.d.o| contracts
 contracts |o.d.o{ office_plan_orders
@@ -1966,44 +2040,10 @@ contracts |o.d.o{ mapping_note_users_note_roles
 companies |o.d.o{ invoice_send_logs
 contracts |o.d.o{ plan_revision_logs
 contracts |o.d.o| plan_revision_send_logs
-
 items ||.u.o{ mapping_menus_items
-
-' --------------------------------
-invoices |o..o{ demand_letter_send_logs
-invoice_details |o..o{ journalizings
-maintenance_schedules |o..o{ schedule_adjustment_requests
-note_users |o..o{ schedule_adjustment_requests
-statement_of_delivery_send_logs |o..o{ statement_of_delivery_send_log_details
-box_maintenances |o..o{ statement_of_delivery_send_log_details
-
-
-
-boxes |o.u.o{ boxes_control_numbers
-boxes |o.u.o{ box_prepares
-boxes |o.u.o{ box_offsets
-boxes |o.l.o| box_continuous_request_shots
-boxes |o.l.o| box_continuous_requests
-boxes |o.u.o{ box_maintenances
-box_maintenances ||..o| box_maintenance_extents
-boxes |o..o{ item_continuous_requests
-boxes |o..o{ item_continuous_request_shots
-items ||..o| item_extents
-item_types |o..o{ item_sub_types
-items ||..o{ item_requests
 menus ||..o{ item_requests
-items }o..|| item_conditions
-item_requests ||..o| item_request_extents
-items ||..o{ item_continuous_requests
-items ||..o{ item_continuous_request_shots
-items ||..o{ box_prepares
-items ||..o{ box_orders
-items ||..o{ box_stocks
-items ||..o{ box_achievements
-menus |o..o{ item_requests
-
-maintenance_schedules ||..o{ maintenance_schedule_available_hours
-maintenance_schedules ||..o| maintenance_schedule_extents
+boxes }o.d.o| contracts
+items ||.u.o{ mapping_menus_items
 maintenance_schedules ||..o{ box_maintenances
 maintenance_schedules ||..o{ box_prepares
 maintenance_schedules ||..o| box_payments
@@ -2012,43 +2052,20 @@ maintenance_schedules ||..o{ box_stocks
 maintenance_schedules ||..o{ box_achievements
 maintenance_schedules ||..o{ item_requests
 maintenance_schedule_extents |o.l.o| boxes
-
-maintenance_schedules }|..|| maintenance_types
-maintenance_handies |o..|{ maintenance_handy_logs
-depots |o..o{ depot_orders
-depots |o..o{ depot_receiveds
-depots |o..o{ depot_stocks
+items |o..o{ note_maintenance_quantites
+items |o..o{ mapping_item_requests_items
+boxes |o..o{ material_continuous_requests
+boxes |o..o{ material_continuous_request_shots
+boxes |o..o{ material_requests
 items |o.u.o{ depot_orders
 items |o.u.o{ depot_receiveds
 items |o.u.o{ depot_stocks
-
-invoices |o..o{ invoice_details
-invoices |o..o{ invoice_notes
-invoices |o..o{ invoice_payments
-invoices |o..o{ invoice_send_log_details
-invoice_send_logs |o..o{ invoice_send_log_details
-
-note_role_groups |o..o{ mapping_note_role_groups_note_roles
-note_roles |o..o{ mapping_note_role_groups_note_roles
-
-note_users |o..o{ mapping_note_users_note_roles
-note_roles |o..o{ mapping_note_users_note_roles
-note_maintenances |o..o{ note_maintenance_quantites
-note_restrictable_functions |o..o{ mapping_contracts_note_restrictable_functions
-
-items |o..o{ note_maintenance_quantites
-companies |o..o{ note_maintenances
-companies |o..o{ note_users
 invoice_details |o..o{ journalizings
-invoices |o..o{ demand_letter_send_logs
+companies |o..|{ invoice_send_logs
+' --------------------------------
 
-items |o..o{ mapping_item_requests_items
-materials |o..o{ mapping_material_requests_materials
-materials |o..o{ material_continuous_requests
-boxes |o..o{ material_continuous_requests
-materials |o..o{ material_continuous_request_shots
-boxes |o..o{ material_continuous_request_shots
-maintenance_schedules |o..o{ material_requests
-boxes |o..o{ material_requests
+statement_of_delivery_send_logs |o..o{ statement_of_delivery_send_log_details
+maintenance_handies |o..|{ maintenance_handy_logs
+
 
 @enduml

@@ -1,0 +1,114 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "maintenance ERD" {
+  entity "maintenance_schedules" {
+    + maintenance_schedule_id: INT <<Gen>>
+    ==
+    # contract_id: MEDIUMINT
+    maintenance_date: DATE
+    maintenance_type_id: INT
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    is_notified: TINYINT
+    is_extra_request: TINYINT
+    comment: VARCHAR
+    inner_comment: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_schedule_available_hours" {
+    + id: INT <<Gen>>
+    ==
+    specified_time_start: TIME
+    specified_time_end: TIME
+    # maintenance_schedule_id: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_schedule_extents" {
+    + maintenance_schedule_id: INT
+    + box_id: INT
+    ==
+    comment: VARCHAR
+    is_request_desired: TINYINT
+    one_plate: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_handies" {
+    + maintenance_id: INT
+    ==
+    comment: TEXT
+    start_at: DATETIME
+    end_at: DATETIME
+    check_loss_quantity1: TINYINT
+    check_loss_quantity2: TINYINT
+    check_takeout_quantity1: TINYINT
+    check_takeout_quantity2: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_handy_logs" {
+    + maintenance_handy_log_id: INT <<Gen>>
+    ==
+    # maintenance_id: INT
+    params: TEXT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_handy_users" {
+    + maintenance_handy_user_id: INT
+    ==
+    name: VARCHAR
+    token: VARCHAR
+    expire_date: DATETIME
+    sign_in_count: INT
+    last_sign_in_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    undated_at: DATETIME
+    updated_by: INT
+  }
+  entity "maintenance_types" {
+    + maintenance_type_id: INT <<Gen>>
+    ==
+    service_type: TINYINT
+    maintenance_type_name: VARCHAR
+    maintenance_type_note_name: VARCHAR
+    is_without_delivery_sheet: TINYINT
+    is_without_maintenance: TINYINT
+    is_without_suggest: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "maintenance_upper_limits" {
+    + maintenance_upper_limit_id: INT <<Gen>>
+    ==
+    service_type: TINYINT
+    upper_limit: SMALLINT
+    unit: VARCHAR
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  maintenance_schedules |o..o{ schedule_adjustment_requests
+  maintenance_schedules ||..o{ maintenance_schedule_available_hours
+  maintenance_schedules ||..o| maintenance_schedule_extents
+  maintenance_schedules }|..|| maintenance_types
+  maintenance_schedules |o..o{ material_requests
+}
+
+@enduml
