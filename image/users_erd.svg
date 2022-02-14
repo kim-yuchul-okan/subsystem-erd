@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1017px" preserveAspectRatio="none" style="width:1347px;height:1017px;background:#FFFFFF;" version="1.1" viewBox="0 0 1347 1017" width="1347px" zoomAndPan="magnify"><defs><filter height="300%" id="f1irhst5l4yeh5" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[d536a0487ffdcd5078d409192e94cc41]
+cluster users ERD--><rect fill="#FFFFFF" filter="url(#f1irhst5l4yeh5)" height="998" style="stroke:#000000;stroke-width:1.5;" width="1328" x="7" y="7"/><path d="M90,7 L90,16.4883 L80,26.4883 L7,26.4883 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="73" x="10" y="21.5352">users ERD</text><!--MD5=[965545b2c666111da0de2ef0f6e127f0]
+class users_clients--><rect codeLine="9" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="169.6836" id="users_clients" style="stroke:#A80036;stroke-width:1.5;" width="153" x="388.5" y="48.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="428.5" y="65.1016">users_clients</text><line style="stroke:#A80036;stroke-width:1.5;" x1="389.5" x2="540.5" y1="72.6328" y2="72.6328"/><ellipse cx="399.5" cy="83.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="408.5" y="87.2676">id: INT  «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="389.5" x2="540.5" y1="93.5879" y2="93.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="389.5" x2="540.5" y1="95.5879" y2="95.5879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="408.5" y="108.2227">name: VARCHAR</text><polygon fill="none" points="399.5,112.543,403.5,116.543,399.5,120.543,395.5,116.543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="408.5" y="121.1777">client_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="408.5" y="134.1328">client_secret: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="408.5" y="147.0879">redirect_uri: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="408.5" y="160.043">auto_approve: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="408.5" y="172.998">autonomous: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="408.5" y="185.9531">status: ENUM</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="408.5" y="198.9082">suspended: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="408.5" y="211.8633">notes: TINYTEXT</text><!--MD5=[0797f4fad5a962fd7d6fb857745a0cb7]
+class users_sessions--><rect codeLine="22" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="182.6387" id="users_sessions" style="stroke:#A80036;stroke-width:1.5;" width="157" x="382.5" y="285"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="85" x="418.5" y="301.6016">users_sessions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="383.5" x2="538.5" y1="309.1328" y2="309.1328"/><ellipse cx="393.5" cy="320.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="402.5" y="323.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="383.5" x2="538.5" y1="330.0879" y2="330.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="383.5" x2="538.5" y1="332.0879" y2="332.0879"/><polygon fill="none" points="393.5,336.0879,397.5,340.0879,393.5,344.0879,389.5,340.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="402.5" y="344.7227">client_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="402.5" y="357.6777">redirect_uri: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="402.5" y="370.6328">type_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="402.5" y="383.5879">type: ENUM</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="59" x="402.5" y="396.543">code: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="402.5" y="409.498">access_token: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="402.5" y="422.4531">stage: ENUM</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="402.5" y="435.4082">first_requested: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="402.5" y="448.3633">last_updated: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="402.5" y="461.3184">limited_access: TINYINT</text><!--MD5=[38e26be9072b10ca4a37c860ecd3b3e5]
+class users_sessionscopes--><rect codeLine="36" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="91.9531" id="users_sessionscopes" style="stroke:#A80036;stroke-width:1.5;" width="157" x="574.5" y="330.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="593.5" y="347.1016">users_sessionscopes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="575.5" x2="730.5" y1="354.6328" y2="354.6328"/><ellipse cx="585.5" cy="365.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="594.5" y="369.2676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="575.5" x2="730.5" y1="375.5879" y2="375.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="575.5" x2="730.5" y1="377.5879" y2="377.5879"/><polygon fill="none" points="585.5,381.5879,589.5,385.5879,585.5,389.5879,581.5,385.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="594.5" y="390.2227">session_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="594.5" y="403.1777">access_token: VARCHAR</text><polygon fill="none" points="585.5,407.498,589.5,411.498,585.5,415.498,581.5,411.498" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="594.5" y="416.1328">scope: VARCHAR</text><!--MD5=[200d711a76ccce8111c6a03700df0aad]
+class users_scopes--><rect codeLine="43" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="91.9531" id="users_scopes" style="stroke:#A80036;stroke-width:1.5;" width="146" x="577" y="87.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77" x="611.5" y="104.1016">users_scopes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="578" x2="722" y1="111.6328" y2="111.6328"/><ellipse cx="588" cy="122.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="597" y="126.2676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="578" x2="722" y1="132.5879" y2="132.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="578" x2="722" y1="134.5879" y2="134.5879"/><polygon fill="none" points="588,138.5879,592,142.5879,588,146.5879,584,142.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="597" y="147.2227">scope: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="597" y="160.1777">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="597" y="173.1328">description: VARCHAR</text><!--MD5=[9585c414c6d6778efc58567093182bd2]
+class users_user_roles--><rect codeLine="53" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="66.043" id="users_user_roles" style="stroke:#A80036;stroke-width:1.5;" width="102" x="1047" y="719"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="96" x="1050" y="735.6016">users_user_roles</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1048" x2="1148" y1="743.1328" y2="743.1328"/><ellipse cx="1058" cy="754.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="1067" y="757.7676">user_id: INT</text><ellipse cx="1058" cy="767.0879" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="1067" y="770.7227">role_id: INT</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1048" x2="1148" y1="777.043" y2="777.043"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1048" x2="1148" y1="779.043" y2="779.043"/><!--MD5=[535a8c600fd40cf49f98017ca9627530]
+class users_permissions--><rect codeLine="58" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="169.6836" id="users_permissions" style="stroke:#A80036;stroke-width:1.5;" width="146" x="885" y="291.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="106" x="905" y="308.1016">users_permissions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="886" x2="1030" y1="315.6328" y2="315.6328"/><ellipse cx="896" cy="326.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="905" y="330.2676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="886" x2="1030" y1="336.5879" y2="336.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="886" x2="1030" y1="338.5879" y2="338.5879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="905" y="351.2227">area: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="905" y="364.1777">permission: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="905" y="377.1328">description: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="905" y="390.0879">actions: TEXT</text><polygon fill="none" points="896,394.4082,900,398.4082,896,402.4082,892,398.4082" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="905" y="403.043">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="905" y="415.998">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="905" y="428.9531">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="905" y="441.9082">updated_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="905" y="454.8633">updated_by: INT</text><!--MD5=[f85fa7661c2d8865be928142a3391d06]
+class users_metadata--><rect codeLine="71" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="130.8184" id="users_metadata" style="stroke:#A80036;stroke-width:1.5;" width="129" x="758.5" y="68"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="777" y="84.6016">users_metadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="759.5" x2="886.5" y1="92.1328" y2="92.1328"/><ellipse cx="769.5" cy="103.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="778.5" y="106.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="759.5" x2="886.5" y1="113.0879" y2="113.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="759.5" x2="886.5" y1="115.0879" y2="115.0879"/><polygon fill="none" points="769.5,119.0879,773.5,123.0879,769.5,127.0879,765.5,123.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="778.5" y="127.7227">parent_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="778.5" y="140.6777">key: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="778.5" y="153.6328">value: VARCHAR</text><polygon fill="none" points="769.5,157.9531,773.5,161.9531,769.5,165.9531,765.5,161.9531" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="778.5" y="166.5879">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="778.5" y="179.543">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="778.5" y="192.498">updated_at: INT</text><!--MD5=[aaecc1b0081ba1402645fc81db88ac3c]
+class users_providers--><rect codeLine="81" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="182.6387" id="users_providers" style="stroke:#A80036;stroke-width:1.5;" width="160" x="1141" y="42"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="1175" y="58.6016">users_providers</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1142" x2="1300" y1="66.1328" y2="66.1328"/><ellipse cx="1152" cy="77.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="1161" y="80.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1142" x2="1300" y1="87.0879" y2="87.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1142" x2="1300" y1="89.0879" y2="89.0879"/><polygon fill="none" points="1152,93.0879,1156,97.0879,1152,101.0879,1148,97.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="1161" y="101.7227">parent_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="105" x="1161" y="114.6777">provider: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="1161" y="127.6328">uid: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="1161" y="140.5879">secret: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="1161" y="153.543">access_token: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="1161" y="166.498">expires: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="1161" y="179.4531">refresh_token: VARCHAR</text><polygon fill="none" points="1152,183.7734,1156,187.7734,1152,191.7734,1148,187.7734" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="1161" y="192.4082">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="1161" y="205.3633">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="1161" y="218.3184">updated_at: INT</text><!--MD5=[0123471e1de88c5d17da4285bc61e217]
+class users_group_roles--><rect codeLine="95" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="66.043" id="users_group_roles" style="stroke:#A80036;stroke-width:1.5;" width="111" x="891.5" y="903.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="105" x="894.5" y="920.1016">users_group_roles</text><line style="stroke:#A80036;stroke-width:1.5;" x1="892.5" x2="1001.5" y1="927.6328" y2="927.6328"/><ellipse cx="902.5" cy="938.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="911.5" y="942.2676">group_id: INT</text><ellipse cx="902.5" cy="951.5879" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="911.5" y="955.2227">role_id: INT</text><line style="stroke:#A80036;stroke-width:1.0;" x1="892.5" x2="1001.5" y1="961.543" y2="961.543"/><line style="stroke:#A80036;stroke-width:1.0;" x1="892.5" x2="1001.5" y1="963.543" y2="963.543"/><!--MD5=[e83b5e9a36f6b7b42dd235ed8c31ac23]
+class users_role_permissions--><rect codeLine="100" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="91.9531" id="users_role_permissions" style="stroke:#A80036;stroke-width:1.5;" width="140" x="883" y="528"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="134" x="886" y="544.6016">users_role_permissions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="884" x2="1022" y1="552.1328" y2="552.1328"/><ellipse cx="894" cy="563.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="903" y="566.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="884" x2="1022" y1="573.0879" y2="573.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="884" x2="1022" y1="575.0879" y2="575.0879"/><polygon fill="none" points="894,579.0879,898,583.0879,894,587.0879,890,583.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="903" y="587.7227">role_id: INT</text><polygon fill="none" points="894,592.043,898,596.043,894,600.043,890,596.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="903" y="600.6777">perms_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="903" y="613.6328">actions: TEXT</text><!--MD5=[716c52c3ac3ef069fc420ab84880a911]
+class users_roles--><rect codeLine="107" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="143.7734" id="users_roles" style="stroke:#A80036;stroke-width:1.5;" width="129" x="882.5" y="680"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="65" x="914.5" y="696.6016">users_roles</text><line style="stroke:#A80036;stroke-width:1.5;" x1="883.5" x2="1010.5" y1="704.1328" y2="704.1328"/><ellipse cx="893.5" cy="715.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="902.5" y="718.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="883.5" x2="1010.5" y1="725.0879" y2="725.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="883.5" x2="1010.5" y1="727.0879" y2="727.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="902.5" y="739.7227">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="902.5" y="752.6777">filter: ENUM</text><polygon fill="none" points="893.5,756.998,897.5,760.998,893.5,764.998,889.5,760.998" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="902.5" y="765.6328">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="902.5" y="778.5879">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="902.5" y="791.543">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="902.5" y="804.498">updated_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="902.5" y="817.4531">updated_by: INT</text><!--MD5=[43559222ba0d9c97fa5916e88e8af9dd]
+class users_groups--><rect codeLine="118" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="104.9082" id="users_groups" style="stroke:#A80036;stroke-width:1.5;" width="129" x="1037.5" y="884"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77" x="1063.5" y="900.6016">users_groups</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1038.5" x2="1165.5" y1="908.1328" y2="908.1328"/><ellipse cx="1048.5" cy="919.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="1057.5" y="922.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1038.5" x2="1165.5" y1="929.0879" y2="929.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1038.5" x2="1165.5" y1="931.0879" y2="931.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="1057.5" y="943.7227">name: VARCHAR</text><polygon fill="none" points="1048.5,948.043,1052.5,952.043,1048.5,956.043,1044.5,952.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="1057.5" y="956.6777">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="1057.5" y="969.6328">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="1057.5" y="982.5879">updated_at: INT</text><!--MD5=[8413f8248b2da7966d2de021109ec289]
+class users--><rect codeLine="126" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="182.6387" id="users" style="stroke:#A80036;stroke-width:1.5;" width="165" x="940.5" y="42"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="1007.5" y="58.6016">users</text><line style="stroke:#A80036;stroke-width:1.5;" x1="941.5" x2="1104.5" y1="66.1328" y2="66.1328"/><ellipse cx="951.5" cy="77.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="960.5" y="80.7676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="941.5" x2="1104.5" y1="87.0879" y2="87.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="941.5" x2="1104.5" y1="89.0879" y2="89.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="960.5" y="101.7227">username: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="960.5" y="114.6777">password: VARCHAR</text><polygon fill="none" points="951.5,118.998,955.5,122.998,951.5,126.998,947.5,122.998" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="960.5" y="127.6328">group_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="960.5" y="140.5879">email: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="960.5" y="153.543">last_login: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="139" x="960.5" y="166.498">previous_login: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="960.5" y="179.4531">login_hash: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="960.5" y="192.4082">user_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="960.5" y="205.3633">created_at: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="960.5" y="218.3184">updated_at: INT</text><!--MD5=[1942f2ac9b92e84ab7b372b287dc90a3]
+class users_user_permissions--><rect codeLine="151" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="91.9531" id="users_user_permissions" style="stroke:#A80036;stroke-width:1.5;" width="143" x="210.5" y="87.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="137" x="213.5" y="104.1016">users_user_permissions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="211.5" x2="352.5" y1="111.6328" y2="111.6328"/><ellipse cx="221.5" cy="122.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="230.5" y="126.2676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="211.5" x2="352.5" y1="132.5879" y2="132.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="211.5" x2="352.5" y1="134.5879" y2="134.5879"/><polygon fill="none" points="221.5,138.5879,225.5,142.5879,221.5,146.5879,217.5,142.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="230.5" y="147.2227">user_id: INT</text><polygon fill="none" points="221.5,151.543,225.5,155.543,221.5,159.543,217.5,155.543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="230.5" y="160.1777">perms_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="230.5" y="173.1328">actions: TEXT</text><!--MD5=[f6dafe1470b7d6deaf301579f8023426]
+class users_group_permissions--><rect codeLine="158" fill="#FEFECE" filter="url(#f1irhst5l4yeh5)" height="91.9531" id="users_group_permissions" style="stroke:#A80036;stroke-width:1.5;" width="152" x="23" y="87.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="146" x="26" y="104.1016">users_group_permissions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="174" y1="111.6328" y2="111.6328"/><ellipse cx="34" cy="122.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="43" y="126.2676">id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="24" x2="174" y1="132.5879" y2="132.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="24" x2="174" y1="134.5879" y2="134.5879"/><polygon fill="none" points="34,138.5879,38,142.5879,34,146.5879,30,142.5879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="43" y="147.2227">group_id: INT</text><polygon fill="none" points="34,151.543,38,155.543,34,159.543,30,155.543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="43" y="160.1777">perms_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="72" x="43" y="173.1328">actions: TEXT</text><!--MD5=[13826e48e8933f9d664d66fad1f169b5]
+link users_clients to users_sessions--><path codeLine="50" d="M464,226.83 C464,226.83 464,276.76 464,276.76 " fill="none" id="users_clients-users_sessions" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="464" x2="470" y1="276.76" y2="284.76"/><line style="stroke:#A80036;stroke-width:1.0;" x1="464" x2="458" y1="276.76" y2="284.76"/><line style="stroke:#A80036;stroke-width:1.0;" x1="464" x2="464" y1="276.76" y2="284.76"/><ellipse cx="464" cy="270.76" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="464" x2="464" y1="229.83" y2="218.83"/><ellipse cx="464" cy="229.83" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="460" x2="468" y1="222.83" y2="222.83"/><!--MD5=[449b56da47d53c84fa42e32c8d42adf8]
+link users_sessions to users_sessionscopes--><path codeLine="51" d="M547.65,377 C547.65,377 566.47,377 566.47,377 " fill="none" id="users_sessions-users_sessionscopes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="566.47" x2="574.47" y1="377" y2="371"/><line style="stroke:#A80036;stroke-width:1.0;" x1="566.47" x2="574.47" y1="377" y2="383"/><line style="stroke:#A80036;stroke-width:1.0;" x1="566.47" x2="574.47" y1="377" y2="377"/><ellipse cx="560.47" cy="377" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="550.65" x2="539.65" y1="377" y2="377"/><ellipse cx="550.65" cy="377" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="543.65" x2="543.65" y1="381" y2="373"/><!--MD5=[3a5d35af1bae49d1b11757567096f0ca]
+link users_scopes to users_sessionscopes--><path codeLine="52" d="M650,187.78 C650,187.78 650,322.39 650,322.39 " fill="none" id="users_scopes-users_sessionscopes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="650" x2="656" y1="322.39" y2="330.39"/><line style="stroke:#A80036;stroke-width:1.0;" x1="650" x2="644" y1="322.39" y2="330.39"/><line style="stroke:#A80036;stroke-width:1.0;" x1="650" x2="650" y1="322.39" y2="330.39"/><ellipse cx="650" cy="316.39" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="650" x2="650" y1="190.78" y2="179.78"/><ellipse cx="650" cy="190.78" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="646" x2="654" y1="183.78" y2="183.78"/><!--MD5=[2057d2845c9370750448089660cae7ca]
+link users_metadata to users--><path codeLine="140" d="M895.66,134 C895.66,134 932.3,134 932.3,134 " fill="none" id="users_metadata-users" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="932.3" x2="940.3" y1="134" y2="128"/><line style="stroke:#A80036;stroke-width:1.0;" x1="932.3" x2="940.3" y1="134" y2="140"/><line style="stroke:#A80036;stroke-width:1.0;" x1="932.3" x2="940.3" y1="134" y2="134"/><line style="stroke:#A80036;stroke-width:1.0;" x1="930.3" x2="930.3" y1="130" y2="138"/><line style="stroke:#A80036;stroke-width:1.0;" x1="891.66" x2="891.66" y1="138" y2="130"/><line style="stroke:#A80036;stroke-width:1.0;" x1="894.66" x2="894.66" y1="138" y2="130"/><line style="stroke:#A80036;stroke-width:1.0;" x1="895.66" x2="887.66" y1="134" y2="134"/><!--MD5=[e903103939f0b92e8cd297c8f775727e]
+link users to users_providers--><path codeLine="141" d="M1113.54,134 C1113.54,134 1132.82,134 1132.82,134 " fill="none" id="users-users_providers" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1136.82" x2="1136.82" y1="130" y2="138"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1133.82" x2="1133.82" y1="130" y2="138"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1132.82" x2="1140.82" y1="134" y2="134"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1113.54" x2="1105.54" y1="134" y2="140"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1113.54" x2="1105.54" y1="134" y2="128"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1113.54" x2="1105.54" y1="134" y2="134"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1115.54" x2="1115.54" y1="138" y2="130"/><!--MD5=[7086daa22ac6d069ea8053225e639dc6]
+link users to users_permissions--><path codeLine="142" d="M985.75,233.02 C985.75,233.02 985.75,283.47 985.75,283.47 " fill="none" id="users-users_permissions" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="989.75" x2="981.75" y1="287.47" y2="287.47"/><line style="stroke:#A80036;stroke-width:1.0;" x1="989.75" x2="981.75" y1="284.47" y2="284.47"/><line style="stroke:#A80036;stroke-width:1.0;" x1="985.75" x2="985.75" y1="283.47" y2="291.47"/><line style="stroke:#A80036;stroke-width:1.0;" x1="985.75" x2="979.75" y1="233.02" y2="225.02"/><line style="stroke:#A80036;stroke-width:1.0;" x1="985.75" x2="991.75" y1="233.02" y2="225.02"/><line style="stroke:#A80036;stroke-width:1.0;" x1="985.75" x2="985.75" y1="233.02" y2="225.02"/><line style="stroke:#A80036;stroke-width:1.0;" x1="981.75" x2="989.75" y1="235.02" y2="235.02"/><!--MD5=[f00625b804d09e39e782ea93a79b6934]
+link users to users_user_roles--><path codeLine="143" d="M1076.25,233.09 C1076.25,233.09 1076.25,710.79 1076.25,710.79 " fill="none" id="users-users_user_roles" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1076.25" x2="1082.25" y1="710.79" y2="718.79"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1076.25" x2="1070.25" y1="710.79" y2="718.79"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1076.25" x2="1076.25" y1="710.79" y2="718.79"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1080.25" x2="1072.25" y1="708.79" y2="708.79"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1072.25" x2="1080.25" y1="229.09" y2="229.09"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1072.25" x2="1080.25" y1="232.09" y2="232.09"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1076.25" x2="1076.25" y1="233.09" y2="225.09"/><!--MD5=[eb5b3cdc2f852fde95bbe9882eed4ae7]
+link users_roles to users_user_roles--><path codeLine="144" d="M1019.91,752 C1019.91,752 1038.81,752 1038.81,752 " fill="none" id="users_roles-users_user_roles" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1038.81" x2="1046.81" y1="752" y2="746"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1038.81" x2="1046.81" y1="752" y2="758"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1038.81" x2="1046.81" y1="752" y2="752"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1036.81" x2="1036.81" y1="748" y2="756"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1015.91" x2="1015.91" y1="756" y2="748"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1018.91" x2="1018.91" y1="756" y2="748"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1019.91" x2="1011.91" y1="752" y2="752"/><!--MD5=[907c2a49b38423a7ab37c7d4f2ea7f3f]
+link users_roles to users_group_roles--><path codeLine="145" d="M947,832.13 C947,832.13 947,895.21 947,895.21 " fill="none" id="users_roles-users_group_roles" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947" x2="953" y1="895.21" y2="903.21"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947" x2="941" y1="895.21" y2="903.21"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947" x2="947" y1="895.21" y2="903.21"/><line style="stroke:#A80036;stroke-width:1.0;" x1="951" x2="943" y1="893.21" y2="893.21"/><line style="stroke:#A80036;stroke-width:1.0;" x1="943" x2="951" y1="828.13" y2="828.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="943" x2="951" y1="831.13" y2="831.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947" x2="947" y1="832.13" y2="824.13"/><!--MD5=[c0c7f10c61197a7be81883c9d24331fd]
+link users_group_roles to users_groups--><path codeLine="146" d="M1010.52,937 C1010.52,937 1029.36,937 1029.36,937 " fill="none" id="users_group_roles-users_groups" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1033.36" x2="1033.36" y1="933" y2="941"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1030.36" x2="1030.36" y1="933" y2="941"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1029.36" x2="1037.36" y1="937" y2="937"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1010.52" x2="1002.52" y1="937" y2="943"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1010.52" x2="1002.52" y1="937" y2="931"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1010.52" x2="1002.52" y1="937" y2="937"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1012.52" x2="1012.52" y1="941" y2="933"/><!--MD5=[641b10bae0ab7252f33423eb742ceaa6]
+link users_metadata to users_metadata--><path codeLine="147" d="M823,59.88 C823,59.88 823,59 823,59 C823,59 745,59 745,59 C745,59 745,209 745,209 C745,209 820.5,209 820.5,209 C820.5,209 820.5,207.13 820.5,207.13 " fill="none" id="users_metadata-users_metadata" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="820.5" x2="814.5" y1="207.13" y2="199.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="820.5" x2="826.5" y1="207.13" y2="199.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="820.5" x2="820.5" y1="207.13" y2="199.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="816.5" x2="824.5" y1="209.13" y2="209.13"/><line style="stroke:#A80036;stroke-width:1.0;" x1="827" x2="819" y1="63.84" y2="63.84"/><line style="stroke:#A80036;stroke-width:1.0;" x1="827" x2="819" y1="60.84" y2="60.84"/><line style="stroke:#A80036;stroke-width:1.0;" x1="823" x2="823" y1="59.84" y2="67.84"/><!--MD5=[7ad16ad1e359363b04335350928658b8]
+link users_providers to users_providers--><path codeLine="148" d="M1221,33.59 C1221,33.59 1221,24 1221,24 C1221,24 1123.25,24 1123.25,24 C1123.25,24 1123.25,255 1123.25,255 C1123.25,255 1145,255 1145,255 C1145,255 1145,233.28 1145,233.28 " fill="none" id="users_providers-users_providers" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1145" x2="1139" y1="233.28" y2="225.28"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1145" x2="1151" y1="233.28" y2="225.28"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1145" x2="1145" y1="233.28" y2="225.28"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1141" x2="1149" y1="235.28" y2="235.28"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1225" x2="1217" y1="37.59" y2="37.59"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1225" x2="1217" y1="34.59" y2="34.59"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1221" x2="1221" y1="33.59" y2="41.59"/><!--MD5=[b0fa352193c465e939decdd1dce3b140]
+link users_role_permissions to users_roles--><path codeLine="149" d="M947.25,628.3 C947.25,628.3 947.25,671.71 947.25,671.71 " fill="none" id="users_role_permissions-users_roles" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="951.25" x2="943.25" y1="675.71" y2="675.71"/><line style="stroke:#A80036;stroke-width:1.0;" x1="951.25" x2="943.25" y1="672.71" y2="672.71"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947.25" x2="947.25" y1="671.71" y2="679.71"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947.25" x2="941.25" y1="628.3" y2="620.3"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947.25" x2="953.25" y1="628.3" y2="620.3"/><line style="stroke:#A80036;stroke-width:1.0;" x1="947.25" x2="947.25" y1="628.3" y2="620.3"/><line style="stroke:#A80036;stroke-width:1.0;" x1="943.25" x2="951.25" y1="630.3" y2="630.3"/><!--MD5=[b788a6f795bf3a31077ab6fda68e3067]
+link users_permissions to users_role_permissions--><path codeLine="150" d="M954,469.69 C954,469.69 954,519.95 954,519.95 " fill="none" id="users_permissions-users_role_permissions" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="954" x2="960" y1="519.95" y2="527.95"/><line style="stroke:#A80036;stroke-width:1.0;" x1="954" x2="948" y1="519.95" y2="527.95"/><line style="stroke:#A80036;stroke-width:1.0;" x1="954" x2="954" y1="519.95" y2="527.95"/><line style="stroke:#A80036;stroke-width:1.0;" x1="958" x2="950" y1="517.95" y2="517.95"/><line style="stroke:#A80036;stroke-width:1.0;" x1="950" x2="958" y1="465.69" y2="465.69"/><line style="stroke:#A80036;stroke-width:1.0;" x1="950" x2="958" y1="468.69" y2="468.69"/><line style="stroke:#A80036;stroke-width:1.0;" x1="954" x2="954" y1="469.69" y2="461.69"/><!--MD5=[14cf34324513cd3af6c154cea21bf22c]
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "users ERD" {
+  entity "users_clients" {
+    + id: INT  <<generated>>
+    ==
+    name: VARCHAR
+    # client_id: VARCHAR
+    client_secret: VARCHAR
+    redirect_uri: VARCHAR
+    auto_approve: TINYINT
+    autonomous: TINYINT
+    status: ENUM
+    suspended: TINYINT
+    notes: TINYTEXT
+  }
+  entity "users_sessions" {
+    + id: INT <<generated>>
+    ==
+    # client_id: VARCHAR
+    redirect_uri: VARCHAR
+    type_id: VARCHAR
+    type: ENUM
+    code: TEXT
+    access_token: VARCHAR
+    stage: ENUM
+    first_requested: INT
+    last_updated: INT
+    limited_access: TINYINT
+  }
+  entity "users_sessionscopes" {
+    + id: INT <<generated>>
+    ==
+    # session_id: INT
+    access_token: VARCHAR
+    # scope: VARCHAR
+  }
+  entity "users_scopes" {
+    + id: INT <<generated>>
+    ==
+    # scope: VARCHAR
+    name: VARCHAR
+    description: VARCHAR
+  }
+  users_clients |o.d.o{  users_sessions
+  users_sessions |o.r.o{  users_sessionscopes
+  users_scopes |o.d.o{  users_sessionscopes
+  entity "users_user_roles" {
+    + user_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_permissions" {
+    + id: INT <<generated>>
+    ==
+    area: VARCHAR
+    permission: VARCHAR
+    description: VARCHAR
+    actions: TEXT
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_metadata" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    key: VARCHAR
+    value: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_providers" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    provider: VARCHAR
+    uid: VARCHAR
+    secret: VARCHAR
+    access_token: VARCHAR
+    expires: INT
+    refresh_token: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_group_roles" {
+    + group_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_role_permissions" {
+    + id: INT <<generated>>
+    ==
+    # role_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_roles" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    filter: ENUM
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_groups" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users" {
+    + id: INT <<generated>>
+    ==
+    username: VARCHAR
+    password: VARCHAR
+    # group_id: INT
+    email: VARCHAR
+    last_login: VARCHAR
+    previous_login: VARCHAR
+    login_hash: VARCHAR
+    user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  users }|.l.|| users_metadata
+  users }|.r.|| users_providers
+  users }|.d.|| users_permissions
+  users ||..|{ users_user_roles
+  users_roles ||.r.|{ users_user_roles
+  users_roles ||.d.|{ users_group_roles
+  users_group_roles }|.r.|| users_groups
+  users_metadata ||..|{ users_metadata
+  users_providers ||..|{ users_providers
+  users_role_permissions }|..|| users_roles
+  users_permissions ||.d.|{ users_role_permissions
+  entity "users_user_permissions" {
+    + id: INT <<generated>>
+    ==
+    # user_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_group_permissions" {
+    + id: INT <<generated>>
+    ==
+    # group_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+}
+
+@enduml
+
+@startuml
+
+hide circle
+
+skinparam linetype ortho
+
+frame "users ERD" {
+  entity "users_clients" {
+    + id: INT  <<generated>>
+    ==
+    name: VARCHAR
+    # client_id: VARCHAR
+    client_secret: VARCHAR
+    redirect_uri: VARCHAR
+    auto_approve: TINYINT
+    autonomous: TINYINT
+    status: ENUM
+    suspended: TINYINT
+    notes: TINYTEXT
+  }
+  entity "users_sessions" {
+    + id: INT <<generated>>
+    ==
+    # client_id: VARCHAR
+    redirect_uri: VARCHAR
+    type_id: VARCHAR
+    type: ENUM
+    code: TEXT
+    access_token: VARCHAR
+    stage: ENUM
+    first_requested: INT
+    last_updated: INT
+    limited_access: TINYINT
+  }
+  entity "users_sessionscopes" {
+    + id: INT <<generated>>
+    ==
+    # session_id: INT
+    access_token: VARCHAR
+    # scope: VARCHAR
+  }
+  entity "users_scopes" {
+    + id: INT <<generated>>
+    ==
+    # scope: VARCHAR
+    name: VARCHAR
+    description: VARCHAR
+  }
+  users_clients |o.d.o{  users_sessions
+  users_sessions |o.r.o{  users_sessionscopes
+  users_scopes |o.d.o{  users_sessionscopes
+  entity "users_user_roles" {
+    + user_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_permissions" {
+    + id: INT <<generated>>
+    ==
+    area: VARCHAR
+    permission: VARCHAR
+    description: VARCHAR
+    actions: TEXT
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_metadata" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    key: VARCHAR
+    value: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_providers" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    provider: VARCHAR
+    uid: VARCHAR
+    secret: VARCHAR
+    access_token: VARCHAR
+    expires: INT
+    refresh_token: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_group_roles" {
+    + group_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_role_permissions" {
+    + id: INT <<generated>>
+    ==
+    # role_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_roles" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    filter: ENUM
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_groups" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users" {
+    + id: INT <<generated>>
+    ==
+    username: VARCHAR
+    password: VARCHAR
+    # group_id: INT
+    email: VARCHAR
+    last_login: VARCHAR
+    previous_login: VARCHAR
+    login_hash: VARCHAR
+    user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  users }|.l.|| users_metadata
+  users }|.r.|| users_providers
+  users }|.d.|| users_permissions
+  users ||..|{ users_user_roles
+  users_roles ||.r.|{ users_user_roles
+  users_roles ||.d.|{ users_group_roles
+  users_group_roles }|.r.|| users_groups
+  users_metadata ||..|{ users_metadata
+  users_providers ||..|{ users_providers
+  users_role_permissions }|..|| users_roles
+  users_permissions ||.d.|{ users_role_permissions
+  entity "users_user_permissions" {
+    + id: INT <<generated>>
+    ==
+    # user_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_group_permissions" {
+    + id: INT <<generated>>
+    ==
+    # group_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+}
+
+@enduml
+
+PlantUML version 1.2022.0(Wed Jan 12 01:16:42 JST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1719px" preserveAspectRatio="none" style="width:1649px;height:1719px;background:#FFFFFF;" version="1.1" viewBox="0 0 1649 1719" width="1649px" zoomAndPan="magnify"><defs><filter height="300%" id="fcgiygagw2c2f" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[728cfc4a39243ab143293523dfb4753d]
+cluster plans ERD--><rect fill="#FFFFFF" filter="url(#fcgiygagw2c2f)" height="1635" style="stroke:#000000;stroke-width:1.5;" width="1144" x="7" y="72"/><path d="M90,72 L90,81.4883 L80,91.4883 L7,91.4883 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="73" x="10" y="86.5352">plans ERD</text><!--MD5=[8c095ddb4102835ed82e0130508abee4]
+class office_addon_types--><rect codeLine="9" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="91.9531" id="office_addon_types" style="stroke:#A80036;stroke-width:1.5;" width="259" x="241.5" y="1104"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="111" x="315.5" y="1120.6016">office_addon_types</text><line style="stroke:#A80036;stroke-width:1.5;" x1="242.5" x2="499.5" y1="1128.1328" y2="1128.1328"/><ellipse cx="252.5" cy="1139.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="233" x="261.5" y="1142.7676">office_addon_type_id: TINYINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="242.5" x2="499.5" y1="1149.0879" y2="1149.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="242.5" x2="499.5" y1="1151.0879" y2="1151.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="247.5" y="1163.7227">office_addon_type_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="247.5" y="1176.6777">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="247.5" y="1189.6328">created_by: INT</text><!--MD5=[82e63583161e00aa81958c644cf6d7f8]
+class office_option_types--><rect codeLine="16" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="91.9531" id="office_option_types" style="stroke:#A80036;stroke-width:1.5;" width="260" x="550" y="1104"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="110" x="625" y="1120.6016">office_option_types</text><line style="stroke:#A80036;stroke-width:1.5;" x1="551" x2="809" y1="1128.1328" y2="1128.1328"/><ellipse cx="561" cy="1139.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="234" x="570" y="1142.7676">office_option_type_id: TINYINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="551" x2="809" y1="1149.0879" y2="1149.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="551" x2="809" y1="1151.0879" y2="1151.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="556" y="1163.7227">office_option_type_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="556" y="1176.6777">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="556" y="1189.6328">created_by: INT</text><!--MD5=[aa6c49af46c5301508b22c9bb864a9b2]
+class office_addon_order_send_logs--><rect codeLine="23" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="117.8633" id="office_addon_order_send_logs" style="stroke:#A80036;stroke-width:1.5;" width="296" x="209" y="1489"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="175" x="269.5" y="1505.6016">office_addon_order_send_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="210" x2="504" y1="1513.1328" y2="1513.1328"/><ellipse cx="220" cy="1524.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="270" x="229" y="1527.7676">office_addon_order_send_log_id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="210" x2="504" y1="1534.0879" y2="1534.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="210" x2="504" y1="1536.0879" y2="1536.0879"/><polygon fill="none" points="220,1540.0879,224,1544.0879,220,1548.0879,216,1544.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="229" y="1548.7227">office_addon_order_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="229" y="1561.6777">sent_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="229" y="1574.6328">mailbody: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="229" y="1587.5879">contract_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="229" y="1600.543">created_by: INT</text><!--MD5=[a3efc48bbda0827d6f30c756d27ada52]
+class office_addon_orders--><rect codeLine="32" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="260.3691" id="office_addon_orders" style="stroke:#A80036;stroke-width:1.5;" width="241" x="628.5" y="172"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="118" x="690" y="188.6016">office_addon_orders</text><line style="stroke:#A80036;stroke-width:1.5;" x1="629.5" x2="868.5" y1="196.1328" y2="196.1328"/><ellipse cx="639.5" cy="207.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="648.5" y="210.7676">office_addon_order_id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="629.5" x2="868.5" y1="217.0879" y2="217.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="629.5" x2="868.5" y1="219.0879" y2="219.0879"/><polygon fill="none" points="639.5,223.0879,643.5,227.0879,639.5,231.0879,635.5,227.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="648.5" y="231.7227">contract_id: INT</text><polygon fill="none" points="639.5,236.043,643.5,240.043,639.5,244.043,635.5,240.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="648.5" y="244.6777">office_addon_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="648.5" y="257.6328">maintenance_date: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="648.5" y="270.5879">from: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="648.5" y="283.543">text: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="648.5" y="296.498">inner_memo: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="648.5" y="309.4531">registered_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="648.5" y="322.4082">registered_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="648.5" y="335.3633">reserved_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="648.5" y="348.3184">reserved_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="648.5" y="361.2734">status: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="648.5" y="374.2285">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="648.5" y="387.1836">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="648.5" y="400.1387">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="648.5" y="413.0938">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="648.5" y="426.0488">updated_by: INT</text><!--MD5=[2450f73334cc9da67d628293df1cd558]
+class office_addons--><rect codeLine="52" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="338.0996" id="office_addons" style="stroke:#A80036;stroke-width:1.5;" width="280" x="609" y="557"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="709" y="573.6016">office_addons</text><line style="stroke:#A80036;stroke-width:1.5;" x1="610" x2="888" y1="581.1328" y2="581.1328"/><ellipse cx="620" cy="592.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="214" x="629" y="595.7676">office_addon_id: SMALLINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="610" x2="888" y1="602.0879" y2="602.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="610" x2="888" y1="604.0879" y2="604.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="629" y="616.7227">service_type: TINYINT</text><polygon fill="none" points="620,621.043,624,625.043,620,629.043,616,625.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="629" y="629.6777">office_addon_type_id: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="629" y="642.6328">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="629" y="655.5879">inner_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="629" y="668.543">inner_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="629" y="681.498">invoice_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="629" y="694.4531">invoice_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="629" y="707.4082">quantity_limit: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="629" y="720.3633">price: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="629" y="733.3184">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="629" y="746.2734">maintenance_count: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="629" y="759.2285">operation_times: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="629" y="772.1836">sort_order: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="629" y="785.1387">is_deleted: TINYINT</text><ellipse cx="620" cy="794.459" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="211" x="629" y="798.0938">zuora_product_rate_plan_id: VARCHAR</text><ellipse cx="620" cy="807.4141" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="254" x="629" y="811.0488">zuora_product_rate_plan_charge_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="629" y="824.0039">zuora_sync_status: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="629" y="836.959">zuora_sync_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="629" y="849.9141">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="629" y="862.8691">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="629" y="875.8242">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="629" y="888.7793">updated_by: INT</text><!--MD5=[3351e066ce33f5fe51d54ec502959062]
+class office_option_groups--><rect codeLine="78" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="221.5039" id="office_option_groups" style="stroke:#A80036;stroke-width:1.5;" width="280" x="540" y="1437"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="620.5" y="1453.6016">office_option_groups</text><line style="stroke:#A80036;stroke-width:1.5;" x1="541" x2="819" y1="1461.1328" y2="1461.1328"/><ellipse cx="551" cy="1472.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="254" x="560" y="1475.7676">office_option_group_id: SMALLINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="541" x2="819" y1="1482.0879" y2="1482.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="541" x2="819" y1="1484.0879" y2="1484.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="560" y="1496.7227">service_type: TINYINT</text><polygon fill="none" points="551,1501.043,555,1505.043,551,1509.043,547,1505.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="165" x="560" y="1509.6777">office_option_type_id: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="560" y="1522.6328">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="560" y="1535.5879">inner_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="560" y="1548.543">inner_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="560" y="1561.498">invoice_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="560" y="1574.4531">invoice_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="560" y="1587.4082">sort_order: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="560" y="1600.3633">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="560" y="1613.3184">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="560" y="1626.2734">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="560" y="1639.2285">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="560" y="1652.1836">updated_by: INT</text><!--MD5=[d8a857653d1726908dfef029c62af15d]
+class office_options--><rect codeLine="95" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="286.2793" id="office_options" style="stroke:#A80036;stroke-width:1.5;" width="280" x="855" y="1405"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="79" x="955.5" y="1421.6016">office_options</text><line style="stroke:#A80036;stroke-width:1.5;" x1="856" x2="1134" y1="1429.1328" y2="1429.1328"/><ellipse cx="866" cy="1440.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="875" y="1443.7676">office_option_id: SMALLINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="856" x2="1134" y1="1450.0879" y2="1450.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="856" x2="1134" y1="1452.0879" y2="1452.0879"/><polygon fill="none" points="866,1456.0879,870,1460.0879,866,1464.0879,862,1460.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="875" y="1464.7227">office_option_group_id: SMALLINT</text><polygon fill="none" points="866,1469.043,870,1473.043,866,1477.043,862,1473.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="875" y="1477.6777">office_plan_id: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="875" y="1490.6328">quantity_limit: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="875" y="1503.5879">price: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="875" y="1516.543">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="875" y="1529.498">maintenance_count: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="875" y="1542.4531">operation_times: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="875" y="1555.4082">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="875" y="1568.3633">block_split_group: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="234" x="875" y="1581.3184">block_discount_office_option_id: SMALLINT</text><ellipse cx="866" cy="1590.6387" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="211" x="875" y="1594.2734">zuora_product_rate_plan_id: VARCHAR</text><ellipse cx="866" cy="1603.5938" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="254" x="875" y="1607.2285">zuora_product_rate_plan_charge_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="875" y="1620.1836">zuora_sync_status: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="875" y="1633.1387">zuora_sync_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="875" y="1646.0938">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="875" y="1659.0488">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="875" y="1672.0039">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="875" y="1684.959">updated_by: INT</text><!--MD5=[3b9e2523e09bf677acf185a559cfc577]
+class office_plan_order_send_logs--><rect codeLine="117" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="117.8633" id="office_plan_order_send_logs" style="stroke:#A80036;stroke-width:1.5;" width="285" x="288.5" y="667"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="163" x="349.5" y="683.6016">office_plan_order_send_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="289.5" x2="572.5" y1="691.1328" y2="691.1328"/><ellipse cx="299.5" cy="702.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="259" x="308.5" y="705.7676">office_plan_order_send_log_id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="289.5" x2="572.5" y1="712.0879" y2="712.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="289.5" x2="572.5" y1="714.0879" y2="714.0879"/><polygon fill="none" points="299.5,718.0879,303.5,722.0879,299.5,726.0879,295.5,722.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="308.5" y="726.7227">office_plan_order_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="308.5" y="739.6777">sent_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="308.5" y="752.6328">mailbody: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="308.5" y="765.5879">contract_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="308.5" y="778.543">created_by: INT</text><!--MD5=[6978a832ed99cb34a14477af65b32261]
+class office_plan_orders--><rect codeLine="126" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="389.9199" id="office_plan_orders" style="stroke:#A80036;stroke-width:1.5;" width="273" x="320.5" y="107"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="106" x="404" y="123.6016">office_plan_orders</text><line style="stroke:#A80036;stroke-width:1.5;" x1="321.5" x2="592.5" y1="131.1328" y2="131.1328"/><ellipse cx="331.5" cy="142.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="247" x="340.5" y="145.7676">office_plan_order_id: MEDIUMINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="321.5" x2="592.5" y1="152.0879" y2="152.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="321.5" x2="592.5" y1="154.0879" y2="154.0879"/><polygon fill="none" points="331.5,158.0879,335.5,162.0879,331.5,166.0879,327.5,162.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="128" x="340.5" y="166.7227">contract_id: MEDIUMINT</text><polygon fill="none" points="331.5,171.043,335.5,175.043,331.5,179.043,327.5,175.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="340.5" y="179.6777">office_plan_id: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="340.5" y="192.6328">current_office_plan_id: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="340.5" y="205.5879">from: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="340.5" y="218.543">to: DATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="340.5" y="231.498">invoice_cycle: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="174" x="340.5" y="244.4531">contract_renewal_cycle: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="340.5" y="257.4082">price_e_pattern: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="340.5" y="270.3633">inner_memo: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="340.5" y="283.3184">memo: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="340.5" y="296.2734">reason: TEXT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="340.5" y="309.2285">status: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="340.5" y="322.1836">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="340.5" y="335.1387">order_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="129" x="340.5" y="348.0938">published_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="340.5" y="361.0488">published_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="135" x="340.5" y="374.0039">application_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="340.5" y="386.959">application_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="340.5" y="399.9141">registered_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="340.5" y="412.8691">registered_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="340.5" y="425.8242">reserved_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="340.5" y="438.7793">reserved_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="340.5" y="451.7344">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="340.5" y="464.6895">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="340.5" y="477.6445">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="340.5" y="490.5996">updated_by: INT</text><!--MD5=[12d56c5409ad22f3a822c8526e7f546d]
+class office_plans--><rect codeLine="156" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="389.9199" id="office_plans" style="stroke:#A80036;stroke-width:1.5;" width="280" x="855" y="955"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="961" y="971.6016">office_plans</text><line style="stroke:#A80036;stroke-width:1.5;" x1="856" x2="1134" y1="979.1328" y2="979.1328"/><ellipse cx="866" cy="990.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="203" x="875" y="993.7676">office_plan_id: SMALLINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="856" x2="1134" y1="1000.0879" y2="1000.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="856" x2="1134" y1="1002.0879" y2="1002.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="875" y="1014.7227">service_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="875" y="1027.6777">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="875" y="1040.6328">inner_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="875" y="1053.5879">inner_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="875" y="1066.543">invoice_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="875" y="1079.498">invoice_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="875" y="1092.4531">quantity_limit: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="875" y="1105.4082">price: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="875" y="1118.3633">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="875" y="1131.3184">maintenance_count: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="875" y="1144.2734">operation_times: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="875" y="1157.2285">sort_order: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="875" y="1170.1836">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="59" x="875" y="1183.1387">weight: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="143" x="875" y="1196.0938">uncollected_rate: DECIMAL</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="875" y="1209.0488">is_new_plan: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="875" y="1222.0039">office_addon_id: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="222" x="875" y="1234.959">office_addon_block_split_group: TINYINT</text><ellipse cx="866" cy="1244.2793" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="211" x="875" y="1247.9141">zuora_product_rate_plan_id: VARCHAR</text><ellipse cx="866" cy="1257.2344" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="254" x="875" y="1260.8691">zuora_product_rate_plan_charge_id: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="125" x="875" y="1273.8242">zuora_sync_status: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="875" y="1286.7793">zuora_sync_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="875" y="1299.7344">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="875" y="1312.6895">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="875" y="1325.6445">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="875" y="1338.5996">updated_by: INT</text><!--MD5=[f9ee03fdc36f3f806f7c5685e2ab43b8]
+class plan_revision_logs--><rect codeLine="186" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="91.9531" id="plan_revision_logs" style="stroke:#A80036;stroke-width:1.5;" width="230" x="905" y="256"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="104" x="968" y="272.6016">plan_revision_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="906" x2="1134" y1="280.1328" y2="280.1328"/><ellipse cx="916" cy="291.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="925" y="294.7676">plan_revision_log_id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="906" x2="1134" y1="301.0879" y2="301.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="906" x2="1134" y1="303.0879" y2="303.0879"/><polygon fill="none" points="916,307.0879,920,311.0879,916,315.0879,912,311.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="925" y="315.7227">contract_id: INT</text><polygon fill="none" points="916,320.043,920,324.043,916,328.043,912,324.043" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="925" y="328.6777">plan_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="925" y="341.6328">created_by: INT</text><!--MD5=[471db35f97b70aa7a481f4bf1d4a9cae]
+class plan_revision_send_logs--><rect codeLine="193" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="117.8633" id="plan_revision_send_logs" style="stroke:#A80036;stroke-width:1.5;" width="262" x="23" y="243"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="138" x="85" y="259.6016">plan_revision_send_logs</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="284" y1="267.1328" y2="267.1328"/><ellipse cx="34" cy="278.1328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="236" x="43" y="281.7676">plan_revision_send_log_id: INT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="24" x2="284" y1="288.0879" y2="288.0879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="24" x2="284" y1="290.0879" y2="290.0879"/><polygon fill="none" points="34,294.0879,38,298.0879,34,302.0879,30,298.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="43" y="302.7227">contract_id: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="43" y="315.6777">yearmonth: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="43" y="328.6328">sent_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="43" y="341.5879">downloaded_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="43" y="354.543">created_by: INT</text><!--MD5=[3569d270afc03d4a0898c261833e6749]
+class plans--><rect codeLine="202" fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="273.3242" id="plans" style="stroke:#A80036;stroke-width:1.5;" width="193" x="938.5" y="589.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="1019.5" y="606.1016">plans</text><line style="stroke:#A80036;stroke-width:1.5;" x1="939.5" x2="1130.5" y1="613.6328" y2="613.6328"/><ellipse cx="949.5" cy="624.6328" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="958.5" y="628.2676">plan_id: SMALLINT «generated»</text><line style="stroke:#A80036;stroke-width:1.0;" x1="939.5" x2="1130.5" y1="634.5879" y2="634.5879"/><line style="stroke:#A80036;stroke-width:1.0;" x1="939.5" x2="1130.5" y1="636.5879" y2="636.5879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="944.5" y="649.2227">plan_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="944.5" y="662.1777">name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="944.5" y="675.1328">inner_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="944.5" y="688.0879">inner_short_name: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="944.5" y="701.043">quantity_limit: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="944.5" y="713.998">price: MEDIUMINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="944.5" y="726.9531">tax_class: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="944.5" y="739.9082">maintenance_count: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="944.5" y="752.8633">operation_times: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="944.5" y="765.8184">service_type: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="944.5" y="778.7734">chart_color: VARCHAR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="944.5" y="791.7285">sort_order: SMALLINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="103" x="944.5" y="804.6836">is_deleted: TINYINT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="944.5" y="817.6387">created_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="944.5" y="830.5938">created_by: INT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="944.5" y="843.5488">updated_at: DATETIME</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="944.5" y="856.5039">updated_by: INT</text><!--MD5=[66aab1fb7235a144374180887ec21426]
+class contracts--><rect fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="40.1328" id="contracts" style="stroke:#A80036;stroke-width:1.5;" width="58" x="574" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="577" y="23.6016">contracts</text><line style="stroke:#A80036;stroke-width:1.5;" x1="575" x2="631" y1="31.1328" y2="31.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="575" x2="631" y1="39.1328" y2="39.1328"/><!--MD5=[8ec70e7a9d56b90e163702b358c46ce9]
+class mapping_contracts_addons--><rect fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="40.1328" id="mapping_contracts_addons" style="stroke:#A80036;stroke-width:1.5;" width="164" x="1167" y="706"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="158" x="1170" y="722.6016">mapping_contracts_addons</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1168" x2="1330" y1="730.1328" y2="730.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1168" x2="1330" y1="738.1328" y2="738.1328"/><!--MD5=[e1530f16fd1f9c0d3ad79a9cb07340c2]
+class mapping_contracts_plans--><rect fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="40.1328" id="mapping_contracts_plans" style="stroke:#A80036;stroke-width:1.5;" width="152" x="1366" y="706"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="146" x="1369" y="722.6016">mapping_contracts_plans</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1367" x2="1517" y1="730.1328" y2="730.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1367" x2="1517" y1="738.1328" y2="738.1328"/><!--MD5=[0b7cc11e8165183f00ebbcb90f51b498]
+class invoice_plans--><rect fill="#FEFECE" filter="url(#fcgiygagw2c2f)" height="40.1328" id="invoice_plans" style="stroke:#A80036;stroke-width:1.5;" width="82" x="1553" y="706"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="76" x="1556" y="722.6016">invoice_plans</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1554" x2="1634" y1="730.1328" y2="730.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1554" x2="1634" y1="738.1328" y2="738.1328"/><!--MD5=[fce457e08db82234ccb0ecc61f80c94f]
+link plans to office_plans--><path codeLine="224" d="M1035,870.78 C1035,870.78 1035,946.94 1035,946.94 " fill="none" id="plans-office_plans" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1035" x2="1035" y1="943.94" y2="954.94"/><ellipse cx="1035" cy="943.94" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1039" x2="1031" y1="950.94" y2="950.94"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1035" x2="1035" y1="873.78" y2="862.78"/><ellipse cx="1035" cy="873.78" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1031" x2="1039" y1="866.78" y2="866.78"/><!--MD5=[088ad5e7bd070671cde6656a0c77b17a]
+link plan_revision_logs to plans--><path codeLine="225" d="M1035,356.18 C1035,356.18 1035,581.09 1035,581.09 " fill="none" id="plan_revision_logs-plans" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1035" x2="1035" y1="578.09" y2="589.09"/><ellipse cx="1035" cy="578.09" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1039" x2="1031" y1="585.09" y2="585.09"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1035" x2="1029" y1="356.18" y2="348.18"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1035" x2="1041" y1="356.18" y2="348.18"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1035" x2="1035" y1="356.18" y2="348.18"/><ellipse cx="1035" cy="362.18" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><!--MD5=[eea174cffe0de873a33f03a0bcc6c2d0]
+link office_plans to office_options--><path codeLine="226" d="M995,1353.21 C995,1353.21 995,1396.76 995,1396.76 " fill="none" id="office_plans-office_options" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="995" x2="1001" y1="1396.76" y2="1404.76"/><line style="stroke:#A80036;stroke-width:1.0;" x1="995" x2="989" y1="1396.76" y2="1404.76"/><line style="stroke:#A80036;stroke-width:1.0;" x1="995" x2="995" y1="1396.76" y2="1404.76"/><ellipse cx="995" cy="1390.76" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="995" x2="995" y1="1356.21" y2="1345.21"/><ellipse cx="995" cy="1356.21" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="991" x2="999" y1="1349.21" y2="1349.21"/><!--MD5=[142f0ad55a06d2a1c6246d18462f59bf]
+link office_option_groups to office_options--><path codeLine="227" d="M828.46,1548 C828.46,1548 846.54,1548 846.54,1548 " fill="none" id="office_option_groups-office_options" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="846.54" x2="854.54" y1="1548" y2="1542"/><line style="stroke:#A80036;stroke-width:1.0;" x1="846.54" x2="854.54" y1="1548" y2="1554"/><line style="stroke:#A80036;stroke-width:1.0;" x1="846.54" x2="854.54" y1="1548" y2="1548"/><ellipse cx="840.54" cy="1548" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="831.46" x2="820.46" y1="1548" y2="1548"/><ellipse cx="831.46" cy="1548" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="824.46" x2="824.46" y1="1552" y2="1544"/><!--MD5=[f38ce08d4d76fbebce191555ef45edb7]
+link office_option_types to office_option_groups--><path codeLine="228" d="M680,1204.04 C680,1204.04 680,1428.6 680,1428.6 " fill="none" id="office_option_types-office_option_groups" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="680" x2="686" y1="1428.6" y2="1436.6"/><line style="stroke:#A80036;stroke-width:1.0;" x1="680" x2="674" y1="1428.6" y2="1436.6"/><line style="stroke:#A80036;stroke-width:1.0;" x1="680" x2="680" y1="1428.6" y2="1436.6"/><ellipse cx="680" cy="1422.6" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="680" x2="680" y1="1207.04" y2="1196.04"/><ellipse cx="680" cy="1207.04" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="676" x2="684" y1="1200.04" y2="1200.04"/><!--MD5=[14a45be833044090e300e15252602889]
+link office_addon_orders to office_addons--><path codeLine="229" d="M749,440.1 C749,440.1 749,548.65 749,548.65 " fill="none" id="office_addon_orders-office_addons" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="749" x2="749" y1="545.65" y2="556.65"/><ellipse cx="749" cy="545.65" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="753" x2="745" y1="552.65" y2="552.65"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="749" x2="743" y1="440.1" y2="432.1"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="749" x2="755" y1="440.1" y2="432.1"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="749" x2="749" y1="440.1" y2="432.1"/><ellipse cx="749" cy="446.1" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><!--MD5=[eda4e510c8c458ca02713b8556bd4426]
+link office_addons to office_addon_types--><path codeLine="230" d="M600.89,840 C600.89,840 394.5,840 394.5,840 C394.5,840 394.5,1095.92 394.5,1095.92 " fill="none" id="office_addons-office_addon_types" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="394.5" x2="394.5" y1="1092.92" y2="1103.92"/><ellipse cx="394.5" cy="1092.92" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="398.5" x2="390.5" y1="1099.92" y2="1099.92"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="600.89" x2="608.89" y1="840" y2="834"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="600.89" x2="608.89" y1="840" y2="846"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="600.89" x2="608.89" y1="840" y2="840"/><ellipse cx="594.89" cy="840" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><!--MD5=[ff9e302acddb8c0aef3425b9e2b4eaf0]
+link office_addon_types to office_addon_order_send_logs--><path codeLine="231" d="M371,1204.04 C371,1204.04 371,1480.83 371,1480.83 " fill="none" id="office_addon_types-office_addon_order_send_logs" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="371" x2="377" y1="1480.83" y2="1488.83"/><line style="stroke:#A80036;stroke-width:1.0;" x1="371" x2="365" y1="1480.83" y2="1488.83"/><line style="stroke:#A80036;stroke-width:1.0;" x1="371" x2="371" y1="1480.83" y2="1488.83"/><ellipse cx="371" cy="1474.83" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="371" x2="371" y1="1207.04" y2="1196.04"/><ellipse cx="371" cy="1207.04" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="367" x2="375" y1="1200.04" y2="1200.04"/><!--MD5=[ee390d8d12ee33473151eb6b0d5e40f9]
+link office_plan_orders to office_plan_order_send_logs--><path codeLine="232" d="M447,505.25 C447,505.25 447,658.56 447,658.56 " fill="none" id="office_plan_orders-office_plan_order_send_logs" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="447" x2="453" y1="658.56" y2="666.56"/><line style="stroke:#A80036;stroke-width:1.0;" x1="447" x2="441" y1="658.56" y2="666.56"/><line style="stroke:#A80036;stroke-width:1.0;" x1="447" x2="447" y1="658.56" y2="666.56"/><ellipse cx="447" cy="652.56" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="447" x2="447" y1="508.25" y2="497.25"/><ellipse cx="447" cy="508.25" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="443" x2="451" y1="501.25" y2="501.25"/><!--MD5=[613083211e9ee8bfddac75b47975decf]
+link contracts to office_addon_orders--><path codeLine="235" d="M640.19,34 C640.19,34 750.75,34 750.75,34 C750.75,34 750.75,163.93 750.75,163.93 " fill="none" id="contracts-office_addon_orders" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="750.75" x2="756.75" y1="163.93" y2="171.93"/><line style="stroke:#A80036;stroke-width:1.0;" x1="750.75" x2="744.75" y1="163.93" y2="171.93"/><line style="stroke:#A80036;stroke-width:1.0;" x1="750.75" x2="750.75" y1="163.93" y2="171.93"/><ellipse cx="750.75" cy="157.93" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="643.19" x2="632.19" y1="34" y2="34"/><ellipse cx="643.19" cy="34" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="636.19" x2="636.19" y1="38" y2="30"/><!--MD5=[dc3609b9386dcfc975712629847a0095]
+link contracts to office_plan_orders--><path codeLine="236" d="M583.75,55.22 C583.75,55.22 583.75,98.97 583.75,98.97 " fill="none" id="contracts-office_plan_orders" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="583.75" x2="589.75" y1="98.97" y2="106.97"/><line style="stroke:#A80036;stroke-width:1.0;" x1="583.75" x2="577.75" y1="98.97" y2="106.97"/><line style="stroke:#A80036;stroke-width:1.0;" x1="583.75" x2="583.75" y1="98.97" y2="106.97"/><ellipse cx="583.75" cy="92.97" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="583.75" x2="583.75" y1="58.22" y2="47.22"/><ellipse cx="583.75" cy="58.22" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="579.75" x2="587.75" y1="51.22" y2="51.22"/><!--MD5=[5a2722ab9ba417285c669684eb2c5ce9]
+link contracts to plan_revision_logs--><path codeLine="237" d="M640.32,21 C640.32,21 1020,21 1020,21 C1020,21 1020,247.91 1020,247.91 " fill="none" id="contracts-plan_revision_logs" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1020" x2="1026" y1="247.91" y2="255.91"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1020" x2="1014" y1="247.91" y2="255.91"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1020" x2="1020" y1="247.91" y2="255.91"/><ellipse cx="1020" cy="241.91" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="643.32" x2="632.32" y1="21" y2="21"/><ellipse cx="643.32" cy="21" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="636.32" x2="636.32" y1="25" y2="17"/><!--MD5=[a96d2213d5b1ff37aab82436889b60f0]
+link contracts to plan_revision_send_logs--><path codeLine="238" d="M565.89,27 C565.89,27 154,27 154,27 C154,27 154,234.67 154,234.67 " fill="none" id="contracts-plan_revision_send_logs" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="154" x2="154" y1="231.67" y2="242.67"/><ellipse cx="154" cy="231.67" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="158" x2="150" y1="238.67" y2="238.67"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="562.89" x2="573.89" y1="27" y2="27"/><ellipse cx="562.89" cy="27" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="569.89" x2="569.89" y1="23" y2="31"/><!--MD5=[626d4902b7cd8b1fc5a79f12089165fb]
+link plans to mapping_contracts_addons--><path codeLine="239" d="M1139.67,726 C1139.67,726 1158.82,726 1158.82,726 " fill="none" id="plans-mapping_contracts_addons" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1158.82" x2="1166.82" y1="726" y2="720"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1158.82" x2="1166.82" y1="726" y2="732"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1158.82" x2="1166.82" y1="726" y2="726"/><ellipse cx="1152.82" cy="726" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1142.67" x2="1131.67" y1="726" y2="726"/><ellipse cx="1142.67" cy="726" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1135.67" x2="1135.67" y1="730" y2="722"/><!--MD5=[df84c19376bd29190dd539832ad1df98]
+link plans to mapping_contracts_plans--><path codeLine="240" d="M1139.71,668 C1139.71,668 1442,668 1442,668 C1442,668 1442,697.71 1442,697.71 " fill="none" id="plans-mapping_contracts_plans" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1442" x2="1448" y1="697.71" y2="705.71"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1442" x2="1436" y1="697.71" y2="705.71"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1442" x2="1442" y1="697.71" y2="705.71"/><ellipse cx="1442" cy="691.71" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1142.71" x2="1131.71" y1="668" y2="668"/><ellipse cx="1142.71" cy="668" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1135.71" x2="1135.71" y1="672" y2="664"/><!--MD5=[af83496a9c22418a60525b54cdab5838]
+link plans to invoice_plans--><path codeLine="241" d="M1139.73,629 C1139.73,629 1594,629 1594,629 C1594,629 1594,697.9 1594,697.9 " fill="none" id="plans-invoice_plans" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1594" x2="1600" y1="697.9" y2="705.9"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1594" x2="1588" y1="697.9" y2="705.9"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1594" x2="1594" y1="697.9" y2="705.9"/><ellipse cx="1594" cy="691.9" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1142.73" x2="1131.73" y1="629" y2="629"/><ellipse cx="1142.73" cy="629" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.0;fill:none;"/><line style="stroke:#A80036;stroke-width:1.0;fill:none;" x1="1135.73" x2="1135.73" y1="633" y2="625"/><!--MD5=[0b52a3dd5ceb4b55aabb931f5e11c803]
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "plans ERD" {
+  entity "office_addon_types" {
+    + office_addon_type_id: TINYINT <<generated>>
+    ==
+    office_addon_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_option_types" {
+    + office_option_type_id: TINYINT <<generated>>
+    ==
+    office_option_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_addon_order_send_logs" {
+    + office_addon_order_send_log_id: INT <<generated>>
+    ==
+    # office_addon_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_addon_orders" {
+    + office_addon_order_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # office_addon_id: INT
+    maintenance_date: DATE
+    from: DATE
+    text: TEXT
+    inner_memo: TEXT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    status: TINYINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_addons" {
+    + office_addon_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_addon_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_option_groups" {
+    + office_option_group_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_option_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_options" {
+    + office_option_id: SMALLINT <<generated>>
+    ==
+    # office_option_group_id: SMALLINT
+    # office_plan_id: SMALLINT
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    is_deleted: TINYINT
+    block_split_group: TINYINT
+    block_discount_office_option_id: SMALLINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plan_order_send_logs" {
+    + office_plan_order_send_log_id: INT <<generated>>
+    ==
+    # office_plan_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_plan_orders" {
+    + office_plan_order_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    # office_plan_id: SMALLINT
+    current_office_plan_id: SMALLINT
+    from: DATE
+    to: DATE
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    price_e_pattern: TINYINT
+    inner_memo: TEXT
+    memo: TEXT
+    reason: TEXT
+    status: TINYINT
+    is_deleted: TINYINT
+    order_type: TINYINT
+    published_at: DATETIME
+    published_by: INT
+    application_at: DATETIME
+    application_by: INT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plans" {
+    + office_plan_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    weight: INT
+    uncollected_rate: DECIMAL
+    is_new_plan: TINYINT
+    office_addon_id: SMALLINT
+    office_addon_block_split_group: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "plan_revision_logs" {
+    + plan_revision_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # plan_id: INT
+    created_by: INT
+  }
+  entity "plan_revision_send_logs" {
+    + plan_revision_send_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    sent_at: DATETIME
+    downloaded_at: DATETIME
+    created_by: INT
+  }
+  entity "plans" {
+    + plan_id: SMALLINT <<generated>>
+    ==
+    plan_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    service_type: TINYINT
+    chart_color: VARCHAR
+    sort_order: SMALLINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  plans |o.d.o| office_plans
+  plans |o.u.o{ plan_revision_logs
+  office_plans |o.d.o{ office_options
+  office_options }o.l.o| office_option_groups
+  office_option_groups }o.u.o| office_option_types
+  office_addon_orders }o.d.o| office_addons
+  office_addons }o.d.o| office_addon_types
+  office_addon_types |o.d.o{ office_addon_order_send_logs
+  office_plan_orders |o.d.o{ office_plan_order_send_logs
+}
+
+contracts |o..o{ office_addon_orders
+contracts |o..o{ office_plan_orders
+contracts |o..o{ plan_revision_logs
+contracts |o..o| plan_revision_send_logs
+plans |o.r.o{ mapping_contracts_addons
+plans |o.r.o{ mapping_contracts_plans
+plans |o.r.o{ invoice_plans
+
+@enduml
+
+@startuml
+
+hide circle
+
+skinparam linetype ortho
+
+frame "plans ERD" {
+  entity "office_addon_types" {
+    + office_addon_type_id: TINYINT <<generated>>
+    ==
+    office_addon_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_option_types" {
+    + office_option_type_id: TINYINT <<generated>>
+    ==
+    office_option_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_addon_order_send_logs" {
+    + office_addon_order_send_log_id: INT <<generated>>
+    ==
+    # office_addon_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_addon_orders" {
+    + office_addon_order_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # office_addon_id: INT
+    maintenance_date: DATE
+    from: DATE
+    text: TEXT
+    inner_memo: TEXT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    status: TINYINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_addons" {
+    + office_addon_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_addon_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_option_groups" {
+    + office_option_group_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_option_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_options" {
+    + office_option_id: SMALLINT <<generated>>
+    ==
+    # office_option_group_id: SMALLINT
+    # office_plan_id: SMALLINT
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    is_deleted: TINYINT
+    block_split_group: TINYINT
+    block_discount_office_option_id: SMALLINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plan_order_send_logs" {
+    + office_plan_order_send_log_id: INT <<generated>>
+    ==
+    # office_plan_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_plan_orders" {
+    + office_plan_order_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    # office_plan_id: SMALLINT
+    current_office_plan_id: SMALLINT
+    from: DATE
+    to: DATE
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    price_e_pattern: TINYINT
+    inner_memo: TEXT
+    memo: TEXT
+    reason: TEXT
+    status: TINYINT
+    is_deleted: TINYINT
+    order_type: TINYINT
+    published_at: DATETIME
+    published_by: INT
+    application_at: DATETIME
+    application_by: INT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plans" {
+    + office_plan_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    weight: INT
+    uncollected_rate: DECIMAL
+    is_new_plan: TINYINT
+    office_addon_id: SMALLINT
+    office_addon_block_split_group: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "plan_revision_logs" {
+    + plan_revision_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # plan_id: INT
+    created_by: INT
+  }
+  entity "plan_revision_send_logs" {
+    + plan_revision_send_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    sent_at: DATETIME
+    downloaded_at: DATETIME
+    created_by: INT
+  }
+  entity "plans" {
+    + plan_id: SMALLINT <<generated>>
+    ==
+    plan_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    service_type: TINYINT
+    chart_color: VARCHAR
+    sort_order: SMALLINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  plans |o.d.o| office_plans
+  plans |o.u.o{ plan_revision_logs
+  office_plans |o.d.o{ office_options
+  office_options }o.l.o| office_option_groups
+  office_option_groups }o.u.o| office_option_types
+  office_addon_orders }o.d.o| office_addons
+  office_addons }o.d.o| office_addon_types
+  office_addon_types |o.d.o{ office_addon_order_send_logs
+  office_plan_orders |o.d.o{ office_plan_order_send_logs
+}
+
+contracts |o..o{ office_addon_orders
+contracts |o..o{ office_plan_orders
+contracts |o..o{ plan_revision_logs
+contracts |o..o| plan_revision_send_logs
+plans |o.r.o{ mapping_contracts_addons
+plans |o.r.o{ mapping_contracts_plans
+plans |o.r.o{ invoice_plans
+
+@enduml
+
+PlantUML version 1.2022.0(Wed Jan 12 01:16:42 JST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg>

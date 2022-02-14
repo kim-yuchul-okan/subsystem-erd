@@ -1,0 +1,168 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "users ERD" {
+  entity "users_clients" {
+    + id: INT  <<generated>>
+    ==
+    name: VARCHAR
+    # client_id: VARCHAR
+    client_secret: VARCHAR
+    redirect_uri: VARCHAR
+    auto_approve: TINYINT
+    autonomous: TINYINT
+    status: ENUM
+    suspended: TINYINT
+    notes: TINYTEXT
+  }
+  entity "users_sessions" {
+    + id: INT <<generated>>
+    ==
+    # client_id: VARCHAR
+    redirect_uri: VARCHAR
+    type_id: VARCHAR
+    type: ENUM
+    code: TEXT
+    access_token: VARCHAR
+    stage: ENUM
+    first_requested: INT
+    last_updated: INT
+    limited_access: TINYINT
+  }
+  entity "users_sessionscopes" {
+    + id: INT <<generated>>
+    ==
+    # session_id: INT
+    access_token: VARCHAR
+    # scope: VARCHAR
+  }
+  entity "users_scopes" {
+    + id: INT <<generated>>
+    ==
+    # scope: VARCHAR
+    name: VARCHAR
+    description: VARCHAR
+  }
+  users_clients |o.d.o{  users_sessions
+  users_sessions |o.r.o{  users_sessionscopes
+  users_scopes |o.d.o{  users_sessionscopes
+  entity "users_user_roles" {
+    + user_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_permissions" {
+    + id: INT <<generated>>
+    ==
+    area: VARCHAR
+    permission: VARCHAR
+    description: VARCHAR
+    actions: TEXT
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_metadata" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    key: VARCHAR
+    value: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_providers" {
+    + id: INT <<generated>>
+    ==
+    # parent_id: INT
+    provider: VARCHAR
+    uid: VARCHAR
+    secret: VARCHAR
+    access_token: VARCHAR
+    expires: INT
+    refresh_token: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users_group_roles" {
+    + group_id: INT
+    + role_id: INT
+    ==
+  }
+  entity "users_role_permissions" {
+    + id: INT <<generated>>
+    ==
+    # role_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_roles" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    filter: ENUM
+    # user_id: INT
+    created_at: INT
+    created_by: INT
+    updated_at: INT
+    updated_by: INT
+  }
+  entity "users_groups" {
+    + id: INT <<generated>>
+    ==
+    name: VARCHAR
+    # user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  entity "users" {
+    + id: INT <<generated>>
+    ==
+    username: VARCHAR
+    password: VARCHAR
+    # group_id: INT
+    email: VARCHAR
+    last_login: VARCHAR
+    previous_login: VARCHAR
+    login_hash: VARCHAR
+    user_id: INT
+    created_at: INT
+    updated_at: INT
+  }
+  users }|.l.|| users_metadata
+  users }|.r.|| users_providers
+  users }|.d.|| users_permissions
+  users ||..|{ users_user_roles
+  users_roles ||.r.|{ users_user_roles
+  users_roles ||.d.|{ users_group_roles
+  users_group_roles }|.r.|| users_groups
+  users_metadata ||..|{ users_metadata
+  users_providers ||..|{ users_providers
+  users_role_permissions }|..|| users_roles
+  users_permissions ||.d.|{ users_role_permissions
+  entity "users_user_permissions" {
+    + id: INT <<generated>>
+    ==
+    # user_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+  entity "users_group_permissions" {
+    + id: INT <<generated>>
+    ==
+    # group_id: INT
+    # perms_id: INT
+    actions: TEXT
+  }
+}
+
+@enduml

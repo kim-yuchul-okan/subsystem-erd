@@ -1,0 +1,515 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "company ERD" {
+  entity "companies" {
+    + company_id: MEDIUMINT <<generated>>
+    ==
+    name: VARCHAR
+    name_kana: VARCHAR
+    is_monitoring: TINYINT
+    payment_type: TINYINT
+    payment_type_registered_at: DATE
+    ceo_name: VARCHAR
+    ceo_name_kana: VARCHAR
+    ceo_post: VARCHAR
+    zipcode: VARCHAR
+    address_prefecture: TINYINT
+    address_city: VARCHAR
+    address_street_number: VARCHAR
+    address_after: VARCHAR
+    tel: VARCHAR
+    fax: VARCHAR
+    crm_account_id: VARCHAR
+    * zuora_parent_account_number: VARCHAR
+    zuora_sync_status: TINYINT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "company_extents" {
+    + company_id: MEDIUMINT <<generated>>
+    ==
+    contact_memo: TEXT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contacts" {
+    + contact_id: INT <<generated>>
+    ==
+    # company_id: MEDIUMINT
+    name: VARCHAR
+    name_kana: VARCHAR
+    email: VARCHAR
+    tel: VARCHAR
+    fax: VARCHAR
+    mobile: VARCHAR
+    memo: VARCHAR
+    department_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_companies_contacts" {
+    + mapping_companies_contacts_id: INT <<generated>>
+    ==
+    # contact_id: INT
+    email_purpose_id: TINYINT
+    type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_contracts_addons" {
+    + mapping_contracts_addons_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: INT
+    # plan_id: INT
+    from: DATE
+    to: DATE
+    invoice_month: INT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_contracts_contacts" {
+    + mapping_contracts_contacts_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # contact_id: INT
+    email_purpose_id: TINYINT
+    type: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "mapping_contracts_plans" {
+    + mapping_contracts_plans_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: INT
+    # plan_id: INT
+    from: DATE
+    to: DATE
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    current_contract_period: SMALLINT
+    initial_contract_period: TINYINT
+    price_e_pattern: TINYINT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_delivery_available_hours" {
+    + id: INT <<generated>>
+    ==
+    specified_time_start: TIME
+    specified_time_end: TIME
+    contract_id: MEDIUMINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_delivery_dates" {
+    + contract_id: MEDIUMINT
+    ==
+    is_deliverable_mon: TINYINT
+    is_deliverable_tue: TINYINT
+    is_deliverable_wed: TINYINT
+    is_deliverable_thu: TINYINT
+    is_deliverable_fri: TINYINT
+    is_deliverable_holiday: TINYINT
+    start_time: TIME
+    end_time: TIME
+    operation_times: SMALLINT
+    operation_times_comment: TEXT
+    parking_times: SMALLINT
+    parking_times_comment: TEXT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_delivery_locations" {
+    + contract_id: MEDIUMINT
+    ==
+    zipcode: VARCHAR
+    address_prefecture: TINYINT
+    address_city: VARCHAR
+    address_street_number: VARCHAR
+    address_after: VARCHAR
+    area_id: TINYINT
+    car_park: TINYINT
+    how_to_use_built_in_car_park: VARCHAR
+    near_by_car_park: VARCHAR
+    receiption_floor: VARCHAR
+    entrance_exit_memo: VARCHAR
+    inside_building_memo: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_delivery_okanbins" {
+    + contract_id: MEDIUMINT
+    ==
+    stuff_name: VARCHAR
+    email_address: VARCHAR
+    delivery_time: INT
+    bowl: VARCHAR
+    one_plate: VARCHAR
+    chopsticks: VARCHAR
+    spoon: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_extents" {
+    + contract_id: MEDIUMINT
+    ==
+    from_tft: DATE
+    to_tft: DATE
+    maintenance_count_comment: VARCHAR
+    cs_memo: TEXT
+    first_maintenance_memo: TEXT
+    collective_registration_memo: TEXT
+    employee_number: INT
+    industry_type: TINYINT
+    tel: VARCHAR
+    transfer_information: VARCHAR
+    is_accepted_request_alert: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contract_sales_accumulations" {
+    + contract_id: MEDIUMINT
+    yearmonth: INT
+    ==
+    sales_amount: INT
+    collect_amount: INT
+    total_sales_amount: INT
+    total_uncollect_amount: INT
+    amortization_amount: INT
+    billing_diff: INT
+    billing_reason: TINYINT
+    carry_over_total_uncollect_amount: INT
+    uncollected_rate: DECIMAL
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts" {
+    + contract_id: MEDIUMINT <<generated>>
+    ==
+    name: VARCHAR
+    name_kana: VARCHAR
+    short_place_name: VARCHAR
+    company_id: MEDIUMINT
+    application_date: DATE
+    first_maintenance_date: DATE
+    first_date: DATE
+    first_date_calc: DATE
+    start_day: TINYINT
+    initial_start_day: TINYINT
+    expire_date: DATE
+    last_maintenance_date: DATE
+    irregular_payments: VARCHAR
+    need_invoice_mailing: TINYINT
+    is_company_pay: TINYINT
+    maintenance_count: TINYINT
+    service_type: TINYINT
+    registration_status: TINYINT
+    initial_office_plan_id: SMALLINT
+    payment_terms: TINYINT
+    invoice_pattern: TINYINT
+    auto_renewal_flag: TINYINT
+    * zuora_account_id: VARCHAR
+    * zuora_subscription_id: VARCHAR
+    zuora_diff_charge_id: VARCHAR
+    zuora_offset_charge_id: VARCHAR
+    crm_account_id: VARCHAR
+    zuora_subscription_number: VARCHAR
+    zuora_child_account_number: VARCHAR
+    zuora_sync_status: TINYINT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_cs_tags" {
+    + contracts_cs_tag_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: INT
+    cs_tag_id: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_addons" {
+    + contracts_office_addon_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    office_addon_id: SMALLINT
+    from: DATE
+    to: DATE
+    invoice_month: INT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_addons_histories" {
+    + contracts_office_addons_history_id: INT <<generated>>
+    ==
+    logged_at: DATETIME
+    # contracts_office_addon_id: MEDIUMINT
+    # contract_id: MEDIUMINT
+    office_addon_id: SMALLINT
+    from: DATE
+    to: DATE
+    invoice_month: INT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_options" {
+    + contracts_office_option_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    office_option_id: SMALLINT
+    term_group_id: MEDIUMINT
+    from: DATE
+    to: DATE
+    initial_contract_period: TINYINT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_options_histories" {
+    + contracts_office_options_history_id: INT <<generated>>
+    ==
+    logged_at: DATETIME
+    # contracts_office_option_id: MEDIUMINT
+    # contract_id: MEDIUMINT
+    office_option_id: SMALLINT
+    term_group_id: MEDIUMINT
+    from: DATE
+    to: DATE
+    initial_contract_period: TINYINT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_plans" {
+    + contracts_office_plan_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    office_plan_id: SMALLINT
+    term_group_id: MEDIUMINT
+    from: DATE
+    to: DATE
+    initial_contract_period: TINYINT
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    price_e_pattern: TINYINT
+    is_trial: TINYINT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_office_plans_histories" {
+    + contracts_office_plans_history_id: INT <<generated>>
+    ==
+    logged_at: DATETIME
+    # ccontracts_office_plan_id: MEDIUMINT
+    # ccontract_id: MEDIUMINT
+    office_plan_id: SMALLINT
+    term_group_id: MEDIUMINT
+    from: DATE
+    to: DATE
+    initial_contract_period: TINYINT
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    price_e_pattern: TINYINT
+    is_trial: TINYINT
+    application_date: DATE
+    recorded_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "contracts_unreceivable_dates" {
+    + contracts_unreceivable_date_id: INT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    unreceivable_date: DATE
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "cs_tags" {
+    + cs_tag_id: INT  <<generated>>
+    ==
+    name: VARCHAR
+    is_display: TINYINT
+    service_type: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "auto_renewal_contracts_office_options" {
+    + contract_id: INT
+    + term_group_id: INT
+    ==
+    created_at: DATETIME
+    created_by: INT
+  }
+  frame "contract temp" {
+    entity "tmp_contracts" {
+      + contract_id: MEDIUMINT <<generated>>
+      ==
+      name: VARCHAR
+      name_kana: VARCHAR
+      short_place_name: VARCHAR
+      company_id: MEDIUMINT
+      application_date: DATE
+      first_maintenance_date: DATE
+      first_date: DATE
+      first_date_calc: DATE
+      start_day: TINYINT
+      initial_start_day: TINYINT
+      expire_date: DATE
+      last_maintenance_date: DATE
+      irregular_payments: VARCHAR
+      need_invoice_mailing: TINYINT
+      is_company_pay: TINYINT
+      maintenance_count: TINYINT
+      service_type: TINYINT
+      registration_status: TINYINT
+      initial_office_plan_id: SMALLINT
+      payment_terms: TINYINT
+      invoice_pattern: TINYINT
+      auto_renewal_flag: TINYINT
+      * zuora_account_id: VARCHAR
+      * zuora_subscription_id: VARCHAR
+      zuora_diff_charge_id: VARCHAR
+      zuora_offset_charge_id: VARCHAR
+      crm_account_id: VARCHAR
+      zuora_subscription_number: VARCHAR
+      zuora_child_account_number: VARCHAR
+      zuora_sync_status: TINYINT
+      zuora_sync_at: DATETIME
+      created_at: DATETIME
+      created_by: INT
+      updated_at: DATETIME
+      updated_by: INT
+    }
+    entity "contract_cycles" {
+      + mapping_contracts_plans_id: INT <<generated>>
+      ==
+      from: DATE
+      to: DATE
+    }
+  }
+
+  companies ||.u.o| company_extents
+  companies ||.u.o{ contacts
+  companies |o.d.o| contracts
+  contacts |o.u.o{ mapping_companies_contacts
+  contacts |o..o{ mapping_contracts_contacts
+  mapping_contracts_contacts }o.r.o| contracts
+  contracts |o.u.o{ contracts_cs_tags
+  contracts_cs_tags }o.u.|| cs_tags
+  contracts |o.l.o{ auto_renewal_contracts_office_options
+  contracts |o.l.o{ mapping_contracts_plans
+  contracts |o.l.o{ mapping_contracts_addons
+  contracts |o..o| contract_delivery_dates
+  contracts |o..o| contract_delivery_locations
+  contracts |o..o| contract_delivery_okanbins
+  contracts |o..o| contract_extents
+  contracts |o..o| contract_sales_accumulations
+  contracts |o..o{ contract_delivery_available_hours
+  contracts |o..o{ contracts_unreceivable_dates
+  contracts |o..o{ contracts_office_addons
+  contracts |o..o{ contracts_office_plans
+  contracts |o..o{ contracts_office_options
+  contracts_office_addons ||..o{ contracts_office_addons_histories
+  contracts_office_plans ||..o{ contracts_office_plans_histories
+  contracts_office_options ||..o{ contracts_office_options_histories
+}
+
+' invoices }o.d.o{ contracts
+' boxes }o.d.o| contracts
+' contracts |o.d.o{ office_plan_orders
+' contracts |o.d.o{ maintenance_schedules
+' contracts |o.d.o{ office_addon_orders
+' contracts |o.d.o{ application_send_logs
+' contracts |o.d.o{ demand_letter_send_logs
+' contracts |o.d.o{ schedule_adjustment_requests
+' contracts |o.d.o{ schedule_mail_send_logs
+' contracts |o.d.o{ statement_of_delivery_send_logs
+' contracts |o.d.o{ tft_donation_requests
+' contracts |o.d.o{ invoice_detail_spots
+' contracts |o.d.o{ invoice_note_templates
+' contracts |o.d.o{ mapping_contracts_note_restrictable_functions
+' contracts |o.d.o{ mapping_note_users_note_roles
+' companies |o.d.o{ invoice_send_logs
+' contracts |o.d.o{ plan_revision_logs
+' contracts |o.d.o| plan_revision_send_logs
+
+' companies |o.r.o| tmp_contracts
+' contracts |o.l.o| tmp_contracts
+' tmp_contracts |o..o| contract_delivery_dates
+' tmp_contracts |o..o| contract_delivery_locations
+' tmp_contracts |o..o| contract_delivery_okanbins
+' tmp_contracts |o..o| contract_extents
+' tmp_contracts |o..o| contract_sales_accumulations
+' tmp_contracts |o..o{ contract_delivery_available_hours
+' tmp_contracts |o..o{ contracts_unreceivable_dates
+' tmp_contracts |o..o{ contracts_office_plans
+' tmp_contracts |o..o{ contracts_cs_tags
+' contracts |o.u.o| tmp_boxes
+
+@enduml

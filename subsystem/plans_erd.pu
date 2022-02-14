@@ -1,0 +1,244 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+frame "plans ERD" {
+  entity "office_addon_types" {
+    + office_addon_type_id: TINYINT <<generated>>
+    ==
+    office_addon_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_option_types" {
+    + office_option_type_id: TINYINT <<generated>>
+    ==
+    office_option_type_name: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "office_addon_order_send_logs" {
+    + office_addon_order_send_log_id: INT <<generated>>
+    ==
+    # office_addon_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_addon_orders" {
+    + office_addon_order_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # office_addon_id: INT
+    maintenance_date: DATE
+    from: DATE
+    text: TEXT
+    inner_memo: TEXT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    status: TINYINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_addons" {
+    + office_addon_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_addon_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_option_groups" {
+    + office_option_group_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    # office_option_type_id: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_options" {
+    + office_option_id: SMALLINT <<generated>>
+    ==
+    # office_option_group_id: SMALLINT
+    # office_plan_id: SMALLINT
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    is_deleted: TINYINT
+    block_split_group: TINYINT
+    block_discount_office_option_id: SMALLINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plan_order_send_logs" {
+    + office_plan_order_send_log_id: INT <<generated>>
+    ==
+    # office_plan_order_id: INT
+    sent_at: DATETIME
+    mailbody: TEXT
+    contract_id: INT
+    created_by: INT
+  }
+  entity "office_plan_orders" {
+    + office_plan_order_id: MEDIUMINT <<generated>>
+    ==
+    # contract_id: MEDIUMINT
+    # office_plan_id: SMALLINT
+    current_office_plan_id: SMALLINT
+    from: DATE
+    to: DATE
+    invoice_cycle: TINYINT
+    contract_renewal_cycle: TINYINT
+    price_e_pattern: TINYINT
+    inner_memo: TEXT
+    memo: TEXT
+    reason: TEXT
+    status: TINYINT
+    is_deleted: TINYINT
+    order_type: TINYINT
+    published_at: DATETIME
+    published_by: INT
+    application_at: DATETIME
+    application_by: INT
+    registered_at: DATETIME
+    registered_by: INT
+    reserved_at: DATETIME
+    reserved_by: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "office_plans" {
+    + office_plan_id: SMALLINT <<generated>>
+    ==
+    service_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    invoice_name: VARCHAR
+    invoice_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    sort_order: MEDIUMINT
+    is_deleted: TINYINT
+    weight: INT
+    uncollected_rate: DECIMAL
+    is_new_plan: TINYINT
+    office_addon_id: SMALLINT
+    office_addon_block_split_group: TINYINT
+    * zuora_product_rate_plan_id: VARCHAR
+    * zuora_product_rate_plan_charge_id: VARCHAR
+    zuora_sync_status: INT
+    zuora_sync_at: DATETIME
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "plan_revision_logs" {
+    + plan_revision_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    # plan_id: INT
+    created_by: INT
+  }
+  entity "plan_revision_send_logs" {
+    + plan_revision_send_log_id: INT <<generated>>
+    ==
+    # contract_id: INT
+    yearmonth: INT
+    sent_at: DATETIME
+    downloaded_at: DATETIME
+    created_by: INT
+  }
+  entity "plans" {
+    + plan_id: SMALLINT <<generated>>
+    ==
+    plan_type: TINYINT
+    name: VARCHAR
+    inner_name: VARCHAR
+    inner_short_name: VARCHAR
+    quantity_limit: SMALLINT
+    price: MEDIUMINT
+    tax_class: TINYINT
+    maintenance_count: TINYINT
+    operation_times: SMALLINT
+    service_type: TINYINT
+    chart_color: VARCHAR
+    sort_order: SMALLINT
+    is_deleted: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+
+  plans |o.d.o| office_plans
+  plans |o.u.o{ plan_revision_logs
+  office_plans |o.d.o{ office_options
+  office_options }o.l.o| office_option_groups
+  office_option_groups }o.u.o| office_option_types
+  office_addon_orders }o.d.o| office_addons
+  office_addons }o.d.o| office_addon_types
+  office_addon_types |o.d.o{ office_addon_order_send_logs
+  office_plan_orders |o.d.o{ office_plan_order_send_logs
+}
+
+contracts |o..o{ office_addon_orders
+contracts |o..o{ office_plan_orders
+contracts |o..o{ plan_revision_logs
+contracts |o..o| plan_revision_send_logs
+plans |o.r.o{ mapping_contracts_addons
+plans |o.r.o{ mapping_contracts_plans
+plans |o.r.o{ invoice_plans
+
+@enduml
