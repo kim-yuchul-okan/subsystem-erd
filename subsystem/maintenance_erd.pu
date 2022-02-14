@@ -104,11 +104,12 @@ frame "maintenance ERD" {
     created_at: DATETIME
     updated_at: DATETIME
   }
-  maintenance_schedules |o..o{ schedule_adjustment_requests
   maintenance_schedules ||..o{ maintenance_schedule_available_hours
   maintenance_schedules ||..o| maintenance_schedule_extents
   maintenance_schedules }|..|| maintenance_types
-  maintenance_schedules |o..o{ material_requests
+  maintenance_handies |o..|{ maintenance_handy_logs
 }
+maintenance_schedules |o..o{ schedule_adjustment_requests
+maintenance_schedules |o..o{ material_requests
 
 @enduml
