@@ -5,9 +5,8 @@
 ```sh
 ├── README.md
 ├── image
-│   ├── company_erd.svg
-│   ├── plans_erd.svg
-│   └── users_erd.svg
+│   ├── png
+│   └── svg
 ├── subsystem
 │   ├── company_erd.pu
 │   ├── plans_erd.pu
