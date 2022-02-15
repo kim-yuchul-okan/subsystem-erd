@@ -3,7 +3,7 @@
 ## directory
 
 - README.md
-- preview/ 各種イメージ
+- preview/
   - png/
   - svg/
 - src/
