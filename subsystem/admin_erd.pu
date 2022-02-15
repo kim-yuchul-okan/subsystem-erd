@@ -171,6 +171,45 @@ frame "admins ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
+  entity "prefectures" {
+    + prefecture_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    delivery_dates: SMALLINT∂
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "taxes" {
+    + tax_id: INT <<Gen>>
+    ==
+    from: DATE
+    to: DATE
+    rate: DECIMAL
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "tkvs" {
+    + tkv_id: INT <<Gen>>
+    ==
+    type: VARCHAR
+    key: VARCHAR
+    value: TEXT
+    description: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "delivery_results_changes_histories" {
+    + delivery_results_changes_history_id: INT <<Gen>>
+    ==
+    prev_maintenance_id: INT
+    next_maintenance_id: INT
+    created_at: DATETIME
+    created_by: INT
+  }
   admins |o.d.o{ mapping_admins_roles
   mapping_admins_roles }o..o| roles
   area_groups ||..o{ areas

@@ -88,6 +88,19 @@ frame "note ERD" {
     created_at: DATETIME
     updated_at: DATETIME
   }
+  entity "notice_templates" {
+    + notice_template_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    content: TEXT
+    service_type: INT
+    is_display: TINYINT
+    sort_order: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
   note_users |o..o{ mapping_note_users_note_roles
   note_roles |o..o{ mapping_note_users_note_roles
   note_maintenances |o..o{ note_maintenance_quantites

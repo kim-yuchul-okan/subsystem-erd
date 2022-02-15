@@ -71,7 +71,6 @@ frame "invoce ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
-
   entity "invoice_send_log_details" {
     + invoice_send_log_detail_id: INT <<Gen>>
     ==
@@ -102,6 +101,22 @@ frame "invoce ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
+  entity "journalizings" {
+    + journalizing_id: INT <<Gen>>
+    ==
+    yearmonth: INT
+    journalizing_type: TINYINT
+    # invoice_detail_id: INT
+    from: DATE
+    unit_price: INT
+    payment_date: DATE
+    payment_amount: INT
+    payment_count: TINYINT
+    payment_status: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  invoice_details |o..o{ journalizings
   invoices |o..o{ invoice_details
   invoices |o.l.o{ demand_letter_send_logs
   invoices |o..o{ invoice_notes
@@ -111,7 +126,6 @@ frame "invoce ERD" {
 }
 contracts |o.d.o{ invoice_detail_spots
 contracts |o.d.o{ invoice_note_templates
-invoice_details |o..o{ journalizings
 companies |o..|{ invoice_send_logs
 
 @enduml

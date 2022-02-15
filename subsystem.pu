@@ -59,24 +59,6 @@ frame "reference" {
     # contract_id: INT
     created_by: INT
   }
-  entity "statement_of_delivery_send_log_details" {
-    + statement_of_delivery_send_log_id: INT
-    + maintenance_id: INT
-    ==
-    skip_collect_amount: TINYINT
-    created_at: DATETIME
-    created_by: INT
-  }
-  entity "statement_of_delivery_send_logs" {
-    + statement_of_delivery_send_log_id: INT <<Gen>>
-    ==
-    sent_at: DATETIME
-    mailbody: TEXT
-    # contract_id: INT
-    maintenance_date: DATE
-    next_maintenance_date: DATE
-    created_by: INT
-  }
   entity "tft_donation_requests" {
     + tft_donation_request_id: MEDIUMINT <<Gen>>
     ==
@@ -91,7 +73,6 @@ frame "reference" {
     updated_at: DATETIME
     updated_by: INT
   }
-
   entity "notice_templates" {
     + notice_template_id: INT <<Gen>>
     ==
@@ -144,6 +125,25 @@ frame "reference" {
     created_at: DATETIME
     created_by: INT
   }
+  entity "statement_of_delivery_send_log_details" {
+    + statement_of_delivery_send_log_id: INT
+    + maintenance_id: INT
+    ==
+    skip_collect_amount: TINYINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  entity "statement_of_delivery_send_logs" {
+    + statement_of_delivery_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    mailbody: TEXT
+    # contract_id: INT
+    maintenance_date: DATE
+    next_maintenance_date: DATE
+    created_by: INT
+  }
+  statement_of_delivery_send_logs |o..o{ statement_of_delivery_send_log_details
 }
 frame "users ERD" {
   entity "users_clients" {
@@ -972,6 +972,67 @@ frame "company ERD" {
     created_at: DATETIME
     created_by: INTßß
   }
+  entity "application_send_logs" {
+    + application_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: INT
+    created_by: INT
+  }
+  entity "demand_letter_send_logs" {
+    + demand_letter_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: MEDIUMINT
+    # invoice_id: INT
+    created_by: INT
+  }
+  entity "schedule_adjustment_requests" {
+    + schedule_adjustment_request_id: INT <<Gen>>
+    ==
+    received_at: DATETIME
+    # maintenance_schedule_id: INT
+    # contract_id: INT
+    # note_user_id: INT
+    original_maintenance_date: DATE
+    request_maintenance_date: DATE
+    status: TINYINT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "schedule_mail_send_logs" {
+    + schedule_mail_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    # contract_id: INT
+    created_by: INT
+  }
+  entity "statement_of_delivery_send_logs" {
+    + statement_of_delivery_send_log_id: INT <<Gen>>
+    ==
+    sent_at: DATETIME
+    mailbody: TEXT
+    # contract_id: INT
+    maintenance_date: DATE
+    next_maintenance_date: DATE
+    created_by: INT
+  }
+  entity "tft_donation_requests" {
+    + tft_donation_request_id: MEDIUMINT <<Gen>>
+    ==
+    # contract_id: MEDIUMINT
+    from_tft: DATE
+    to_tft: DATE
+    from_term: DATE
+    to_term: DATE
+    quantity: INT
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
   frame "contract temp" {
     entity "tmp_contracts" {
       + contract_id: MEDIUMINT <<Gen>>
@@ -1019,6 +1080,7 @@ frame "company ERD" {
       to: DATE
     }
   }
+
   companies ||.u.o| company_extents
   companies ||.u.o{ contacts
   companies |o.d.o| contracts
@@ -1034,17 +1096,24 @@ frame "company ERD" {
   contracts |o..o| contract_delivery_locations
   contracts |o..o| contract_delivery_okanbins
   contracts |o..o| contract_extents
-  contracts |o..o| contract_sales_accumulations
+  contracts |o.l.o| contract_sales_accumulations
   contracts |o..o{ contract_delivery_available_hours
   contracts |o..o{ contracts_unreceivable_dates
   contracts |o..o{ contracts_office_addons
   contracts |o..o{ contracts_office_plans
   contracts |o..o{ contracts_office_options
+  contracts |o.r.o{ application_send_logs
+  contracts |o.r.o{ demand_letter_send_logs
+  contracts |o.r.o{ schedule_mail_send_logs
+  contracts |o.r.o{ schedule_adjustment_requests
+  contracts |o.r.o{ statement_of_delivery_send_logs
+  contracts |o.r.o{ tft_donation_requests
   contracts_office_addons ||..o{ contracts_office_addons_histories
   contracts_office_plans ||..o{ contracts_office_plans_histories
   contracts_office_options ||..o{ contracts_office_options_histories
+  contracts |o.l.o{ mapping_contracts_note_restrictable_functions
   note_restrictable_functions |o..o{ mapping_contracts_note_restrictable_functions
-  contracts |o.d.o{ mapping_contracts_note_restrictable_functions
+
 }
 frame "admins ERD" {
   entity "admins" {
@@ -1480,6 +1549,14 @@ frame "box ERD" {
     created_at: DATETIME
     created_by: INT
   }
+  entity "statement_of_delivery_send_log_details" {
+    + statement_of_delivery_send_log_id: INT
+    + maintenance_id: INT
+    ==
+    skip_collect_amount: TINYINT
+    created_at: DATETIME
+    created_by: INT
+  }
   frame "box temp" {
     entity "tmp_boxes" {
       + box_id: INT <<Gen>>
@@ -1888,6 +1965,22 @@ frame "invoce ERD" {
     updated_at: DATETIME
     updated_by: INT
   }
+  entity "journalizings" {
+    + journalizing_id: INT <<Gen>>
+    ==
+    yearmonth: INT
+    journalizing_type: TINYINT
+    # invoice_detail_id: INT
+    from: DATE
+    unit_price: INT
+    payment_date: DATE
+    payment_amount: INT
+    payment_count: TINYINT
+    payment_status: SMALLINT
+    created_at: DATETIME
+    created_by: INT
+  }
+  invoice_details |o..o{ journalizings
   invoices |o..o{ invoice_details
   invoices |o.l.o{ demand_letter_send_logs
   invoices |o..o{ invoice_notes
@@ -1999,6 +2092,7 @@ frame "maintenance ERD" {
   maintenance_handies |o..|{ maintenance_handy_logs
 }
 
+box_maintenances |o.d.o{ statement_of_delivery_send_log_details
 companies |o..o{ note_users
 companies |o..o{ note_maintenances
 note_users |o..o{ schedule_adjustment_requests
@@ -2046,13 +2140,8 @@ boxes |o..o{ material_requests
 items |o.u.o{ depot_orders
 items |o.u.o{ depot_receiveds
 items |o.u.o{ depot_stocks
-invoice_details |o..o{ journalizings
 companies |o..|{ invoice_send_logs
 maintenance_schedules |o..o{ schedule_adjustment_requests
 maintenance_schedules |o..o{ material_requests
-' --------------------------------
-statement_of_delivery_send_logs |o..o{ statement_of_delivery_send_log_details
-
-
 
 @enduml

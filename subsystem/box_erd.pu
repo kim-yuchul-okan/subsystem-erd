@@ -266,6 +266,14 @@ frame "box ERD" {
     created_at: DATETIME
     created_by: INT
   }
+  entity "statement_of_delivery_send_log_details" {
+    + statement_of_delivery_send_log_id: INT
+    + maintenance_id: INT
+    ==
+    skip_collect_amount: TINYINT
+    created_at: DATETIME
+    created_by: INT
+  }
   frame "box temp" {
     entity "tmp_boxes" {
       + box_id: INT <<Gen>>
