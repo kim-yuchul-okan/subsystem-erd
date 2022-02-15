@@ -18,6 +18,11 @@
     - [note_erd.pu](#note_erd)
   - [subsystem.pu](#subsystem)
 
+### preview
+
+- 各パート別の ERD イメージ格納
+- `png`, `svg`形式を用意
+
 ### subsystem
 
 - ALL
