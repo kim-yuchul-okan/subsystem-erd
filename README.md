@@ -15,7 +15,6 @@
   - [invoice_erd.pu](#invoice_erd)
   - [maintenance_erd.pu](#maintenance_erd)
   - [note_erd.pu](#note_erd)
-  - [reference_erd.pu](#reference_erd)
 - [subsystem.pu](#subsystem)
 
 ### subsystem
@@ -36,7 +35,7 @@
 
 ### admin_erd
 
-- admins, roles, areas, calendar, faqs, information, menus
+- admins, roles, areas, calendar, faqs, information, menus, others
 
 ### box_erd
 
@@ -53,7 +52,3 @@
 ### note_erd
 
 - note
-
-### reference_erd
-
-- etc

@@ -7,143 +7,7 @@ hide circle
 skinparam linetype ortho
 
 frame "reference" {
-  entity "application_send_logs" {
-    + application_send_log_id: INT <<Gen>>
-    ==
-    sent_at: DATETIME
-    # contract_id: INT
-    created_by: INT
-  }
-  entity "demand_letter_send_logs" {
-    + demand_letter_send_log_id: INT <<Gen>>
-    ==
-    sent_at: DATETIME
-    # contract_id: MEDIUMINT
-    # invoice_id: INT
-    created_by: INT
-  }
-  entity "journalizings" {
-    + journalizing_id: INT <<Gen>>
-    ==
-    yearmonth: INT
-    journalizing_type: TINYINT
-    # invoice_detail_id: INT
-    from: DATE
-    unit_price: INT
-    payment_date: DATE
-    payment_amount: INT
-    payment_count: TINYINT
-    payment_status: SMALLINT
-    created_at: DATETIME
-    created_by: INT
-  }
-  entity "schedule_adjustment_requests" {
-    + schedule_adjustment_request_id: INT <<Gen>>
-    ==
-    received_at: DATETIME
-    # maintenance_schedule_id: INT
-    # contract_id: INT
-    # note_user_id: INT
-    original_maintenance_date: DATE
-    request_maintenance_date: DATE
-    status: TINYINT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "schedule_mail_send_logs" {
-    + schedule_mail_log_id: INT <<Gen>>
-    ==
-    sent_at: DATETIME
-    # contract_id: INT
-    created_by: INT
-  }
-  entity "tft_donation_requests" {
-    + tft_donation_request_id: MEDIUMINT <<Gen>>
-    ==
-    # contract_id: MEDIUMINT
-    from_tft: DATE
-    to_tft: DATE
-    from_term: DATE
-    to_term: DATE
-    quantity: INT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "notice_templates" {
-    + notice_template_id: INT <<Gen>>
-    ==
-    name: VARCHAR
-    content: TEXT
-    service_type: INT
-    is_display: TINYINT
-    sort_order: INT
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "prefectures" {
-    + prefecture_id: INT <<Gen>>
-    ==
-    name: VARCHAR
-    delivery_dates: SMALLINT∂
-    created_at: DATETIME
-    updated_at: DATETIME
-  }
-  entity "taxes" {
-    + tax_id: INT <<Gen>>
-    ==
-    from: DATE
-    to: DATE
-    rate: DECIMAL
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "tkvs" {
-    + tkv_id: INT <<Gen>>
-    ==
-    type: VARCHAR
-    key: VARCHAR
-    value: TEXT
-    description: VARCHAR
-    created_at: DATETIME
-    created_by: INT
-    updated_at: DATETIME
-    updated_by: INT
-  }
-  entity "delivery_results_changes_histories" {
-    + delivery_results_changes_history_id: INT <<Gen>>
-    ==
-    prev_maintenance_id: INT
-    next_maintenance_id: INT
-    created_at: DATETIME
-    created_by: INT
-  }
-  entity "statement_of_delivery_send_log_details" {
-    + statement_of_delivery_send_log_id: INT
-    + maintenance_id: INT
-    ==
-    skip_collect_amount: TINYINT
-    created_at: DATETIME
-    created_by: INT
-  }
-  entity "statement_of_delivery_send_logs" {
-    + statement_of_delivery_send_log_id: INT <<Gen>>
-    ==
-    sent_at: DATETIME
-    mailbody: TEXT
-    # contract_id: INT
-    maintenance_date: DATE
-    next_maintenance_date: DATE
-    created_by: INT
-  }
-  statement_of_delivery_send_logs |o..o{ statement_of_delivery_send_log_details
+
 }
 frame "users ERD" {
   entity "users_clients" {
@@ -1279,6 +1143,45 @@ frame "admins ERD" {
     created_by: INT
     updated_at: DATETIME
     updated_by: INT
+  }
+  entity "prefectures" {
+    + prefecture_id: INT <<Gen>>
+    ==
+    name: VARCHAR
+    delivery_dates: SMALLINT∂
+    created_at: DATETIME
+    updated_at: DATETIME
+  }
+  entity "taxes" {
+    + tax_id: INT <<Gen>>
+    ==
+    from: DATE
+    to: DATE
+    rate: DECIMAL
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "tkvs" {
+    + tkv_id: INT <<Gen>>
+    ==
+    type: VARCHAR
+    key: VARCHAR
+    value: TEXT
+    description: VARCHAR
+    created_at: DATETIME
+    created_by: INT
+    updated_at: DATETIME
+    updated_by: INT
+  }
+  entity "delivery_results_changes_histories" {
+    + delivery_results_changes_history_id: INT <<Gen>>
+    ==
+    prev_maintenance_id: INT
+    next_maintenance_id: INT
+    created_at: DATETIME
+    created_by: INT
   }
   admins |o.d.o{ mapping_admins_roles
   mapping_admins_roles }o..o| roles
