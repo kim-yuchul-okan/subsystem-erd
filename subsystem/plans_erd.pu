@@ -1,4 +1,4 @@
-@startuml
+@startuml subsystem-plans
 
 ' hide the spot
 hide circle
