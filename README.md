@@ -3,19 +3,20 @@
 ## directory
 
 - README.md
-- image/
+- preview/ 各種イメージ
   - png/
   - svg/
-- subsystem/
-  - [admin_erd.pu](#admin_erd)
-  - [box_erd.pu](#box_erd)
-  - [company_erd.pu](#company_erd)
-  - [plans_erd.pu](#plans_erd)
-  - [users_erd.pu](#users_erd)
-  - [invoice_erd.pu](#invoice_erd)
-  - [maintenance_erd.pu](#maintenance_erd)
-  - [note_erd.pu](#note_erd)
-- [subsystem.pu](#subsystem)
+- src/
+  - subsystem/
+    - [admin_erd.pu](#admin_erd)
+    - [box_erd.pu](#box_erd)
+    - [company_erd.pu](#company_erd)
+    - [plans_erd.pu](#plans_erd)
+    - [users_erd.pu](#users_erd)
+    - [invoice_erd.pu](#invoice_erd)
+    - [maintenance_erd.pu](#maintenance_erd)
+    - [note_erd.pu](#note_erd)
+  - [subsystem.pu](#subsystem)
 
 ### subsystem
 
