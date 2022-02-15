@@ -6,9 +6,6 @@ hide circle
 ' avoid problems with angled crows feet
 skinparam linetype ortho
 
-frame "reference" {
-
-}
 frame "users ERD" {
   entity "users_clients" {
     + id: INT  <<Gen>>
@@ -1994,7 +1991,6 @@ frame "maintenance ERD" {
   maintenance_schedules }|..|| maintenance_types
   maintenance_handies |o..|{ maintenance_handy_logs
 }
-
 box_maintenances |o.d.o{ statement_of_delivery_send_log_details
 companies |o..o{ note_users
 companies |o..o{ note_maintenances
